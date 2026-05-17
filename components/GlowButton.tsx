@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 import Link from "next/link";
@@ -22,19 +21,37 @@ export default function GlowButton({
   type = "button"
 }: GlowButtonProps) {
   const baseStyles = "relative inline-flex items-center justify-center px-8 py-4 font-display font-semibold text-sm tracking-wide rounded-lg transition-all duration-300 overflow-hidden group";
-
+  
   const variants = {
     primary: "bg-accent-primary text-white hover:bg-blue-600 shadow-lg shadow-blue-500/25",
     ghost: "bg-transparent border border-border text-text-primary hover:border-accent-primary hover:text-accent-primary",
     outline: "bg-transparent border-2 border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-white"
   };
 
-  const Component = href ? Link : motion.button;
-  const props = href ? { href } : { onClick, type };
+  const MotionLink = motion(Link);
+
+  if (href) {
+    return (
+      <MotionLink
+        href={href}
+        className={`${baseStyles} ${variants[variant]} ${className}`}
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.98 }}
+      >
+        <span className="relative z-10">{children}</span>
+        {variant === "primary" && (
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          />
+        )}
+      </MotionLink>
+    );
+  }
 
   return (
-    <Component
-      {...props}
+    <motion.button
+      onClick={onClick}
+      type={type}
       className={`${baseStyles} ${variants[variant]} ${className}`}
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.98 }}
@@ -45,6 +62,6 @@ export default function GlowButton({
           className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         />
       )}
-    </Component>
+    </motion.button>
   );
 }
