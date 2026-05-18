@@ -29,22 +29,31 @@ export default function GlowButton({
     outline: "bg-transparent border-2 border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-white"
   };
 
-  const Component = href ? Link : motion.button;
-  const props = href ? { href } : { onClick, type };
+  const combinedClassName = `${baseStyles} ${variants[variant]} ${className}`;
+
+  if (href) {
+    return (
+      <Link href={href} className={combinedClassName}>
+        <span className="relative z-10">{children}</span>
+        {variant === "primary" && (
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        )}
+      </Link>
+    );
+  }
 
   return (
-    <Component
-      {...props}
-      className={`${baseStyles} ${variants[variant]} ${className}`}
+    <motion.button
+      onClick={onClick}
+      type={type}
+      className={combinedClassName}
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.98 }}
     >
       <span className="relative z-10">{children}</span>
       {variant === "primary" && (
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       )}
-    </Component>
+    </motion.button>
   );
 }
