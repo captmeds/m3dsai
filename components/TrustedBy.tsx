@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const clients = [
-  "Bali Sunny Kids", "23Tribes", "Keira Shabira", "pilotintel", "MIX DJ", "lineaaaa", "movme"
+  "TechFlow", "RetailMax", "SecureFinance", "GrowthMarketing", "StartupBoost", "MediCare Plus"
 ];
 
 export default function TrustedBy() {

@@ -22,11 +22,10 @@ export const services = [
   {
     id: "ai-services",
     name: "AI Services",
-    description: "Intelligent automation and AI-powered solutions including OpenClaw setup and customization for your business.",
+    description: "Intelligent automation and AI-powered solutions for your business.",
     icon: "Brain",
     gradient: "from-purple-500 to-blue-500",
     features: [
-      "OpenClaw setup and customization",
       "AI chatbot integration",
       "Process automation",
       "Predictive analytics",
@@ -105,22 +104,22 @@ export const services = [
 export const testimonials = [
   {
     quote: "m3DSai transformed our outdated website into a lead-generating machine. Our conversion rate increased by 340% in just 3 months.",
-    name: "Tia",
-    company: "Bali Sunny Kids",
+    name: "Sarah Chen",
+    company: "TechFlow Solutions",
     role: "CEO",
     rating: 5
   },
   {
     quote: "The AI chatbot they built handles 80% of our customer inquiries automatically. It's like having a 24/7 support team.",
     name: "Marcus Johnson",
-    company: "lineaaaa",
+    company: "RetailMax",
     role: "Operations Director",
     rating: 5
   },
   {
     quote: "Their security audit uncovered vulnerabilities we didn't know existed. Professional, thorough, and actionable recommendations.",
-    name: "Elena Hermus",
-    company: "movme",
+    name: "Elena Rodriguez",
+    company: "SecureFinance",
     role: "CTO",
     rating: 5
   }
