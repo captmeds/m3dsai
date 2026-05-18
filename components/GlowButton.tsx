@@ -22,7 +22,7 @@ export default function GlowButton({
   type = "button"
 }: GlowButtonProps) {
   const baseStyles = "relative inline-flex items-center justify-center px-8 py-4 font-display font-semibold text-sm tracking-wide rounded-lg transition-all duration-300 overflow-hidden group";
-
+  
   const variants = {
     primary: "bg-accent-primary text-white hover:bg-blue-600 shadow-lg shadow-blue-500/25",
     ghost: "bg-transparent border border-border text-text-primary hover:border-accent-primary hover:text-accent-primary",
