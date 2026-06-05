@@ -40,11 +40,11 @@ export default function AnimatedCounter({
     <motion.span
       ref={ref}
       className={`font-mono font-bold ${className}`}
-      initial={{ opacity: 0, y: 20 }}
+      initial={false}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
     >
-      {prefix}{displayValue}{suffix}
+      {prefix}{isInView ? displayValue : target}{suffix}
     </motion.span>
   );
 }
