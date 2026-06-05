@@ -25,7 +25,7 @@ export default function ContactPage() {
             </FadeUp>
             <FadeUp delay={0.2}>
               <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-                Have a project in mind? We'd love to hear about it. Reach out and let's discuss how we can help your business grow.
+                Share the essentials about your business, goals, budget, and timeline. We'll receive a clear project brief through WhatsApp.
               </p>
             </FadeUp>
           </div>
@@ -35,7 +35,7 @@ export default function ContactPage() {
             <FadeUp>
               <div>
                 <h2 className="font-display text-2xl font-bold text-text-primary mb-6">
-                  Send us a message
+                  Build your project brief
                 </h2>
                 <ContactForm />
               </div>
@@ -70,20 +70,16 @@ export default function ContactPage() {
                   ))}
                 </div>
 
-                {/* Calendar Embed Placeholder */}
                 <div className="glass rounded-2xl p-6 mt-8">
                   <h3 className="font-display font-bold text-text-primary mb-4">
-                    Book a Meeting
+                    What M3DS AI Can Help With
                   </h3>
-                  <p className="text-text-secondary text-sm mb-4">
-                    Schedule a free 30-minute strategy call with our team.
-                  </p>
-                  <div className="bg-bg-card rounded-xl p-8 text-center">
-                    <p className="text-text-muted text-sm">
-                      [Calendly Embed Placeholder]<br />
-                      Add your Calendly link in production
-                    </p>
-                  </div>
+                  <ul className="space-y-3 text-text-secondary text-sm">
+                    <li>Website design, SEO structure, and performance tuning</li>
+                    <li>AI services, chatbot integration, and workflow automation</li>
+                    <li>Digital marketing, conversion optimization, and reporting</li>
+                    <li>Custom dashboards, KPI tracking, and security consulting</li>
+                  </ul>
                 </div>
               </div>
             </FadeUp>
