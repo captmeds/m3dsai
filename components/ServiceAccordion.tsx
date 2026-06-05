@@ -24,7 +24,7 @@ export default function ServiceAccordion({ items }: ServiceAccordionProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: index * 0.1 }}
-          className="glass rounded-xl overflow-hidden"
+          className="glass rounded-lg overflow-hidden"
         >
           <button
             onClick={() => setOpenIndex(openIndex === index ? null : index)}

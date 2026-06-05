@@ -15,18 +15,18 @@ interface ProjectCardProps {
 export default function ProjectCard({ client, service, title, outcome, index }: ProjectCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
+      initial={false}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
       className="group relative"
     >
       <Link href={`/our-work/`} className="block">
-        <div className="glass rounded-2xl overflow-hidden transition-all duration-300 group-hover:border-accent-primary/50 group-hover:shadow-lg group-hover:shadow-accent-glow">
+        <div className="glass rounded-lg overflow-hidden transition-all duration-300 group-hover:border-accent-primary/50 group-hover:shadow-lg group-hover:shadow-accent-glow">
           <div className="aspect-[4/3] bg-gradient-to-br from-bg-secondary to-bg-card relative overflow-hidden">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center">
-                <div className="w-20 h-20 rounded-2xl bg-accent-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent-primary/20 transition-colors">
+                <div className="w-20 h-20 rounded-lg bg-accent-primary/10 border border-accent-primary/25 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent-primary/20 transition-colors">
                   <span className="font-display text-3xl font-bold text-accent-primary">
                     {client.charAt(0)}
                   </span>

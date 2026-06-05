@@ -25,7 +25,7 @@ export default function ServiceCard({ name, description, icon, href, index }: Se
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -33,20 +33,20 @@ export default function ServiceCard({ name, description, icon, href, index }: Se
       className="group relative"
     >
       <Link href={href} className="block">
-        <div className="glass rounded-2xl p-8 h-full transition-all duration-300 group-hover:border-accent-primary/50 group-hover:shadow-lg group-hover:shadow-accent-glow">
-          <div className="w-12 h-12 rounded-xl bg-accent-primary/10 flex items-center justify-center mb-6 group-hover:bg-accent-primary/20 transition-colors duration-300">
-            <IconComponent className="w-6 h-6 text-accent-primary group-hover:rotate-[15deg] transition-transform duration-300" />
+        <div className="glass tech-surface rounded-lg p-8 h-full transition-all duration-300 group-hover:border-accent-primary/50 group-hover:shadow-lg group-hover:shadow-accent-glow">
+          <div className="relative z-10 w-12 h-12 rounded-md bg-accent-primary/10 border border-accent-primary/25 flex items-center justify-center mb-6 group-hover:bg-accent-primary/20 transition-colors duration-300">
+            <IconComponent className="w-6 h-6 text-accent-primary transition-transform duration-300" />
           </div>
 
-          <h3 className="font-display text-xl font-bold text-text-primary mb-3">
+          <h3 className="relative z-10 font-display text-xl font-bold text-text-primary mb-3">
             {name}
           </h3>
 
-          <p className="text-text-secondary text-sm leading-relaxed mb-6">
+          <p className="relative z-10 text-text-secondary text-sm leading-relaxed mb-6">
             {description}
           </p>
 
-          <span className="inline-flex items-center text-accent-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all duration-300">
+          <span className="relative z-10 inline-flex items-center text-accent-primary text-sm font-semibold group-hover:gap-3 gap-2 transition-all duration-300">
             Learn more 
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </span>

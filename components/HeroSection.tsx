@@ -11,32 +11,12 @@ export default function HeroSection() {
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-hero" />
 
-      {/* Animated gradient mesh */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{ duration: 8, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-          className="absolute top-1/4 -left-32 w-96 h-96 bg-accent-primary/20 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{
-            x: [0, -80, 0],
-            y: [0, 60, 0],
-          }}
-          transition={{ duration: 10, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-          className="absolute top-1/3 right-0 w-80 h-80 bg-accent-secondary/15 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{
-            x: [0, 60, 0],
-            y: [0, 40, 0],
-          }}
-          transition={{ duration: 12, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-          className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"
-        />
+      {/* Technical signal field */}
+      <div className="absolute inset-0 overflow-hidden opacity-70">
+        <div className="absolute left-0 right-0 top-24 h-px bg-gradient-to-r from-transparent via-accent-primary/35 to-transparent" />
+        <div className="absolute left-0 right-0 bottom-28 h-px bg-gradient-to-r from-transparent via-accent-secondary/25 to-transparent" />
+        <div className="absolute left-1/2 top-0 h-full w-px bg-gradient-to-b from-accent-primary/35 via-transparent to-transparent" />
+        <div className="absolute inset-x-0 top-1/3 h-28 bg-[linear-gradient(90deg,transparent,rgba(56,189,248,0.06),transparent)]" />
       </div>
 
       {/* Dot grid overlay */}
@@ -49,7 +29,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="font-mono text-xs uppercase tracking-[0.2em] text-accent-primary mb-6 block">
+            <span className="font-mono text-xs uppercase tracking-[0.22em] text-accent-primary mb-6 block">
               Smart Technology. Real Results.
             </span>
           </motion.div>
@@ -58,7 +38,7 @@ export default function HeroSection() {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-text-primary leading-[1.1] mb-6"
+            className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-text-primary leading-[1.04] mb-6"
           >
             IT Services That Actually{" "}
             <span className="gradient-text">Move Your Business Forward</span>
@@ -68,7 +48,7 @@ export default function HeroSection() {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-text-secondary text-lg sm:text-xl leading-relaxed mb-10 max-w-2xl mx-auto"
+            className="text-text-secondary text-lg sm:text-xl leading-relaxed mb-10 max-w-3xl mx-auto"
           >
             m3DSai delivers AI-powered IT service management — from smart websites to security consulting — built for small and medium businesses ready to grow.
           </motion.p>
@@ -94,7 +74,7 @@ export default function HeroSection() {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-wrap gap-8 justify-center"
+            className="glass tech-surface rounded-lg border-border-accent/50 px-6 py-5 flex flex-wrap gap-8 justify-center max-w-2xl mx-auto"
           >
             <div className="text-center">
               <AnimatedCounter target={150} suffix="+" className="text-2xl text-accent-primary" />

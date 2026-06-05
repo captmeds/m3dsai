@@ -16,11 +16,11 @@ interface PricingCardProps {
 export default function PricingCard({ tier, price, description, features, isPopular = false, index }: PricingCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-      className={`relative rounded-2xl p-8 h-full flex flex-col ${
+      className={`relative rounded-lg p-8 h-full flex flex-col ${
         isPopular 
           ? 'bg-gradient-to-b from-accent-primary/20 to-bg-card border-2 border-accent-primary/50 shadow-lg shadow-accent-glow' 
           : 'glass'

@@ -11,7 +11,7 @@ export default function TrustedBy() {
     <section className="py-16 border-y border-border bg-bg-secondary/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={false}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -27,7 +27,7 @@ export default function TrustedBy() {
             {clients.map((client, index) => (
               <motion.div
                 key={client}
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}

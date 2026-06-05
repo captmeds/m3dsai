@@ -15,11 +15,11 @@ interface TestimonialCardProps {
 export default function TestimonialCard({ quote, name, company, role, rating, index }: TestimonialCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
-      className="glass rounded-2xl p-8 relative"
+      className="glass rounded-lg p-8 relative"
     >
       <Quote className="w-10 h-10 text-accent-primary/20 absolute top-6 right-6" />
 

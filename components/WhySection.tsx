@@ -54,7 +54,7 @@ export default function WhySection() {
                     whileHover={{ x: 8 }}
                     className="flex gap-4 group"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-accent-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent-primary/20 transition-colors">
+                    <div className="w-12 h-12 rounded-md bg-accent-primary/10 border border-accent-primary/25 flex items-center justify-center flex-shrink-0 group-hover:bg-accent-primary/20 transition-colors">
                       <prop.icon className="w-6 h-6 text-accent-primary" />
                     </div>
                     <div>
@@ -74,8 +74,8 @@ export default function WhySection() {
           {/* Right visual */}
           <FadeUp delay={0.3}>
             <div className="relative">
-              <div className="glass rounded-2xl p-8 border border-border">
-                <div className="space-y-6">
+              <div className="glass tech-surface rounded-lg p-8 border border-border">
+                <div className="relative z-10 space-y-6">
                   <div className="flex items-center justify-between pb-4 border-b border-border">
                     <span className="font-mono text-xs text-text-muted uppercase tracking-wider">Comparison</span>
                     <span className="font-mono text-xs text-accent-primary">m3DSai vs Traditional</span>
@@ -107,9 +107,8 @@ export default function WhySection() {
                 </div>
               </div>
 
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent-primary/10 rounded-full blur-2xl" />
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent-secondary/10 rounded-full blur-2xl" />
+              <div className="absolute -top-3 -right-3 h-16 w-16 border-t border-r border-accent-primary/40" />
+              <div className="absolute -bottom-3 -left-3 h-16 w-16 border-b border-l border-accent-secondary/35" />
             </div>
           </FadeUp>
         </div>

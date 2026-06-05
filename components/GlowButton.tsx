@@ -21,12 +21,12 @@ export default function GlowButton({
   className = "",
   type = "button"
 }: GlowButtonProps) {
-  const baseStyles = "relative inline-flex items-center justify-center px-8 py-4 font-display font-semibold text-sm tracking-wide rounded-lg transition-all duration-300 overflow-hidden group";
+  const baseStyles = "relative inline-flex items-center justify-center px-8 py-4 font-display font-semibold text-sm tracking-wide rounded-md transition-all duration-300 overflow-hidden group";
   
   const variants = {
-    primary: "bg-accent-primary text-white hover:bg-blue-600 shadow-lg shadow-blue-500/25",
-    ghost: "bg-transparent border border-border text-text-primary hover:border-accent-primary hover:text-accent-primary",
-    outline: "bg-transparent border-2 border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-white"
+    primary: "bg-accent-primary text-bg-primary hover:bg-accent-secondary shadow-lg shadow-accent-glow",
+    ghost: "bg-bg-card/40 border border-border text-text-primary hover:border-accent-primary hover:text-accent-primary",
+    outline: "bg-transparent border border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-bg-primary"
   };
 
   const combinedClassName = `${baseStyles} ${variants[variant]} ${className}`;
@@ -36,7 +36,7 @@ export default function GlowButton({
       <Link href={href} className={combinedClassName}>
         <span className="relative z-10">{children}</span>
         {variant === "primary" && (
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-r from-accent-primary to-accent-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         )}
       </Link>
     );
@@ -52,7 +52,7 @@ export default function GlowButton({
     >
       <span className="relative z-10">{children}</span>
       {variant === "primary" && (
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-primary to-accent-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       )}
     </motion.button>
   );

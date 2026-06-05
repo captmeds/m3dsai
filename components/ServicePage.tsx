@@ -78,7 +78,7 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
             </div>
 
             <FadeUp delay={0.2}>
-              <div className={`glass rounded-2xl p-8 bg-gradient-to-br ${service.gradient} bg-opacity-5`}>
+              <div className={`glass rounded-lg p-8 bg-gradient-to-br ${service.gradient} bg-opacity-5`}>
                 <div className="grid grid-cols-2 gap-4">
                   {service.features.map((feature, i) => (
                     <motion.div
@@ -87,7 +87,7 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.4 + i * 0.1 }}
-                      className="bg-bg-card/50 rounded-xl p-4"
+                      className="bg-bg-card/50 rounded-lg p-4"
                     >
                       <Check className="w-5 h-5 text-accent-secondary mb-2" />
                       <p className="text-text-primary text-sm font-medium">{feature}</p>
@@ -117,7 +117,7 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
       {/* Pricing Teaser */}
       <section className="py-20 bg-bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="glass rounded-2xl p-12 text-center">
+          <div className="glass rounded-lg p-12 text-center">
             <FadeUp>
               <h2 className="font-display text-3xl font-bold text-text-primary mb-4">
                 Transparent Pricing
@@ -129,19 +129,19 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
 
             <FadeUp delay={0.1}>
               <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto mb-8">
-                <div className="bg-bg-card rounded-xl p-6">
+                <div className="bg-bg-card rounded-lg p-6">
                   <p className="font-mono text-xs text-text-muted uppercase mb-2">Starter</p>
                   <p className="font-display text-3xl font-bold text-text-primary">
                     ${typeof service.pricing.starter === 'number' ? service.pricing.starter : service.pricing.starter}
                   </p>
                 </div>
-                <div className="bg-bg-card rounded-xl p-6 border-2 border-accent-primary">
+                <div className="bg-bg-card rounded-lg p-6 border border-accent-primary">
                   <p className="font-mono text-xs text-accent-primary uppercase mb-2">Growth</p>
                   <p className="font-display text-3xl font-bold text-text-primary">
                     ${typeof service.pricing.growth === 'number' ? service.pricing.growth : service.pricing.growth}
                   </p>
                 </div>
-                <div className="bg-bg-card rounded-xl p-6">
+                <div className="bg-bg-card rounded-lg p-6">
                   <p className="font-mono text-xs text-text-muted uppercase mb-2">Enterprise</p>
                   <p className="font-display text-3xl font-bold text-text-primary">Custom</p>
                 </div>
