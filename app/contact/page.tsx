@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 import FadeUp from "@/components/animations/FadeUp";
 import SectionLabel from "@/components/SectionLabel";
@@ -55,10 +55,8 @@ export default function ContactPage() {
 
                 <div className="space-y-6">
                   {[
-                    { icon: Mail, label: "Email", value: "hello@m3dsai.com" },
-                    { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
-                    { icon: MapPin, label: "Address", value: "123 Tech Street, Suite 100\nSan Francisco, CA 94105" },
-                    { icon: Clock, label: "Hours", value: "Mon - Fri: 9AM - 6PM PST\n24/7 Emergency Support" }
+                    { icon: Mail, label: "Email", value: "admin@m3dsai.com" },
+                    { icon: Phone, label: "WhatsApp", value: "+17474440033" }
                   ].map((item, index) => (
                     <div key={index} className="flex gap-4">
                       <div className="w-12 h-12 rounded-xl bg-accent-primary/10 flex items-center justify-center flex-shrink-0">
