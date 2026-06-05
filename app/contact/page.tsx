@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 import FadeUp from "@/components/animations/FadeUp";
 import SectionLabel from "@/components/SectionLabel";
@@ -56,8 +56,7 @@ export default function ContactPage() {
 
                 <div className="space-y-6">
                   {[
-                    { icon: Mail, label: "Email", value: "admin@m3dsai.com" },
-                    { icon: Phone, label: "WhatsApp", value: "+17474440033" }
+                    { icon: Mail, label: "Email", value: "admin@m3dsai.com" }
                   ].map((item, index) => (
                     <div key={index} className="flex gap-4">
                       <div className="w-12 h-12 rounded-md bg-accent-primary/10 border border-accent-primary/25 flex items-center justify-center flex-shrink-0">
