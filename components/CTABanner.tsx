@@ -8,8 +8,10 @@ export default function CTABanner() {
   return (
     <section className="py-24 lg:py-32 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-accent-primary/10 via-bg-secondary to-accent-secondary/10" />
-      <div className="absolute inset-0 dot-grid opacity-[0.03]" />
+      <div className="absolute inset-0 bg-bg-secondary" />
+      <div className="absolute inset-0 dot-grid opacity-[0.14]" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-primary/45 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent-secondary/35 to-transparent" />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <FadeUp>

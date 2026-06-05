@@ -40,9 +40,9 @@ export const slideLeft = {
 export const glowPulse = {
   animate: {
     boxShadow: [
-      "0 0 20px rgba(79,142,247,0.15)",
-      "0 0 40px rgba(79,142,247,0.35)",
-      "0 0 20px rgba(79,142,247,0.15)"
+      "0 0 20px rgba(56,189,248,0.15)",
+      "0 0 40px rgba(34,211,238,0.3)",
+      "0 0 20px rgba(56,189,248,0.15)"
     ],
     transition: {
       duration: 2,

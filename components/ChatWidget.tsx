@@ -125,7 +125,7 @@ export default function ChatWidget() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="fixed bottom-24 right-6 z-50 w-[380px] max-w-[calc(100vw-3rem)] h-[500px] max-h-[calc(100vh-8rem)] glass rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+            className="fixed bottom-24 right-6 z-50 w-[380px] max-w-[calc(100vw-3rem)] h-[500px] max-h-[calc(100vh-8rem)] glass rounded-lg shadow-2xl flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-accent-primary to-accent-secondary p-4 flex items-center gap-3">
@@ -158,7 +158,7 @@ export default function ChatWidget() {
                       <User className="w-4 h-4 text-accent-secondary" />
                     )}
                   </div>
-                  <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm ${
+                  <div className={`max-w-[80%] rounded-lg px-4 py-2.5 text-sm ${
                     message.sender === "bot"
                       ? "bg-bg-card text-text-primary rounded-tl-none"
                       : "bg-accent-primary text-white rounded-tr-none"
@@ -177,7 +177,7 @@ export default function ChatWidget() {
                   <div className="w-8 h-8 rounded-full bg-accent-primary/20 flex items-center justify-center">
                     <Bot className="w-4 h-4 text-accent-primary" />
                   </div>
-                  <div className="bg-bg-card rounded-2xl rounded-tl-none px-4 py-3 flex gap-1">
+                  <div className="bg-bg-card rounded-lg rounded-tl-none px-4 py-3 flex gap-1">
                     <motion.div
                       animate={{ y: [0, -4, 0] }}
                       transition={{ duration: 0.6, repeat: Infinity, delay: 0 }}

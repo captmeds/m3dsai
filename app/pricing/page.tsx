@@ -114,7 +114,7 @@ export default function PricingPage() {
           </FadeUp>
 
           <FadeUp delay={0.1}>
-            <div className="glass rounded-2xl overflow-hidden">
+            <div className="glass rounded-lg overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
@@ -181,7 +181,7 @@ export default function PricingPage() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp>
-            <div className="glass rounded-2xl p-12">
+            <div className="glass rounded-lg p-12">
               <HelpCircle className="w-12 h-12 text-accent-primary mx-auto mb-6" />
               <h2 className="font-display text-3xl font-bold text-text-primary mb-4">
                 Not sure which plan?

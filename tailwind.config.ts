@@ -30,8 +30,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["Syne", "sans-serif"],
-        body: ["DM Sans", "sans-serif"],
+        display: ["Space Grotesk", "sans-serif"],
+        body: ["Inter", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
       },
       backgroundImage: {
