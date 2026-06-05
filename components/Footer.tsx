@@ -86,9 +86,8 @@ export default function Footer() {
           <div>
             <h4 className="font-display font-bold text-text-primary mb-4">Contact</h4>
             <ul className="space-y-3 text-text-secondary text-sm">
-              <li>hello@m3dsai.com</li>
-              <li>+1 (555) 123-4567</li>
-              <li>123 Tech Street, Suite 100<br />San Francisco, CA 94105</li>
+              <li>admin@m3dsai.com</li>
+              <li>WhatsApp: +17474440033</li>
             </ul>
           </div>
         </div>
