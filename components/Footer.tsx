@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 
 const footerLinks = {
   services: [
@@ -34,18 +33,6 @@ export default function Footer() {
             <p className="text-text-secondary text-sm leading-relaxed mb-6">
               Smart Technology. Real Results. AI-powered IT services for SMBs ready to grow.
             </p>
-            <div className="flex gap-4">
-              {[Github, Twitter, Linkedin, Mail].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-10 h-10 rounded-lg bg-bg-card flex items-center justify-center text-text-muted hover:text-accent-primary hover:bg-accent-primary/10 transition-all duration-300"
-                  aria-label="Social link"
-                >
-                  <Icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Services */}
@@ -87,7 +74,6 @@ export default function Footer() {
             <h4 className="font-display font-bold text-text-primary mb-4">Contact</h4>
             <ul className="space-y-3 text-text-secondary text-sm">
               <li>admin@m3dsai.com</li>
-              <li>WhatsApp: +17474440033</li>
             </ul>
           </div>
         </div>
