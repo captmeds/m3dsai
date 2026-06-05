@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import { projects } from "@/lib/data";
 
-const categories = ["All", "Website Design", "AI Services", "Digital Marketing", "Custom Dashboards", "Security Consulting"];
+const categories = ["All", ...Array.from(new Set(projects.map(project => project.service)))];
 
 export default function FilterableGrid() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -60,6 +60,9 @@ export default function FilterableGrid() {
                 service={project.service}
                 title={project.title}
                 outcome={project.outcome}
+                description={project.description}
+                displayUrl={project.displayUrl}
+                url={project.url}
                 index={index}
               />
             </motion.div>

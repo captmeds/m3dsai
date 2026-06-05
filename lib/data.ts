@@ -128,52 +128,40 @@ export const testimonials = [
 
 export const projects = [
   {
-    id: "techflow-website",
-    client: "TechFlow Solutions",
+    id: "xjkt-fun",
+    client: "XJKT Fun",
     service: "Website Design",
-    title: "Enterprise SaaS Platform Redesign",
-    outcome: "340% increase in conversions",
-    description: "Complete redesign of TechFlow's enterprise platform with focus on user experience and conversion optimization."
+    title: "Digital Experience Website",
+    outcome: "Live client project",
+    description: "A client web presence built to present the brand clearly and make the experience easy to explore.",
+    displayUrl: "www.xjkt-fun"
   },
   {
-    id: "retailmax-ai",
-    client: "RetailMax",
-    service: "AI Services",
-    title: "AI-Powered Customer Support",
-    outcome: "80% automation rate",
-    description: "Implemented intelligent chatbot and automated ticket routing system."
+    id: "bali-sunny-kids",
+    client: "Bali Sunny Kids",
+    service: "Website Design",
+    title: "Sunny Universe Brand Website",
+    outcome: "Live client website",
+    description: "A warm, brand-led website experience for Bali Sunny Kids and its community.",
+    url: "https://www.balisunnykids.com/"
   },
   {
-    id: "securefinance-security",
-    client: "SecureFinance",
-    service: "Security Consulting",
-    title: "Enterprise Security Overhaul",
-    outcome: "Zero vulnerabilities post-audit",
-    description: "Comprehensive security assessment and remediation for fintech platform."
+    id: "23tribes",
+    client: "23Tribes",
+    service: "E-commerce Website",
+    title: "Tribal-Inspired Streetwear Store",
+    outcome: "Live commerce website",
+    description: "A bold commerce experience for a tribal-inspired streetwear brand.",
+    url: "https://www.23tribes.com/"
   },
   {
-    id: "growthmarketing-dashboard",
-    client: "GrowthMarketing Inc",
-    service: "Custom Dashboards",
-    title: "Real-Time Marketing Analytics",
-    outcome: "45% faster decision making",
-    description: "Built unified dashboard integrating data from 12 marketing channels."
-  },
-  {
-    id: "startupboost-digital",
-    client: "StartupBoost",
-    service: "Digital Marketing",
-    title: "Full-Funnel Growth Campaign",
-    outcome: "280% ROI in 6 months",
-    description: "End-to-end digital marketing strategy from awareness to conversion."
-  },
-  {
-    id: "healthcare-ai",
-    client: "MediCare Plus",
-    service: "AI Services",
-    title: "Patient Intake Automation",
-    outcome: "60% reduction in wait times",
-    description: "AI-powered patient triage and scheduling system."
+    id: "keira-shabira",
+    client: "Keira Shabira",
+    service: "Personal Brand Website",
+    title: "Actress & Singer Profile Website",
+    outcome: "Live personal website",
+    description: "A focused personal-brand website for Indonesian actress and singer Keira Shabira.",
+    url: "https://keirashabira.website/"
   }
 ];
 
