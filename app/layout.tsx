@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -16,7 +17,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`
+            (function () {
+              try {
+                var storedTheme = window.localStorage.getItem("m3dsai-theme");
+                var theme = storedTheme === "light" || storedTheme === "dark"
+                  ? storedTheme
+                  : (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+                document.documentElement.dataset.theme = theme;
+              } catch (error) {
+                document.documentElement.dataset.theme = "dark";
+              }
+            })();
+          `}
+        </Script>
+      </head>
       <body className="antialiased">
         <Navbar />
         <main>{children}</main>
