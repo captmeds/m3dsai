@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 
 interface TestimonialCardProps {
@@ -14,13 +11,7 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ quote, name, company, role, rating, index }: TestimonialCardProps) {
   return (
-    <motion.div
-      initial={false}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
-      className="glass rounded-lg p-8 relative"
-    >
+    <div className="glass rounded-lg p-8 relative" data-index={index}>
       <Quote className="w-10 h-10 text-accent-primary/20 absolute top-6 right-6" />
 
       <div className="flex gap-1 mb-6">
@@ -33,7 +24,7 @@ export default function TestimonialCard({ quote, name, company, role, rating, in
       </div>
 
       <p className="text-text-primary text-base leading-relaxed mb-8 relative z-10">
-        "{quote}"
+        &ldquo;{quote}&rdquo;
       </p>
 
       <div className="flex items-center gap-4">
@@ -45,6 +36,6 @@ export default function TestimonialCard({ quote, name, company, role, rating, in
           <p className="text-text-secondary text-sm">{role} at {company}</p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

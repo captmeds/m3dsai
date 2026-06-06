@@ -1,13 +1,28 @@
 "use client";
 
 import PageTransition from "@/components/PageTransition";
+import JsonLd from "@/components/JsonLd";
 import FadeUp from "@/components/animations/FadeUp";
 import SectionLabel from "@/components/SectionLabel";
 import FilterableGrid from "@/components/FilterableGrid";
+import { breadcrumbSchema, graphSchema, webPageSchema } from "@/lib/schema";
+
+const title = "M3DS AI Work and Client Projects";
+const description =
+  "A selection of M3DS AI client projects including Bali Sunny Kids, 23Tribes, Keira Shabira, XJKT Fun and more.";
 
 export default function OurWorkPage() {
   return (
     <PageTransition>
+      <JsonLd
+        data={graphSchema([
+          webPageSchema({ path: "/our-work/", title, description, pageType: "CollectionPage" }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Our Work", path: "/our-work/" },
+          ]),
+        ])}
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-20">
         <div className="absolute inset-0 bg-gradient-to-b from-accent-primary/5 to-transparent" />

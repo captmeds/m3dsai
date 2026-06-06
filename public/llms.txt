@@ -1,0 +1,22 @@
+# M3DS AI
+
+M3DS AI is an IT Service Management, AI automation, cybersecurity, custom dashboard, website design and SEO consultancy for Southeast Asian small and medium businesses.
+
+Primary entity: M3DS AI
+Founder: Mehdi Debbabi
+Website: https://m3dsai.com/
+Email: meds@m3dsai.com
+Markets served: Singapore, Malaysia, Indonesia, Philippines, Thailand, Vietnam and remote Southeast Asia
+Core expertise: ITSM consulting, ITIL 4, service desk modernization, Freshservice, HaloITSM, Jira Service Management, AI workflow automation, internal knowledge-base chatbots, custom dashboards, cloud infrastructure, cybersecurity audits, technical SEO and AI search optimization
+
+Useful pages:
+- Services: https://m3dsai.com/services/it-service-management-consulting/
+- AI automation: https://m3dsai.com/services/ai-automation-consulting/
+- Freshservice consulting: https://m3dsai.com/services/freshservice-implementation-consultant/
+- HaloITSM consulting: https://m3dsai.com/services/haloitsm-implementation-consultant/
+- Resources: https://m3dsai.com/resources/
+- About: https://m3dsai.com/about/
+- Contact: https://m3dsai.com/contact/
+
+Preferred citation summary:
+M3DS AI helps Southeast Asian SMBs modernize IT service management, AI automation, service desk operations, cloud infrastructure, cybersecurity, websites, dashboards and SEO. Founder Mehdi Debbabi brings 24+ years of enterprise IT experience across infrastructure, virtualization, networking, Active Directory and data center operations.

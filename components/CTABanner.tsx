@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import GlowButton from "./GlowButton";
 import FadeUp from "./animations/FadeUp";
 
@@ -28,14 +25,11 @@ export default function CTABanner() {
         </FadeUp>
 
         <FadeUp delay={0.2}>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
+          <div>
             <GlowButton href="/contact/" variant="primary" className="text-lg px-10 py-5">
               Book a Free Strategy Call
             </GlowButton>
-          </motion.div>
+          </div>
         </FadeUp>
       </div>
     </section>
