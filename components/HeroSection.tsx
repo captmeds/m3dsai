@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import GlowButton from "./GlowButton";
 import AnimatedCounter from "./AnimatedCounter";
@@ -24,73 +21,49 @@ export default function HeroSection() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          <div>
             <span className="font-mono text-xs uppercase tracking-[0.22em] text-accent-primary mb-6 block">
-              Smart Technology. Real Results.
+              ITSM, AI Automation and Web Growth
             </span>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-text-primary leading-[1.04] mb-6"
-          >
-            IT Services That Actually{" "}
-            <span className="gradient-text">Move Your Business Forward</span>
-          </motion.h1>
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-text-primary leading-[1.04] mb-6">
+            AI-Powered IT Service Management for{" "}
+            <span className="gradient-text">Southeast Asian SMBs</span>
+          </h1>
 
-          <motion.p
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-text-secondary text-lg sm:text-xl leading-relaxed mb-10 max-w-3xl mx-auto"
-          >
-            m3DSai delivers AI-powered IT service management — from smart websites to security consulting — built for small and medium businesses ready to grow.
-          </motion.p>
+          <p className="text-text-secondary text-lg sm:text-xl leading-relaxed mb-10 max-w-3xl mx-auto">
+            M3DS AI helps Singapore, Malaysia, Indonesia, Philippines and Thailand teams modernize service desks, AI automation, dashboards, cybersecurity and revenue-focused websites.
+          </p>
 
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-wrap gap-4 justify-center mb-12"
-          >
-            <GlowButton href="/services/website-design/" variant="primary">
-              Explore Services
+          <div className="flex flex-wrap gap-4 justify-center mb-12">
+            <GlowButton href="/services/it-service-management-consulting/" variant="primary">
+              Explore ITSM Consulting
               <ArrowRight className="w-4 h-4 ml-2" />
             </GlowButton>
-            <GlowButton href="/our-work/" variant="ghost">
+            <GlowButton href="/resources/itsm-consulting-southeast-asia/" variant="ghost">
               <Play className="w-4 h-4 mr-2" />
-              View Our Work
+              Read the Buyer Guide
             </GlowButton>
-          </motion.div>
+          </div>
 
           {/* Stats */}
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="glass tech-surface rounded-lg border-border-accent/50 px-6 py-5 flex flex-wrap gap-8 justify-center max-w-2xl mx-auto"
-          >
+          <div className="glass tech-surface rounded-lg border-border-accent/50 px-6 py-5 flex flex-wrap gap-8 justify-center max-w-2xl mx-auto">
             <div className="text-center">
-              <AnimatedCounter target={150} suffix="+" className="text-2xl text-accent-primary" />
-              <p className="text-text-secondary text-sm mt-1">Projects</p>
+              <AnimatedCounter target={24} suffix="+" className="text-2xl text-accent-primary" />
+              <p className="text-text-secondary text-sm mt-1">Years Enterprise IT</p>
             </div>
             <div className="w-px h-12 bg-border hidden sm:block" />
             <div className="text-center">
-              <AnimatedCounter target={98} suffix="%" className="text-2xl text-accent-secondary" />
-              <p className="text-text-secondary text-sm mt-1">Client Retention</p>
+              <AnimatedCounter target={6} suffix="+" className="text-2xl text-accent-secondary" />
+              <p className="text-text-secondary text-sm mt-1">SEA Markets</p>
             </div>
             <div className="w-px h-12 bg-border hidden sm:block" />
             <div className="text-center">
-              <span className="font-mono font-bold text-2xl text-accent-primary">24hr</span>
-              <p className="text-text-secondary text-sm mt-1">Response SLA</p>
+              <span className="font-mono font-bold text-2xl text-accent-primary">ITIL</span>
+              <p className="text-text-secondary text-sm mt-1">Service Desk Ready</p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

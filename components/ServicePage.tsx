@@ -1,14 +1,15 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowLeft, Check, Calendar } from "lucide-react";
 import Link from "next/link";
 import PageTransition from "@/components/PageTransition";
+import JsonLd from "@/components/JsonLd";
 import FadeUp from "@/components/animations/FadeUp";
 import SectionLabel from "@/components/SectionLabel";
 import ServiceAccordion from "@/components/ServiceAccordion";
 import GlowButton from "@/components/GlowButton";
 import { services, faqs } from "@/lib/data";
+import { breadcrumbSchema, faqSchema, graphSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 
 interface ServicePageProps {
   serviceId: string;
@@ -20,6 +21,8 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
   if (!service) return null;
 
   const serviceFaqs = faqs.slice(0, 3);
+  const path = `/services/${service.id}/`;
+  const title = `${service.name} Services for SMBs`;
 
   const accordionItems = service.features.map((feature, index) => ({
     title: feature,
@@ -34,6 +37,18 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
 
   return (
     <PageTransition>
+      <JsonLd
+        data={graphSchema([
+          webPageSchema({ path, title, description: service.description, pageType: "ServicePage" }),
+          serviceSchema({ path, name: title, description: service.description }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/services/" },
+            { name: service.name, path },
+          ]),
+          faqSchema(serviceFaqs),
+        ])}
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-accent-primary/5 to-transparent" />
@@ -56,7 +71,7 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
               <FadeUp delay={0.1}>
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary mb-6">
                   {service.name}{" "}
-                  <span className="gradient-text">Services</span>
+                  <span className="gradient-text">for Growing SMBs</span>
                 </h1>
               </FadeUp>
               <FadeUp delay={0.2}>
@@ -81,17 +96,13 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
               <div className={`glass rounded-lg p-8 bg-gradient-to-br ${service.gradient} bg-opacity-5`}>
                 <div className="grid grid-cols-2 gap-4">
                   {service.features.map((feature, i) => (
-                    <motion.div
+                    <div
                       key={i}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.4 + i * 0.1 }}
                       className="bg-bg-card/50 rounded-lg p-4"
                     >
                       <Check className="w-5 h-5 text-accent-secondary mb-2" />
                       <p className="text-text-primary text-sm font-medium">{feature}</p>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -106,7 +117,7 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
           <FadeUp>
             <SectionLabel text="Details" className="mb-4" />
             <h2 className="font-display text-3xl font-bold text-text-primary mb-8">
-              What's Included
+              What&apos;s Included
             </h2>
           </FadeUp>
 
@@ -185,7 +196,7 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
               Ready to get started?
             </h2>
             <p className="text-text-secondary mb-8">
-              Book a free consultation and let's discuss how our {service.name.toLowerCase()} services can help your business grow.
+              Book a free consultation and let&apos;s discuss how our {service.name.toLowerCase()} services can help your business grow.
             </p>
             <GlowButton href="/contact/" variant="primary" className="text-lg px-10 py-5">
               <Calendar className="w-5 h-5 mr-2" />

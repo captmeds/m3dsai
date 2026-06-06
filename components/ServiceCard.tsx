@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowRight, Globe, Brain, TrendingUp, LayoutDashboard, Shield } from "lucide-react";
 import Link from "next/link";
 
@@ -24,14 +21,7 @@ export default function ServiceCard({ name, description, icon, href, index }: Se
   const IconComponent = iconMap[icon] || Globe;
 
   return (
-    <motion.div
-      initial={false}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ y: -6, transition: { duration: 0.2 } }}
-      className="group relative"
-    >
+    <div className="group relative transition-transform duration-300 hover:-translate-y-1" data-index={index}>
       <Link href={href} className="block">
         <div className="glass tech-surface rounded-lg p-8 h-full transition-all duration-300 group-hover:border-accent-primary/50 group-hover:shadow-lg group-hover:shadow-accent-glow">
           <div className="relative z-10 w-12 h-12 rounded-md bg-accent-primary/10 border border-accent-primary/25 flex items-center justify-center mb-6 group-hover:bg-accent-primary/20 transition-colors duration-300">
@@ -52,6 +42,6 @@ export default function ServiceCard({ name, description, icon, href, index }: Se
           </span>
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 }

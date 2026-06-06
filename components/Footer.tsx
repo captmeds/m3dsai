@@ -4,16 +4,25 @@ import Link from "next/link";
 
 const footerLinks = {
   services: [
-    { name: "Website Design", href: "/services/website-design/" },
-    { name: "AI Services", href: "/services/ai-services/" },
-    { name: "Digital Marketing", href: "/services/digital-marketing/" },
-    { name: "Custom Dashboards", href: "/services/custom-dashboards/" },
-    { name: "Security Consulting", href: "/services/security-consulting/" }
+    { name: "ITSM Consulting", href: "/services/it-service-management-consulting/" },
+    { name: "AI Automation", href: "/services/ai-automation-consulting/" },
+    { name: "Freshservice Consulting", href: "/services/freshservice-implementation-consultant/" },
+    { name: "HaloITSM Consulting", href: "/services/haloitsm-implementation-consultant/" },
+    { name: "Website Design and SEO", href: "/services/website-design-seo/" }
   ],
   company: [
+    { name: "About", href: "/about/" },
+    { name: "Resources", href: "/resources/" },
     { name: "Our Work", href: "/our-work/" },
     { name: "Pricing", href: "/pricing/" },
     { name: "Contact", href: "/contact/" }
+  ],
+  growth: [
+    { name: "Singapore", href: "/locations/singapore/" },
+    { name: "Malaysia", href: "/locations/malaysia/" },
+    { name: "Indonesia", href: "/locations/indonesia/" },
+    { name: "ITSM Comparisons", href: "/comparisons/" },
+    { name: "AI Search Guide", href: "/resources/ai-search-optimization-b2b-services/" }
   ]
 };
 
@@ -21,7 +30,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border bg-bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
@@ -31,7 +40,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-text-secondary text-sm leading-relaxed mb-6">
-              Smart Technology. Real Results. AI-powered IT services for SMBs ready to grow.
+              AI-powered IT service management, automation, dashboards, cybersecurity, and search-ready websites for Southeast Asian SMBs.
             </p>
           </div>
 
@@ -69,11 +78,28 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Growth */}
+          <div>
+            <h4 className="font-display font-bold text-text-primary mb-4">Growth</h4>
+            <ul className="space-y-3">
+              {footerLinks.growth.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href}
+                    className="text-text-secondary hover:text-accent-primary text-sm transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Contact */}
           <div>
             <h4 className="font-display font-bold text-text-primary mb-4">Contact</h4>
             <ul className="space-y-3 text-text-secondary text-sm">
-              <li>admin@m3dsai.com</li>
+              <li>meds@m3dsai.com</li>
             </ul>
           </div>
         </div>
@@ -84,10 +110,10 @@ export default function Footer() {
             © 2026 m3DSai. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="text-text-muted hover:text-text-secondary text-sm transition-colors">
+            <Link href="/privacy-policy/" className="text-text-muted hover:text-text-secondary text-sm transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-text-muted hover:text-text-secondary text-sm transition-colors">
+            <Link href="/terms-of-service/" className="text-text-muted hover:text-text-secondary text-sm transition-colors">
               Terms of Service
             </Link>
           </div>

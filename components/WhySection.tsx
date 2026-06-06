@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Check, Cpu, DollarSign, Layers } from "lucide-react";
 import FadeUp from "./animations/FadeUp";
 import SectionLabel from "./SectionLabel";
@@ -50,10 +47,7 @@ export default function WhySection() {
             <div className="space-y-6">
               {valueProps.map((prop, index) => (
                 <FadeUp key={prop.title} delay={0.3 + index * 0.1}>
-                  <motion.div
-                    whileHover={{ x: 8 }}
-                    className="flex gap-4 group"
-                  >
+                  <div className="flex gap-4 group transition-transform duration-300 hover:translate-x-2">
                     <div className="w-12 h-12 rounded-md bg-accent-primary/10 border border-accent-primary/25 flex items-center justify-center flex-shrink-0 group-hover:bg-accent-primary/20 transition-colors">
                       <prop.icon className="w-6 h-6 text-accent-primary" />
                     </div>
@@ -65,7 +59,7 @@ export default function WhySection() {
                         {prop.description}
                       </p>
                     </div>
-                  </motion.div>
+                  </div>
                 </FadeUp>
               ))}
             </div>
@@ -87,13 +81,9 @@ export default function WhySection() {
                     { feature: "Pricing", m3dsai: "Transparent", traditional: "Hidden fees" },
                     { feature: "Support", m3dsai: "Dedicated", traditional: "Ticket-based" },
                     { feature: "Results", m3dsai: "Guaranteed", traditional: "Variable" }
-                  ].map((row, i) => (
-                    <motion.div
+                  ].map((row) => (
+                    <div
                       key={row.feature}
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.5 + i * 0.1 }}
                       className="grid grid-cols-3 gap-4 items-center"
                     >
                       <span className="text-text-secondary text-sm">{row.feature}</span>
@@ -102,7 +92,7 @@ export default function WhySection() {
                         <span className="text-text-primary text-sm font-medium">{row.m3dsai}</span>
                       </div>
                       <span className="text-text-muted text-sm">{row.traditional}</span>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>

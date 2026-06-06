@@ -3,12 +3,68 @@ import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
+import JsonLd from "@/components/JsonLd";
+import LazyChatWidget from "@/components/LazyChatWidget";
+import { graphSchema, localBusinessSchema, organizationSchema, websiteSchema } from "@/lib/schema";
+import { absoluteUrl, siteConfig } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "m3DSai — Smart Technology. Real Results.",
-  description: "AI-powered IT service management for SMBs. Website design, AI services, digital marketing, custom dashboards, and security consulting.",
-  keywords: "IT services, AI, website design, digital marketing, security consulting, SMB",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.defaultTitle,
+    template: "%s | M3DS AI",
+  },
+  description: siteConfig.defaultDescription,
+  keywords: [
+    "IT service management consulting",
+    "ITSM consultant Southeast Asia",
+    "AI automation consulting",
+    "Freshservice consultant",
+    "HaloITSM consultant",
+    "Jira Service Management consultant",
+    "cybersecurity consultant SMB",
+    "custom dashboards",
+    "technical SEO consultant",
+  ],
+  alternates: {
+    canonical: siteConfig.url,
+  },
+  icons: {
+    icon: "/favicon.svg",
+  },
+  openGraph: {
+    type: "website",
+    locale: siteConfig.locale,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: siteConfig.defaultTitle,
+    description: siteConfig.defaultDescription,
+    images: [
+      {
+        url: absoluteUrl(siteConfig.ogImage),
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} - ${siteConfig.tagline}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.defaultTitle,
+    description: siteConfig.defaultDescription,
+    images: [absoluteUrl(siteConfig.ogImage)],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -17,7 +73,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+    >
       <head>
         <Script id="theme-init" strategy="beforeInteractive">
           {`
@@ -36,10 +95,11 @@ export default function RootLayout({
         </Script>
       </head>
       <body className="antialiased">
+        <JsonLd data={graphSchema([organizationSchema(), websiteSchema(), localBusinessSchema()])} />
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <ChatWidget />
+        <LazyChatWidget />
       </body>
     </html>
   );

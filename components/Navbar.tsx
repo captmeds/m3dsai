@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import Link from "next/link";
 import { navLinks } from "@/lib/data";
@@ -83,10 +82,7 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.nav
-        initial={false}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
             ? 'bg-bg-primary/80 backdrop-blur-xl border-b border-border' 
@@ -135,56 +131,32 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-      </motion.nav>
+      </nav>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "100vh" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-bg-primary/95 backdrop-blur-xl md:hidden"
-          >
-            <div className="flex flex-col items-center justify-center h-full gap-8">
-              {navLinks.map((link, index) => (
-                <motion.div
-                  key={link.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-bg-primary/95 backdrop-blur-xl md:hidden">
+          <div className="flex flex-col items-center justify-center h-full gap-8">
+            {navLinks.map((link) => (
+              <div key={link.name}>
+                <Link
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="font-display text-3xl font-bold text-text-primary hover:text-accent-primary transition-colors"
                 >
-                  <Link
-                    href={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="font-display text-3xl font-bold text-text-primary hover:text-accent-primary transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </motion.div>
-              ))}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="flex justify-center"
-              >
-                <ThemeToggle theme={theme} onSelect={selectTheme} />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-              >
-                <GlowButton href="/contact/" variant="primary">
-                  Book a Demo
-                </GlowButton>
-              </motion.div>
+                  {link.name}
+                </Link>
+              </div>
+            ))}
+            <div className="flex justify-center">
+              <ThemeToggle theme={theme} onSelect={selectTheme} />
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            <GlowButton href="/contact/" variant="primary">
+              Book a Demo
+            </GlowButton>
+          </div>
+        </div>
+      )}
     </>
   );
 }

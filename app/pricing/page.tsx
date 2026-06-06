@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { HelpCircle, Check } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
+import JsonLd from "@/components/JsonLd";
 import FadeUp from "@/components/animations/FadeUp";
 import SectionLabel from "@/components/SectionLabel";
 import PricingCard from "@/components/PricingCard";
@@ -11,6 +11,11 @@ import PricingToggle from "@/components/PricingToggle";
 import GlowButton from "@/components/GlowButton";
 import ServiceAccordion from "@/components/ServiceAccordion";
 import { services, faqs } from "@/lib/data";
+import { breadcrumbSchema, faqSchema, graphSchema, webPageSchema } from "@/lib/schema";
+
+const title = "M3DS AI Pricing";
+const description =
+  "Pricing for M3DS AI ITSM consulting, AI automation, website SEO, custom dashboards, digital marketing and cybersecurity services.";
 
 export default function PricingPage() {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -35,6 +40,16 @@ export default function PricingPage() {
 
   return (
     <PageTransition>
+      <JsonLd
+        data={graphSchema([
+          webPageSchema({ path: "/pricing/", title, description }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Pricing", path: "/pricing/" },
+          ]),
+          faqSchema(faqs),
+        ])}
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-20">
         <div className="absolute inset-0 bg-gradient-to-b from-accent-primary/5 to-transparent" />
@@ -127,13 +142,10 @@ export default function PricingPage() {
                   </thead>
                   <tbody>
                     {allFeatures.map((feature, index) => (
-                      <motion.tr
+                      <tr
                         key={feature}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.05 }}
                         className="border-b border-border last:border-0"
+                        data-index={index}
                       >
                         <td className="p-6 text-text-secondary text-sm">{feature}</td>
                         <td className="p-6 text-center">
@@ -145,7 +157,7 @@ export default function PricingPage() {
                         <td className="p-6 text-center">
                           <Check className="w-5 h-5 mx-auto text-accent-secondary" />
                         </td>
-                      </motion.tr>
+                      </tr>
                     ))}
                   </tbody>
                 </table>
@@ -187,7 +199,7 @@ export default function PricingPage() {
                 Not sure which plan?
               </h2>
               <p className="text-text-secondary mb-8">
-                Let's discuss your needs and find the perfect solution for your business.
+                Let&apos;s discuss your needs and find the perfect solution for your business.
               </p>
               <GlowButton href="/contact/" variant="primary" className="text-lg px-10 py-5">
                 Book a Free Call
