@@ -71,143 +71,10 @@ type LineItem = {
   rate: number;
 };
 
-const clients: Client[] = [
-  {
-    id: "c-1",
-    name: "Straits Managed Services",
-    market: "Singapore",
-    contact: "ops@straits.example",
-    revenue: 18400,
-    outstanding: 0,
-    currency: "SGD",
-    health: "Current",
-  },
-  {
-    id: "c-2",
-    name: "Nusantara Cloud Co.",
-    market: "Indonesia",
-    contact: "finance@nusantara.example",
-    revenue: 146000000,
-    outstanding: 42000000,
-    currency: "IDR",
-    health: "Watch",
-  },
-  {
-    id: "c-3",
-    name: "Kuala Digital Labs",
-    market: "Malaysia",
-    contact: "ap@kdl.example",
-    revenue: 58700,
-    outstanding: 12600,
-    currency: "MYR",
-    health: "Priority",
-  },
-  {
-    id: "c-4",
-    name: "Bangkok Service Desk",
-    market: "Thailand",
-    contact: "billing@bsd.example",
-    revenue: 318000,
-    outstanding: 0,
-    currency: "THB",
-    health: "Current",
-  },
-];
-
-const invoices: Invoice[] = [
-  {
-    id: "M3DS-2026-0018",
-    clientId: "c-1",
-    clientName: "Straits Managed Services",
-    issueDate: "2026-06-01",
-    dueDate: "2026-06-15",
-    amount: 9200,
-    currency: "SGD",
-    status: "Paid",
-  },
-  {
-    id: "M3DS-2026-0019",
-    clientId: "c-2",
-    clientName: "Nusantara Cloud Co.",
-    issueDate: "2026-06-03",
-    dueDate: "2026-06-17",
-    amount: 42000000,
-    currency: "IDR",
-    status: "Sent",
-  },
-  {
-    id: "M3DS-2026-0020",
-    clientId: "c-3",
-    clientName: "Kuala Digital Labs",
-    issueDate: "2026-05-20",
-    dueDate: "2026-06-04",
-    amount: 12600,
-    currency: "MYR",
-    status: "Overdue",
-  },
-  {
-    id: "M3DS-2026-0021",
-    clientId: "c-4",
-    clientName: "Bangkok Service Desk",
-    issueDate: "2026-06-06",
-    dueDate: "2026-06-20",
-    amount: 87000,
-    currency: "THB",
-    status: "Draft",
-  },
-  {
-    id: "M3DS-2026-0022",
-    clientId: "c-1",
-    clientName: "Straits Managed Services",
-    issueDate: "2026-06-07",
-    dueDate: "2026-06-21",
-    amount: 5800,
-    currency: "SGD",
-    status: "Sent",
-  },
-];
-
-const payments: Payment[] = [
-  {
-    id: "PAY-1048",
-    invoiceId: "M3DS-2026-0018",
-    clientName: "Straits Managed Services",
-    method: "Card",
-    reference: "pi_3P8sea_ok",
-    amount: 9200,
-    currency: "SGD",
-    date: "2026-06-06 10:42 UTC+8",
-  },
-  {
-    id: "PAY-1047",
-    invoiceId: "M3DS-2026-0017",
-    clientName: "Bangkok Service Desk",
-    method: "Wise",
-    reference: "WISE-SEA-7751",
-    amount: 62000,
-    currency: "THB",
-    date: "2026-06-04 14:18 UTC+7",
-  },
-  {
-    id: "PAY-1046",
-    invoiceId: "M3DS-2026-0016",
-    clientName: "Kuala Digital Labs",
-    method: "Bank Transfer",
-    reference: "MBB-20260602-92",
-    amount: 18400,
-    currency: "MYR",
-    date: "2026-06-02 09:05 UTC+8",
-  },
-];
-
-const revenueSeries = [
-  { label: "Jan", value: 28 },
-  { label: "Feb", value: 34 },
-  { label: "Mar", value: 31 },
-  { label: "Apr", value: 46 },
-  { label: "May", value: 52 },
-  { label: "Jun", value: 61 },
-];
+const clients: Client[] = [];
+const invoices: Invoice[] = [];
+const payments: Payment[] = [];
+const revenueSeries: Array<{ label: string; value: number }> = [];
 
 const navItems: Array<{ id: View; label: string; icon: typeof BarChart3 }> = [
   { id: "dashboard", label: "Dashboard", icon: BarChart3 },
@@ -287,7 +154,7 @@ function StatCard({
         <span className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-accent-primary/25 bg-accent-primary/10 text-accent-primary">
           <Icon className="h-5 w-5" />
         </span>
-        <span className="text-xs text-emerald-200">+12.4%</span>
+        <span className="text-xs text-text-muted">No data</span>
       </div>
       <p className="text-sm text-text-secondary">{label}</p>
       <p className="mt-1 text-2xl font-semibold text-text-primary">{value}</p>
@@ -327,6 +194,13 @@ function InvoiceTable({
           </tr>
         </thead>
         <tbody className="divide-y divide-border">
+          {rows.length === 0 && (
+            <tr>
+              <td colSpan={6} className="py-10 text-center text-sm text-text-muted">
+                No invoices yet.
+              </td>
+            </tr>
+          )}
           {rows.map((invoice) => (
             <tr key={invoice.id} className="text-text-secondary">
               <td className="py-4 pr-4 font-mono text-xs text-text-primary">{invoice.id}</td>
@@ -360,7 +234,7 @@ function InvoiceTable({
 }
 
 function RevenueChart() {
-  const max = Math.max(...revenueSeries.map((item) => item.value));
+  const max = Math.max(...revenueSeries.map((item) => item.value), 0);
 
   return (
     <div className="rounded-lg border border-border bg-bg-card/82 p-5 shadow-lg shadow-black/10">
@@ -376,30 +250,37 @@ function RevenueChart() {
           Monthly <ChevronDown className="h-4 w-4" />
         </button>
       </div>
-      <div className="flex h-64 items-end gap-3 border-b border-l border-border px-2 pb-2">
-        {revenueSeries.map((item) => (
-          <div key={item.label} className="flex h-full flex-1 flex-col justify-end gap-2">
-            <div
-              className="min-h-8 rounded-t-md bg-gradient-to-t from-accent-primary/55 to-cyan-200/90 shadow-[0_0_24px_rgba(56,189,248,0.22)]"
-              style={{ height: `${(item.value / max) * 100}%` }}
-              title={`${item.label}: ${item.value}k`}
-            />
-            <span className="text-center text-xs text-text-muted">{item.label}</span>
+      <div className="flex h-64 items-center justify-center rounded-md border border-dashed border-border bg-bg-secondary/45 px-4 text-center text-sm text-text-muted">
+        {max === 0 ? (
+          <span>Revenue chart will populate when live invoice data is connected.</span>
+        ) : (
+          <div className="flex h-full w-full items-end gap-3 border-b border-l border-border px-2 pb-2">
+            {revenueSeries.map((item) => (
+              <div key={item.label} className="flex h-full flex-1 flex-col justify-end gap-2">
+                <div
+                  className="min-h-8 rounded-t-md bg-gradient-to-t from-accent-primary/55 to-cyan-200/90 shadow-[0_0_24px_rgba(56,189,248,0.22)]"
+                  style={{ height: `${(item.value / max) * 100}%` }}
+                  title={`${item.label}: ${item.value}k`}
+                />
+                <span className="text-center text-xs text-text-muted">{item.label}</span>
+              </div>
+            ))}
           </div>
-        ))}
+        )}
       </div>
     </div>
   );
 }
 
 function NewInvoiceModal({ onClose }: { onClose: () => void }) {
-  const [selectedClient, setSelectedClient] = useState(clients[0].id);
+  const [clientName, setClientName] = useState("");
+  const [clientMarket, setClientMarket] = useState("");
+  const [clientContact, setClientContact] = useState("");
+  const [currency, setCurrency] = useState<Client["currency"]>("SGD");
   const [lineItems, setLineItems] = useState<LineItem[]>([
-    { id: 1, description: "ITSM platform advisory retainer", quantity: 1, rate: 4200 },
-    { id: 2, description: "Automation workflow implementation", quantity: 2, rate: 1600 },
+    { id: 1, description: "", quantity: 1, rate: 0 },
   ]);
 
-  const activeClient = clients.find((client) => client.id === selectedClient) ?? clients[0];
   const subtotal = lineItems.reduce((total, item) => total + item.quantity * item.rate, 0);
   const tax = subtotal * 0.09;
   const total = subtotal + tax;
@@ -411,7 +292,7 @@ function NewInvoiceModal({ onClose }: { onClose: () => void }) {
   function addLineItem() {
     setLineItems((items) => [
       ...items,
-      { id: Date.now(), description: "New billing item", quantity: 1, rate: 0 },
+      { id: Date.now(), description: "", quantity: 1, rate: 0 },
     ]);
   }
 
@@ -434,20 +315,49 @@ function NewInvoiceModal({ onClose }: { onClose: () => void }) {
 
         <div className="grid gap-5 p-5 lg:grid-cols-[1.3fr_0.7fr]">
           <div className="space-y-4">
-            <label className="block text-sm text-text-secondary">
-              Client
-              <select
-                value={selectedClient}
-                onChange={(event) => setSelectedClient(event.target.value)}
-                className="mt-2 w-full rounded-md border border-border bg-bg-secondary px-3 py-2 text-text-primary outline-none"
-              >
-                {clients.map((client) => (
-                  <option key={client.id} value={client.id}>
-                    {client.name}
-                  </option>
-                ))}
-              </select>
-            </label>
+            <div className="grid gap-3 md:grid-cols-2">
+              <label className="block text-sm text-text-secondary">
+                Client
+                <input
+                  value={clientName}
+                  onChange={(event) => setClientName(event.target.value)}
+                  placeholder="Client name"
+                  className="mt-2 w-full rounded-md border border-border bg-bg-secondary px-3 py-2 text-text-primary outline-none"
+                />
+              </label>
+              <label className="block text-sm text-text-secondary">
+                Currency
+                <select
+                  value={currency}
+                  onChange={(event) => setCurrency(event.target.value as Client["currency"])}
+                  className="mt-2 w-full rounded-md border border-border bg-bg-secondary px-3 py-2 text-text-primary outline-none"
+                >
+                  {["SGD", "MYR", "IDR", "PHP", "THB"].map((item) => (
+                    <option key={item} value={item}>
+                      {item}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="block text-sm text-text-secondary">
+                Market
+                <input
+                  value={clientMarket}
+                  onChange={(event) => setClientMarket(event.target.value)}
+                  placeholder="Market"
+                  className="mt-2 w-full rounded-md border border-border bg-bg-secondary px-3 py-2 text-text-primary outline-none"
+                />
+              </label>
+              <label className="block text-sm text-text-secondary">
+                Billing contact
+                <input
+                  value={clientContact}
+                  onChange={(event) => setClientContact(event.target.value)}
+                  placeholder="Email or contact"
+                  className="mt-2 w-full rounded-md border border-border bg-bg-secondary px-3 py-2 text-text-primary outline-none"
+                />
+              </label>
+            </div>
 
             <div className="space-y-3">
               {lineItems.map((item) => (
@@ -481,7 +391,7 @@ function NewInvoiceModal({ onClose }: { onClose: () => void }) {
                     />
                   </label>
                   <div className="flex items-end">
-                    <IconButton label={`Remove ${item.description}`} onClick={() => removeLineItem(item.id)}>
+                    <IconButton label="Remove line item" onClick={() => removeLineItem(item.id)}>
                       <Trash2 className="h-4 w-4" />
                     </IconButton>
                   </div>
@@ -500,20 +410,22 @@ function NewInvoiceModal({ onClose }: { onClose: () => void }) {
 
           <aside className="rounded-lg border border-border bg-bg-card/82 p-4">
             <h3 className="text-base font-semibold text-text-primary">Invoice Preview</h3>
-            <p className="mt-1 text-sm text-text-secondary">{activeClient.name}</p>
-            <p className="text-xs text-text-muted">{activeClient.market} · {activeClient.contact}</p>
+            <p className="mt-1 text-sm text-text-secondary">{clientName || "Client not selected"}</p>
+            <p className="text-xs text-text-muted">
+              {[clientMarket, clientContact].filter(Boolean).join(" · ") || "Add client details to preview the invoice."}
+            </p>
             <div className="my-5 space-y-3 border-y border-border py-4 text-sm">
               <div className="flex justify-between gap-4 text-text-secondary">
                 <span>Subtotal</span>
-                <span>{formatMoney(subtotal, activeClient.currency)}</span>
+                <span>{formatMoney(subtotal, currency)}</span>
               </div>
               <div className="flex justify-between gap-4 text-text-secondary">
                 <span>Tax estimate</span>
-                <span>{formatMoney(tax, activeClient.currency)}</span>
+                <span>{formatMoney(tax, currency)}</span>
               </div>
               <div className="flex justify-between gap-4 text-lg font-semibold text-text-primary">
                 <span>Total</span>
-                <span>{formatMoney(total, activeClient.currency)}</span>
+                <span>{formatMoney(total, currency)}</span>
               </div>
             </div>
             <div className="grid gap-2">
@@ -533,8 +445,9 @@ function NewInvoiceModal({ onClose }: { onClose: () => void }) {
 
 function RecordPaymentModal({ onClose }: { onClose: () => void }) {
   const [method, setMethod] = useState<PaymentMethod>("Bank Transfer");
-  const [invoiceId, setInvoiceId] = useState(invoices[1].id);
-  const selectedInvoice = invoices.find((invoice) => invoice.id === invoiceId) ?? invoices[1];
+  const openInvoices = invoices.filter((invoice) => invoice.status !== "Paid");
+  const [invoiceId, setInvoiceId] = useState(openInvoices[0]?.id ?? "");
+  const selectedInvoice = openInvoices.find((invoice) => invoice.id === invoiceId);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4 py-8 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="record-payment-title">
@@ -555,8 +468,12 @@ function RecordPaymentModal({ onClose }: { onClose: () => void }) {
               value={invoiceId}
               onChange={(event) => setInvoiceId(event.target.value)}
               className="mt-2 w-full rounded-md border border-border bg-bg-secondary px-3 py-2 text-text-primary outline-none"
+              disabled={openInvoices.length === 0}
             >
-              {invoices.filter((invoice) => invoice.status !== "Paid").map((invoice) => (
+              {openInvoices.length === 0 && (
+                <option value="">No open invoices</option>
+              )}
+              {openInvoices.map((invoice) => (
                 <option key={invoice.id} value={invoice.id}>
                   {invoice.id} · {invoice.clientName}
                 </option>
@@ -589,20 +506,25 @@ function RecordPaymentModal({ onClose }: { onClose: () => void }) {
               Amount
               <input
                 readOnly
-                value={formatMoney(selectedInvoice.amount, selectedInvoice.currency)}
+                value={selectedInvoice ? formatMoney(selectedInvoice.amount, selectedInvoice.currency) : ""}
+                placeholder="Select an open invoice"
                 className="mt-2 w-full rounded-md border border-border bg-bg-secondary px-3 py-2 text-text-primary outline-none"
               />
             </label>
             <label className="block text-sm text-text-secondary">
               Reference
               <input
-                defaultValue="BT-20260607-8842"
+                placeholder="Payment reference"
                 className="mt-2 w-full rounded-md border border-border bg-bg-secondary px-3 py-2 text-text-primary outline-none"
               />
             </label>
           </div>
 
-          <button type="button" className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-accent-primary px-4 py-3 text-sm font-semibold text-slate-950 transition hover:brightness-110">
+          <button
+            type="button"
+            disabled={!selectedInvoice}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-accent-primary px-4 py-3 text-sm font-semibold text-slate-950 transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
+          >
             <Check className="h-4 w-4" /> Mark invoice as paid
           </button>
         </div>
@@ -632,8 +554,8 @@ export default function BillingPlatformPrototype() {
     });
   }, [query, statusFilter]);
 
-  const totalRevenueSgd = 87200;
-  const outstandingSgd = 18450;
+  const totalRevenueSgd = 0;
+  const outstandingSgd = 0;
   const paidCount = invoices.filter((invoice) => invoice.status === "Paid").length;
   const overdueCount = invoices.filter((invoice) => invoice.status === "Overdue").length;
 
@@ -775,6 +697,11 @@ export default function BillingPlatformPrototype() {
                   <p className="text-sm text-text-muted">Revenue, outstanding balances and billing health per client.</p>
                 </div>
                 <div className="grid gap-4 md:grid-cols-2">
+                  {clients.length === 0 && (
+                    <div className="rounded-lg border border-dashed border-border bg-bg-card/70 p-8 text-center text-sm text-text-muted md:col-span-2">
+                      No clients yet.
+                    </div>
+                  )}
                   {clients.map((client) => (
                     <article key={client.id} className="rounded-lg border border-border bg-bg-card/82 p-5 shadow-lg shadow-black/10">
                       <div className="mb-5 flex items-start justify-between gap-4">
@@ -826,6 +753,11 @@ export default function BillingPlatformPrototype() {
                   </button>
                 </div>
                 <div className="space-y-3">
+                  {payments.length === 0 && (
+                    <div className="rounded-lg border border-dashed border-border bg-bg-secondary/60 p-8 text-center text-sm text-text-muted">
+                      No payments recorded yet.
+                    </div>
+                  )}
                   {payments.map((payment) => (
                     <article key={payment.id} className="grid gap-4 rounded-lg border border-border bg-bg-secondary/60 p-4 md:grid-cols-[1fr_auto] md:items-center">
                       <div>
