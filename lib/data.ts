@@ -146,45 +146,6 @@ export const testimonials = [
   }
 ];
 
-export const projects = [
-  {
-    id: "xjkt-fun",
-    client: "XJKT Fun",
-    service: "Website Design",
-    title: "Digital Experience Website",
-    outcome: "Live client project",
-    description: "A client web presence built to present the brand clearly and make the experience easy to explore.",
-    displayUrl: "www.xjkt-fun"
-  },
-  {
-    id: "bali-sunny-kids",
-    client: "Bali Sunny Kids",
-    service: "Website Design",
-    title: "Sunny Universe Brand Website",
-    outcome: "Live client website",
-    description: "A warm, brand-led website experience for Bali Sunny Kids and its community.",
-    url: "https://www.balisunnykids.com/"
-  },
-  {
-    id: "23tribes",
-    client: "23Tribes",
-    service: "E-commerce Website",
-    title: "Tribal-Inspired Streetwear Store",
-    outcome: "Live commerce website",
-    description: "A bold commerce experience for a tribal-inspired streetwear brand.",
-    url: "https://www.23tribes.com/"
-  },
-  {
-    id: "keira-shabira",
-    client: "Keira Shabira",
-    service: "Personal Brand Website",
-    title: "Actress & Singer Profile Website",
-    outcome: "Live personal website",
-    description: "A focused personal-brand website for Indonesian actress and singer Keira Shabira.",
-    url: "https://keirashabira.website/"
-  }
-];
-
 export const processSteps = [
   {
     number: "01",

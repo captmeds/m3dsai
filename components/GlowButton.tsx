@@ -8,15 +8,19 @@ interface GlowButtonProps {
   variant?: "primary" | "ghost" | "outline";
   className?: string;
   type?: "button" | "submit";
+  target?: string;
+  rel?: string;
 }
 
-export default function GlowButton({ 
-  children, 
-  href, 
-  onClick, 
+export default function GlowButton({
+  children,
+  href,
+  onClick,
   variant = "primary",
   className = "",
-  type = "button"
+  type = "button",
+  target,
+  rel
 }: GlowButtonProps) {
   const baseStyles = "relative inline-flex items-center justify-center px-8 py-4 font-display font-semibold text-sm tracking-wide rounded-md transition-all duration-300 overflow-hidden group hover:scale-[1.03] active:scale-[0.98]";
   
@@ -30,7 +34,7 @@ export default function GlowButton({
 
   if (href) {
     return (
-      <Link href={href} className={combinedClassName}>
+      <Link href={href} className={combinedClassName} target={target} rel={rel}>
         <span className="relative z-10">{children}</span>
         {variant === "primary" && (
           <div className="absolute inset-0 bg-gradient-to-r from-accent-primary to-accent-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

@@ -4,12 +4,12 @@ import PageTransition from "@/components/PageTransition";
 import JsonLd from "@/components/JsonLd";
 import FadeUp from "@/components/animations/FadeUp";
 import SectionLabel from "@/components/SectionLabel";
-import FilterableGrid from "@/components/FilterableGrid";
+import PortfolioGrid from "@/components/PortfolioGrid";
 import { breadcrumbSchema, graphSchema, webPageSchema } from "@/lib/schema";
 
-const title = "M3DS AI Work and Client Projects";
+const title = "Our Work | M3DS AI Portfolio";
 const description =
-  "A selection of M3DS AI client projects including Bali Sunny Kids, 23Tribes, Keira Shabira, XJKT Fun and more.";
+  "A selection of websites and digital experiences built by M3DS AI, including XJKT, ZAAAS, Bali Sunny Kids, 23Tribes, and Keira Shabira.";
 
 export default function OurWorkPage() {
   return (
@@ -23,31 +23,34 @@ export default function OurWorkPage() {
           ]),
         ])}
       />
+
       {/* Hero */}
-      <section className="relative pt-32 pb-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-accent-primary/5 to-transparent" />
+      <section className="relative pt-32 pb-16 sm:pb-20">
+        <div className="absolute inset-0 dot-grid opacity-40" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-b from-accent-primary/5 to-transparent" aria-hidden="true" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp>
-            <SectionLabel text="Our Work" className="mb-4" />
+            <SectionLabel text="Portfolio" className="mb-4" />
           </FadeUp>
           <FadeUp delay={0.1}>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary mb-6">
-              Results That{" "}
-              <span className="gradient-text">Speak for Themselves</span>
+              Our <span className="gradient-text">Work</span>
             </h1>
           </FadeUp>
           <FadeUp delay={0.2}>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              A selection of live client projects, including Bali Sunny Kids, 23Tribes, Keira Shabira, XJKT Fun, and more.
+            <p className="mx-auto max-w-2xl text-lg text-text-secondary">
+              M3DS AI designs and builds modern websites, brands, and digital
+              experiences. Here&apos;s a selection of live projects we&apos;ve shipped
+              for clients across Southeast Asia and beyond.
             </p>
           </FadeUp>
         </div>
       </section>
 
-      {/* Projects Grid */}
-      <section className="py-12">
+      {/* Portfolio Grid */}
+      <section className="pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FilterableGrid />
+          <PortfolioGrid />
         </div>
       </section>
     </PageTransition>
