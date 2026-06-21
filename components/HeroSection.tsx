@@ -26,7 +26,7 @@ export default function HeroSection() {
 
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-text-primary leading-[1.04] mb-10">
             AI-Powered IT Service Management for{" "}
-            <span className="gradient-text">Southeast Asian SMBs</span>
+            <span className="gradient-text">Southeast Asian &amp; Australian SMBs</span>
           </h1>
 
           {/* OpenClaw banner */}
