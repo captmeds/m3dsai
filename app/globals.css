@@ -188,6 +188,18 @@ textarea:focus {
   box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.13), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
+/* Blog article prose */
+.prose-blog { color: var(--text-secondary); line-height: 1.8; }
+.prose-blog h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin: 2.5rem 0 1rem; }
+.prose-blog h3 { font-size: 1.125rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem; }
+.prose-blog p { margin-bottom: 1.25rem; }
+.prose-blog ul, .prose-blog ol { margin: 0 0 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.prose-blog ul { list-style: disc; }
+.prose-blog ol { list-style: decimal; }
+.prose-blog li { padding-left: 0.25rem; }
+.prose-blog strong { color: var(--text-primary); font-weight: 600; }
+.prose-blog em { color: var(--text-secondary); font-style: italic; }
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
