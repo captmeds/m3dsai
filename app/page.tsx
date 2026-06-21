@@ -6,7 +6,9 @@ import WhySection from "@/components/WhySection";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import TestimonialCard from "@/components/TestimonialCard";
 import CTABanner from "@/components/CTABanner";
+import GlowButton from "@/components/GlowButton";
 import JsonLd from "@/components/JsonLd";
+import { Bot, MessageSquare, Mic, Brain, Clock, ArrowRight } from "lucide-react";
 import FadeUp from "@/components/animations/FadeUp";
 import SectionLabel from "@/components/SectionLabel";
 import { faqSchema, graphSchema, webPageSchema } from "@/lib/schema";
@@ -85,6 +87,61 @@ export default function Home() {
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* OpenClaw Spotlight */}
+      <section className="py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeUp>
+            <div className="glass rounded-2xl p-8 sm:p-12 lg:p-16 relative overflow-hidden border border-accent-primary/30">
+              <div className="absolute -top-24 -right-24 w-80 h-80 bg-accent-glow/20 rounded-full blur-3xl pointer-events-none" />
+              <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-10 lg:gap-16 items-center relative z-10">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="inline-flex items-center justify-center w-11 h-11 rounded-lg bg-accent-primary/15 text-accent-primary">
+                      <Bot className="w-6 h-6" />
+                    </span>
+                    <SectionLabel text="Featured Service" />
+                  </div>
+                  <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-5">
+                    Your Own Private{" "}
+                    <span className="gradient-text">AI Agent</span>, Live in 48 Hours
+                  </h2>
+                  <p className="text-text-secondary leading-relaxed text-lg mb-8 max-w-2xl">
+                    We are a certified OpenClaw partner for Southeast Asia. We deploy, configure and
+                    support a private AI agent that works across WhatsApp, Telegram, Slack, Discord and
+                    50+ tools — reading email, managing files, automating workflows and remembering your
+                    business context.
+                  </p>
+                  <div className="grid sm:grid-cols-2 gap-3 mb-8 max-w-xl">
+                    {[
+                      { icon: MessageSquare, label: "50+ messaging & tool integrations" },
+                      { icon: Brain, label: "Persistent memory of your business" },
+                      { icon: Mic, label: "Voice commands & spoken replies" },
+                      { icon: Clock, label: "Fully set up and live in 48 hours" },
+                    ].map((item) => (
+                      <div key={item.label} className="flex items-center gap-3 text-text-secondary">
+                        <item.icon className="w-5 h-5 text-accent-primary shrink-0" />
+                        <span className="text-sm">{item.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <GlowButton href="/services/openclaw/">
+                    Explore OpenClaw Setup &amp; Support
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </GlowButton>
+                </div>
+                <div className="hidden lg:flex items-center justify-center">
+                  <div className="relative">
+                    <div className="w-48 h-48 rounded-full bg-accent-primary/10 flex items-center justify-center border border-accent-primary/30">
+                      <Bot className="w-24 h-24 text-accent-primary" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </FadeUp>
         </div>
       </section>
 
