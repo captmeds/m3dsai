@@ -5,6 +5,15 @@ export const services = [
     description:
       "Turn repetitive service desk, admin and reporting work into governed AI-assisted workflows that save time without losing control.",
     icon: "Brain",
+    features: [
+      "Workflow automation design",
+      "RAG chatbot deployment",
+      "Ticket triage & routing",
+      "AI agent integration",
+      "Knowledge base optimisation",
+      "Ongoing automation support",
+    ],
+    pricing: { starter: 799, growth: 1799, enterprise: "Custom" },
   },
   {
     id: "cloud-infrastructure-devops",
@@ -12,6 +21,15 @@ export const services = [
     description:
       "Modernize hosting, deployment and reliability practices without overengineering the stack or losing cost control.",
     icon: "Cloud",
+    features: [
+      "Cloud architecture review",
+      "Migration planning & execution",
+      "CI/CD pipeline setup",
+      "Cost optimisation",
+      "Monitoring & alerting",
+      "Security hardening",
+    ],
+    pricing: { starter: 999, growth: 1999, enterprise: "Custom" },
   },
   {
     id: "custom-dashboards-bi",
@@ -19,6 +37,15 @@ export const services = [
     description:
       "Give leaders a reliable view of service quality, sales performance, operations and risk without manual spreadsheet reporting.",
     icon: "LayoutDashboard",
+    features: [
+      "KPI definition workshop",
+      "Multi-source data integration",
+      "Real-time dashboard build",
+      "Interactive reporting",
+      "Mobile access",
+      "Automated alerts",
+    ],
+    pricing: { starter: 599, growth: 1299, enterprise: "Custom" },
   },
   {
     id: "website-design-seo",
@@ -26,6 +53,15 @@ export const services = [
     description:
       "Launch a fast, credible website with service pages, schema, content structure and conversion paths built for organic lead generation.",
     icon: "Globe",
+    features: [
+      "Custom design & development",
+      "SEO-optimized architecture",
+      "Schema.org structured data",
+      "Core Web Vitals tuning",
+      "Conversion optimisation",
+      "Ongoing maintenance",
+    ],
+    pricing: { starter: 499, growth: 999, enterprise: "Custom" },
   },
 ];
 
