@@ -1,6 +1,5 @@
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import GlowButton from "./GlowButton";
-import AnimatedCounter from "./AnimatedCounter";
 
 export default function HeroSection() {
   return (
@@ -21,11 +20,9 @@ export default function HeroSection() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="max-w-4xl mx-auto text-center">
-          <div>
-            <span className="font-mono text-xs uppercase tracking-[0.22em] text-accent-primary mb-6 block">
-              ITSM, AI Automation and Web Growth
-            </span>
-          </div>
+          <span className="font-mono text-xs uppercase tracking-[0.22em] text-accent-primary mb-6 block">
+            AI Automation and Web Growth
+          </span>
 
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-text-primary leading-[1.04] mb-6">
             AI-Powered IT Service Management for{" "}
@@ -33,36 +30,17 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-text-secondary text-lg sm:text-xl leading-relaxed mb-10 max-w-3xl mx-auto">
-            M3DS AI helps Singapore, Malaysia, Indonesia, Philippines and Thailand teams modernize service desks, AI automation, dashboards, cybersecurity and revenue-focused websites.
+            M3DS AI helps Singapore, Malaysia, Indonesia, Philippines and Thailand teams deploy private AI agents, automate operations, modernize infrastructure and grow with SEO-ready websites.
           </p>
 
-          <div className="flex flex-wrap gap-4 justify-center mb-12">
-            <GlowButton href="/services/it-service-management-consulting/" variant="primary">
-              Explore ITSM Consulting
+          <div className="flex flex-wrap gap-4 justify-center">
+            <GlowButton href="/services/openclaw/" variant="primary">
+              Get OpenClaw Setup
               <ArrowRight className="w-4 h-4 ml-2" />
             </GlowButton>
-            <GlowButton href="/resources/itsm-consulting-southeast-asia/" variant="ghost">
-              <Play className="w-4 h-4 mr-2" />
-              Read the Buyer Guide
+            <GlowButton href="/services/" variant="ghost">
+              View All Services
             </GlowButton>
-          </div>
-
-          {/* Stats */}
-          <div className="glass tech-surface rounded-lg border-border-accent/50 px-6 py-5 flex flex-wrap gap-8 justify-center max-w-2xl mx-auto">
-            <div className="text-center">
-              <AnimatedCounter target={24} suffix="+" className="text-2xl text-accent-primary" />
-              <p className="text-text-secondary text-sm mt-1">Years Enterprise IT</p>
-            </div>
-            <div className="w-px h-12 bg-border hidden sm:block" />
-            <div className="text-center">
-              <AnimatedCounter target={6} suffix="+" className="text-2xl text-accent-secondary" />
-              <p className="text-text-secondary text-sm mt-1">SEA Markets</p>
-            </div>
-            <div className="w-px h-12 bg-border hidden sm:block" />
-            <div className="text-center">
-              <span className="font-mono font-bold text-2xl text-accent-primary">ITIL</span>
-              <p className="text-text-secondary text-sm mt-1">Service Desk Ready</p>
-            </div>
           </div>
         </div>
       </div>

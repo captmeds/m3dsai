@@ -58,7 +58,6 @@ export default function Home() {
         ])}
       />
       <HeroSection />
-      <TrustedBy />
 
       {/* OpenClaw Spotlight */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -140,6 +139,8 @@ export default function Home() {
           </FadeUp>
         </div>
       </section>
+
+      <TrustedBy />
 
       {/* What We Do */}
       <section className="py-16 lg:py-24">
