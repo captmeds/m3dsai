@@ -5,6 +5,7 @@ export const services = [
     description:
       "Turn repetitive service desk, admin and reporting work into governed AI-assisted workflows that save time without losing control.",
     icon: "Brain",
+    gradient: "from-purple-500 to-blue-500",
     features: [
       "Workflow automation design",
       "RAG chatbot deployment",
@@ -21,6 +22,7 @@ export const services = [
     description:
       "Modernize hosting, deployment and reliability practices without overengineering the stack or losing cost control.",
     icon: "Cloud",
+    gradient: "from-sky-500 to-cyan-400",
     features: [
       "Cloud architecture review",
       "Migration planning & execution",
@@ -37,6 +39,7 @@ export const services = [
     description:
       "Give leaders a reliable view of service quality, sales performance, operations and risk without manual spreadsheet reporting.",
     icon: "LayoutDashboard",
+    gradient: "from-emerald-400 to-cyan-500",
     features: [
       "KPI definition workshop",
       "Multi-source data integration",
@@ -53,6 +56,7 @@ export const services = [
     description:
       "Launch a fast, credible website with service pages, schema, content structure and conversion paths built for organic lead generation.",
     icon: "Globe",
+    gradient: "from-blue-500 to-cyan-400",
     features: [
       "Custom design & development",
       "SEO-optimized architecture",
