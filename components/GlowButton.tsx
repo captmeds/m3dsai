@@ -10,6 +10,7 @@ interface GlowButtonProps {
   type?: "button" | "submit";
   target?: string;
   rel?: string;
+  disabled?: boolean;
 }
 
 export default function GlowButton({
@@ -20,7 +21,8 @@ export default function GlowButton({
   className = "",
   type = "button",
   target,
-  rel
+  rel,
+  disabled = false,
 }: GlowButtonProps) {
   const baseStyles = "relative inline-flex items-center justify-center px-8 py-4 font-display font-semibold text-sm tracking-wide rounded-md transition-all duration-300 overflow-hidden group hover:scale-[1.03] active:scale-[0.98]";
   
@@ -47,7 +49,8 @@ export default function GlowButton({
     <button
       onClick={onClick}
       type={type}
-      className={combinedClassName}
+      disabled={disabled}
+      className={`${combinedClassName} disabled:opacity-60 disabled:cursor-not-allowed`}
     >
       <span className="relative z-10">{children}</span>
       {variant === "primary" && (
