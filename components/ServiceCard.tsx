@@ -1,4 +1,4 @@
-import { ArrowRight, Globe, Brain, TrendingUp, LayoutDashboard, Shield } from "lucide-react";
+import { ArrowRight, Globe, Brain, TrendingUp, LayoutDashboard, Shield, Bot, Cloud } from "lucide-react";
 import Link from "next/link";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -6,7 +6,9 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Brain,
   TrendingUp,
   LayoutDashboard,
-  Shield
+  Shield,
+  Bot,
+  Cloud,
 };
 
 interface ServiceCardProps {

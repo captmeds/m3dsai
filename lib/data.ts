@@ -1,105 +1,32 @@
 export const services = [
   {
-    id: "website-design",
-    name: "Website Design",
-    description: "Stunning, conversion-focused websites built for speed and scale.",
-    icon: "Globe",
-    gradient: "from-blue-500 to-cyan-400",
-    features: [
-      "Custom design & development",
-      "SEO-optimized architecture",
-      "Mobile-first responsive",
-      "CMS integration",
-      "Performance tuning",
-      "Ongoing maintenance"
-    ],
-    pricing: {
-      starter: 499,
-      growth: 999,
-      enterprise: "Custom"
-    }
-  },
-  {
-    id: "ai-services",
-    name: "AI Services",
-    description: "Intelligent automation and AI-powered solutions including OpenClaw setup and customization for your business.",
+    id: "ai-automation-consulting",
+    name: "AI Automation Consulting",
+    description:
+      "Turn repetitive service desk, admin and reporting work into governed AI-assisted workflows that save time without losing control.",
     icon: "Brain",
-    gradient: "from-purple-500 to-blue-500",
-    features: [
-      "OpenClaw setup and customization",
-      "AI chatbot integration",
-      "Process automation",
-      "Predictive analytics",
-      "Natural language processing",
-      "Computer vision solutions",
-      "AI strategy consulting"
-    ],
-    pricing: {
-      starter: 499,
-      growth: 1499,
-      enterprise: "Custom"
-    }
   },
   {
-    id: "digital-marketing",
-    name: "Digital Marketing",
-    description: "Data-driven campaigns that attract, engage, and convert.",
-    icon: "TrendingUp",
-    gradient: "from-teal-400 to-orange-400",
-    features: [
-      "SEO & content strategy",
-      "PPC campaign management",
-      "Social media marketing",
-      "Email automation",
-      "Analytics & reporting",
-      "Conversion optimization"
-    ],
-    pricing: {
-      starter: 399,
-      growth: 799,
-      enterprise: "Custom"
-    }
+    id: "cloud-infrastructure-devops",
+    name: "Cloud Infrastructure & DevOps",
+    description:
+      "Modernize hosting, deployment and reliability practices without overengineering the stack or losing cost control.",
+    icon: "Cloud",
   },
   {
-    id: "custom-dashboards",
-    name: "Custom Dashboards",
-    description: "Real-time business intelligence dashboards tailored to your KPIs.",
+    id: "custom-dashboards-bi",
+    name: "Custom Dashboards & BI",
+    description:
+      "Give leaders a reliable view of service quality, sales performance, operations and risk without manual spreadsheet reporting.",
     icon: "LayoutDashboard",
-    gradient: "from-emerald-400 to-cyan-500",
-    features: [
-      "Real-time data visualization",
-      "Custom KPI tracking",
-      "Multi-source integration",
-      "Interactive reporting",
-      "Mobile dashboard access",
-      "Automated alerts"
-    ],
-    pricing: {
-      starter: 299,
-      growth: 599,
-      enterprise: "Custom"
-    }
   },
   {
-    id: "security-consulting",
-    name: "Security Consulting",
-    description: "Enterprise-grade security assessments and implementation.",
-    icon: "Shield",
-    gradient: "from-red-500 to-blue-600",
-    features: [
-      "Security audits & assessments",
-      "Penetration testing",
-      "Compliance consulting",
-      "Incident response planning",
-      "Security awareness training",
-      "24/7 monitoring setup"
-    ],
-    pricing: {
-      starter: 299,
-      growth: 599,
-      enterprise: "Custom"
-    }
-  }
+    id: "website-design-seo",
+    name: "Website Design & SEO",
+    description:
+      "Launch a fast, credible website with service pages, schema, content structure and conversion paths built for organic lead generation.",
+    icon: "Globe",
+  },
 ];
 
 export const testimonials = [
@@ -180,4 +107,3 @@ export const navLinks = [
   { name: "Our Work", href: "/our-work/" },
   { name: "Contact", href: "/contact/" }
 ];
-
