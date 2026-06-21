@@ -1,3 +1,18 @@
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+function esc(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function stripNewlines(s) {
+  return String(s).replace(/[\r\n]/g, " ").trim();
+}
+
 export async function onRequestPost({ request, env }) {
   const RESEND_API_KEY = env.RESEND_API_KEY;
 
@@ -19,6 +34,12 @@ export async function onRequestPost({ request, env }) {
     }
   }
 
+  if (!EMAIL_RE.test(data.email)) {
+    return json({ error: "Invalid email address." }, 400);
+  }
+
+  const safeEmail = stripNewlines(data.email);
+
   const emailHtml = `
 <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#1e293b">
   <div style="background:#030711;padding:28px 32px;border-radius:12px 12px 0 0">
@@ -27,7 +48,7 @@ export async function onRequestPost({ request, env }) {
   <div style="background:#07111f;padding:28px 32px;border-radius:0 0 12px 12px;border:1px solid #1e3a5f">
     <table style="width:100%;border-collapse:collapse">
       ${row("Name", data.name)}
-      ${row("Email", data.email)}
+      ${row("Email", safeEmail)}
       ${row("Phone", data.phone)}
       ${row("Company", data.company || "—")}
       ${row("Website", data.website || "—")}
@@ -41,15 +62,15 @@ export async function onRequestPost({ request, env }) {
     </table>
   </div>
   <p style="color:#64748b;font-size:12px;margin-top:16px;text-align:center">
-    Sent from m3dsai.com/contact/ · Reply to: ${data.email}
+    Sent from m3dsai.com/contact/ · Reply to: ${esc(safeEmail)}
   </p>
 </div>`;
 
   const resendPayload = {
     from: "M3DS AI Contact <noreply@m3dsai.com>",
     to: ["admin@m3dsai.com"],
-    reply_to: data.email,
-    subject: `New Enquiry — ${data.name} · ${data.service} (${data.company || "no company"})`,
+    reply_to: safeEmail,
+    subject: `New Enquiry — ${stripNewlines(data.name)} · ${stripNewlines(data.service)} (${stripNewlines(data.company || "no company")})`,
     html: emailHtml,
   };
 
@@ -85,8 +106,8 @@ export async function onRequestOptions() {
 function row(label, value) {
   return `
     <tr style="border-bottom:1px solid #1e3a5f">
-      <td style="padding:10px 0;color:#94a3b8;font-size:13px;width:38%;vertical-align:top">${label}</td>
-      <td style="padding:10px 0;color:#e2e8f0;font-size:13px;vertical-align:top">${value}</td>
+      <td style="padding:10px 0;color:#94a3b8;font-size:13px;width:38%;vertical-align:top">${esc(label)}</td>
+      <td style="padding:10px 0;color:#e2e8f0;font-size:13px;vertical-align:top">${esc(value)}</td>
     </tr>`;
 }
 
