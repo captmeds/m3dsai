@@ -1,25 +1,5 @@
 export const services = [
   {
-    id: "it-service-management-consulting",
-    name: "ITSM Consulting",
-    description: "Service desk modernization, ITIL-aligned workflows, SLAs, automation, dashboards, and tool implementation for SEA SMBs.",
-    icon: "LayoutDashboard",
-    gradient: "from-cyan-500 to-teal-400",
-    features: [
-      "ITSM process audit",
-      "Service catalog design",
-      "Incident and request workflows",
-      "SLA and priority matrix",
-      "Freshservice, HaloITSM, and JSM advisory",
-      "Executive service desk dashboards"
-    ],
-    pricing: {
-      starter: 799,
-      growth: 1799,
-      enterprise: "Custom"
-    }
-  },
-  {
     id: "website-design",
     name: "Website Design",
     description: "Stunning, conversion-focused websites built for speed and scale.",
@@ -200,3 +180,4 @@ export const navLinks = [
   { name: "Our Work", href: "/our-work/" },
   { name: "Contact", href: "/contact/" }
 ];
+
