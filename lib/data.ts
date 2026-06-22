@@ -214,8 +214,9 @@ export const faqs = [
 export const navLinks = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services/" },
+  { name: "Pricing", href: "/pricing/" },
   { name: "Resources", href: "/resources/" },
   { name: "About", href: "/about/" },
   { name: "Our Work", href: "/our-work/" },
-  { name: "Contact", href: "/contact/" }
+  { name: "Contact", href: "/contact/" },
 ];
