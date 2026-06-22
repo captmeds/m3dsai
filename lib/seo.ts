@@ -10,7 +10,7 @@ export const siteConfig = {
   tagline: "AI-powered IT Service Management for Southeast Asia",
   defaultTitle: "M3DS AI | IT Service Management, AI Automation and Web Growth",
   defaultDescription:
-    "M3DS AI helps Southeast Asian SMBs modernize IT service management, AI automation, dashboards, cybersecurity, websites and SEO with 24+ years of enterprise IT expertise.",
+    "Southeast Asian SMBs trust M3DS AI for IT automation, dashboards, cybersecurity, website design and SEO — 24+ years enterprise IT expertise. Book a call.",
   locale: "en_US",
   ogImage: "/og/m3dsai-og.svg",
   markets: ["Singapore", "Malaysia", "Indonesia", "Philippines", "Thailand", "Vietnam"],

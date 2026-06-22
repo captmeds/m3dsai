@@ -2,7 +2,13 @@ import type { MetadataRoute } from "next";
 import { allGeneratedRoutes, staticRoutes } from "@/lib/seo-content";
 import { absoluteUrl } from "@/lib/seo";
 
-const now = new Date("2026-06-06T00:00:00+07:00");
+const LAST_MODIFIED: Record<string, string> = {
+  "/": "2026-06-22",
+  "/contact/": "2026-06-22",
+  "/pricing/": "2026-06-22",
+  "/services/openclaw/": "2026-06-22",
+};
+const DEFAULT_DATE = "2026-06-15";
 
 function sitemapEntry(
   route: string,
@@ -11,7 +17,7 @@ function sitemapEntry(
 ): MetadataRoute.Sitemap[number] {
   return {
     url: absoluteUrl(route),
-    lastModified: now,
+    lastModified: new Date(LAST_MODIFIED[route] ?? DEFAULT_DATE),
     changeFrequency,
     priority,
   };

@@ -6,13 +6,12 @@ import TrustedBy from "@/components/TrustedBy";
 import ServiceCard from "@/components/ServiceCard";
 import WhySection from "@/components/WhySection";
 import ProcessTimeline from "@/components/ProcessTimeline";
-import TestimonialCard from "@/components/TestimonialCard";
 import CTABanner from "@/components/CTABanner";
 import JsonLd from "@/components/JsonLd";
 import FadeUp from "@/components/animations/FadeUp";
 import SectionLabel from "@/components/SectionLabel";
 import { faqSchema, graphSchema, webPageSchema } from "@/lib/schema";
-import { services, testimonials } from "@/lib/data";
+import { services } from "@/lib/data";
 import { pageMetadata } from "@/lib/seo";
 
 const title = "M3DS AI | AI Automation, Cloud and Web Growth for SEA SMBs";
@@ -107,36 +106,6 @@ export default function Home() {
 
       <WhySection />
       <ProcessTimeline />
-
-      {/* Testimonials */}
-      <section className="py-24 lg:py-32 bg-bg-secondary/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <FadeUp>
-              <SectionLabel text="Testimonials" className="mb-4" />
-            </FadeUp>
-            <FadeUp delay={0.1}>
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary">
-                Trusted by <span className="gradient-text">Industry Leaders</span>
-              </h2>
-            </FadeUp>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={index}
-                quote={testimonial.quote}
-                name={testimonial.name}
-                company={testimonial.company}
-                role={testimonial.role}
-                rating={testimonial.rating}
-                index={index}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
 
       <CTABanner />
     </>

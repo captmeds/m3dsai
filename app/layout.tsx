@@ -7,6 +7,7 @@ import JsonLd from "@/components/JsonLd";
 import LazyChatWidget from "@/components/LazyChatWidget";
 import { graphSchema, localBusinessSchema, organizationSchema, websiteSchema } from "@/lib/schema";
 import { absoluteUrl, siteConfig } from "@/lib/seo";
+import { CurrencyProvider } from "@/lib/currency";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -96,10 +97,12 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <JsonLd data={graphSchema([organizationSchema(), websiteSchema(), localBusinessSchema()])} />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <LazyChatWidget />
+        <CurrencyProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <LazyChatWidget />
+        </CurrencyProvider>
       </body>
     </html>
   );

@@ -69,29 +69,13 @@ export const services = [
   },
 ];
 
-export const testimonials = [
-  {
-    quote: "m3DSai transformed our outdated website into a lead-generating machine. Our conversion rate increased by 340% in just 3 months.",
-    name: "Tia",
-    company: "Bali Sunny Kids",
-    role: "CEO",
-    rating: 5
-  },
-  {
-    quote: "The AI chatbot they built handles 80% of our customer inquiries automatically. It's like having a 24/7 support team.",
-    name: "Marcus Johnson",
-    company: "lineaaaa",
-    role: "Operations Director",
-    rating: 5
-  },
-  {
-    quote: "Their security audit uncovered vulnerabilities we didn't know existed. Professional, thorough, and actionable recommendations.",
-    name: "Elena Hermus",
-    company: "movme",
-    role: "CTO",
-    rating: 5
-  }
-];
+export const testimonials: {
+  quote: string;
+  name: string;
+  company: string;
+  role: string;
+  rating: number;
+}[] = [];
 
 export const processSteps = [
   {
