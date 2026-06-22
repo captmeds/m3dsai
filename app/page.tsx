@@ -64,22 +64,22 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <FadeUp>
-              <SectionLabel text="What We Do" className="mb-4" />
+              <SectionLabel text="Our Services" className="mb-4" />
             </FadeUp>
             <FadeUp delay={0.1}>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary">
-                IT Modernisation, AI Automation and Web Growth.{" "}
-                <span className="gradient-text">One Practical Partner.</span>
+                AI, Cloud &amp; Digital Growth for{" "}
+                <span className="gradient-text">Australian &amp; Asian SMBs.</span>
               </h2>
             </FadeUp>
             <FadeUp delay={0.15}>
               <p className="text-text-secondary mt-4 max-w-2xl mx-auto">
-                Enterprise-grade technology services built for lean SMB teams across Southeast Asia.
+                Six core services — AI consulting, cloud infrastructure, custom dashboards, website design, OpenClaw automation, and SEO — delivering measurable business outcomes.
               </p>
             </FadeUp>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <ServiceCard
                 key={service.id}
@@ -97,7 +97,7 @@ export default function Home() {
               href="/services/"
               className="inline-flex items-center gap-2 text-sm font-semibold text-accent-primary hover:text-accent-secondary transition-colors"
             >
-              View all services
+              Explore all services
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

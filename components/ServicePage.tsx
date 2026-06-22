@@ -54,8 +54,8 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-accent-primary/5 to-transparent" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
-            <Link 
-              href="/services/website-design/"
+            <Link
+              href="/services/"
               className="inline-flex items-center text-text-secondary hover:text-accent-primary text-sm mb-8 transition-colors"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
