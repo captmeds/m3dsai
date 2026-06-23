@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>m3dsEYE — Traffic Radar Dashboard</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <!-- Lawful-use banner (compliance) -->
+  <div class="banner banner-warning" id="lawful-banner" hidden>
+    ⚠ Authorised use only — all access is logged and audited.
+  </div>
+
+  <header class="topbar">
+    <h1 class="brand">m3ds<span>EYE</span> <small>Traffic Radar</small></h1>
+    <div class="topbar-right">
+      <span id="user-chip" class="chip"></span>
+      <button class="btn btn-ghost" id="logout-btn">Sign out</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="live">Live</button>
+    <button class="tab" data-tab="detections">Detections</button>
+    <button class="tab" data-tab="alerts">Alerts <span class="badge" id="alert-count">0</span></button>
+    <button class="tab" data-tab="watchlist">Watchlist</button>
+    <button class="tab" data-tab="cameras">Cameras</button>
+    <button class="tab admin-only" data-tab="audit" hidden>Audit</button>
+  </nav>
+
+  <main class="content">
+    <!-- ── LIVE ──────────────────────────────────────────── -->
+    <section class="panel active" id="tab-live">
+      <div class="row">
+        <div class="card grow">
+          <h2>Live preview</h2>
+          <div class="controls">
+            <select id="live-camera"></select>
+            <button class="btn btn-primary" id="start-btn">Start</button>
+            <button class="btn btn-ghost" id="stop-btn">Stop</button>
+            <span class="status-pill" id="stream-mode"></span>
+          </div>
+          <div class="video-wrap">
+            <img id="live-img" alt="Live preview will appear here once a camera is started." />
+          </div>
+          <p class="muted" id="stream-stats"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── DETECTIONS ────────────────────────────────────── -->
+    <section class="panel" id="tab-detections" hidden>
+      <div class="card">
+        <h2>Detected vehicles</h2>
+        <div class="filters">
+          <input id="f-plate" placeholder="Plate contains…" />
+          <select id="f-camera"><option value="">All cameras</option></select>
+          <select id="f-type">
+            <option value="">All types</option>
+            <option>car</option><option>motorbike</option><option>truck</option>
+            <option>bus</option><option>van</option>
+          </select>
+          <input id="f-from" type="date" />
+          <input id="f-to" type="date" />
+          <button class="btn btn-primary" id="search-btn">Search</button>
+          <button class="btn btn-ghost" id="export-btn">Export CSV</button>
+        </div>
+        <div class="table-wrap">
+          <table id="detections-table">
+            <thead><tr>
+              <th>Snapshot</th><th>Plate</th><th>Conf.</th><th>Type</th>
+              <th>Camera</th><th>First seen</th><th>Watchlist</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ALERTS ────────────────────────────────────────── -->
+    <section class="panel" id="tab-alerts" hidden>
+      <div class="card">
+        <h2>Watchlist alerts</h2>
+        <div class="table-wrap">
+          <table id="alerts-table">
+            <thead><tr>
+              <th>Plate</th><th>Reason</th><th>Severity</th><th>Status</th>
+              <th>Raised</th><th>Actions</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WATCHLIST ─────────────────────────────────────── -->
+    <section class="panel" id="tab-watchlist" hidden>
+      <div class="card">
+        <h2>Watchlist</h2>
+        <form class="filters" id="watchlist-form">
+          <input id="w-plate" placeholder="Plate" required />
+          <input id="w-reason" placeholder="Reason (e.g. Stolen vehicle)" />
+          <select id="w-severity"><option>low</option><option selected>medium</option><option>high</option></select>
+          <input id="w-reference" placeholder="Case / ref no." />
+          <button class="btn btn-primary" type="submit">Add</button>
+        </form>
+        <div class="table-wrap">
+          <table id="watchlist-table">
+            <thead><tr>
+              <th>Plate</th><th>Reason</th><th>Severity</th><th>Reference</th>
+              <th>Added by</th><th>Actions</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CAMERAS ───────────────────────────────────────── -->
+    <section class="panel" id="tab-cameras" hidden>
+      <div class="card">
+        <h2>Cameras</h2>
+        <form class="filters" id="camera-form">
+          <input id="c-name" placeholder="Name" required />
+          <input id="c-location" placeholder="Location" />
+          <select id="c-type">
+            <option value="webcam">Webcam / phone</option>
+            <option value="rtsp">RTSP / CCTV</option>
+            <option value="file">Video file</option>
+          </select>
+          <input id="c-source" placeholder="0  |  rtsp://…  |  data/videos/test.mp4" required />
+          <button class="btn btn-primary" type="submit">Add camera</button>
+        </form>
+        <div class="table-wrap">
+          <table id="cameras-table">
+            <thead><tr>
+              <th>ID</th><th>Name</th><th>Type</th><th>Source</th><th>Location</th><th>Actions</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── AUDIT (admin) ─────────────────────────────────── -->
+    <section class="panel" id="tab-audit" hidden>
+      <div class="card">
+        <h2>Audit log</h2>
+        <div class="table-wrap">
+          <table id="audit-table">
+            <thead><tr>
+              <th>Time</th><th>User</th><th>Action</th><th>Resource</th><th>Detail</th><th>IP</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Detail modal -->
+  <div class="modal" id="detail-modal" hidden>
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+  <script>m3dsEYE.initDashboard();</script>
+</body>
+</html>

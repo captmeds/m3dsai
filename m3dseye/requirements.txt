@@ -1,0 +1,42 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# m3dsEYE — AI Traffic Radar :: Python dependencies
+# All open-source. No paid APIs are required.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# --- Web / API ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20          # file uploads (test videos)
+jinja2==3.1.5                     # (optional) server-side templating
+itsdangerous==2.2.0
+
+# --- Config / validation ---
+pydantic==2.10.4
+pydantic-settings==2.7.1
+pydantic[email]==2.10.4          # EmailStr validation (email-validator)
+email-validator==2.2.0
+python-dotenv==1.0.1
+
+# --- Database (SQLite by default, Postgres optional) ---
+SQLAlchemy==2.0.36
+# psycopg2-binary==2.9.10         # uncomment to use PostgreSQL
+
+# --- Auth / security ---
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1                     # pinned: passlib 1.7.4 reads bcrypt.__about__ (removed in 4.1+)
+python-jose[cryptography]==3.3.0  # JWT tokens
+
+# --- Computer vision ---
+opencv-python-headless==4.10.0.84
+numpy==1.26.4
+Pillow==11.1.0
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Heavy ML deps. These power real detection/OCR but are LARGE.
+# The system is designed to RUN WITHOUT THEM (graceful degradation / mock mode),
+# so install them only when you want live AI inference.
+#
+#   pip install -r requirements-ml.txt
+#
+# See requirements-ml.txt for: ultralytics (YOLO), easyocr / pytesseract, torch
+# ─────────────────────────────────────────────────────────────────────────────

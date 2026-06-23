@@ -1,0 +1,37 @@
+# ── Python ───────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# ── Environment / secrets ────────────────────────────────
+.env
+*.key
+*.pem
+
+# ── Runtime data (NEVER commit captured imagery or the DB) ─
+data/storage/*
+!data/storage/.gitkeep
+data/videos/*
+!data/videos/.gitkeep
+*.db
+*.sqlite
+*.sqlite3
+
+# ── ML model weights (downloaded separately) ─────────────
+models/*.pt
+*.pt
+*.onnx
+
+# ── Logs ─────────────────────────────────────────────────
+logs/
+*.log
+
+# ── OS / IDE ─────────────────────────────────────────────
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>m3dsEYE — Sign in</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body class="login-body">
+  <main class="login-card">
+    <h1 class="brand">m3ds<span>EYE</span></h1>
+    <p class="subtitle">AI Traffic Radar · Secure Access</p>
+
+    <!-- Lawful-use warning is a hard compliance requirement -->
+    <div class="banner banner-warning" id="lawful-banner">
+      ⚠ <strong>Authorised use only.</strong> This system processes vehicle
+      registration data for lawful law-enforcement / government purposes.
+      Unauthorised access or use is prohibited and may be a criminal offence.
+      All activity is logged and audited.
+    </div>
+
+    <form id="login-form" class="form">
+      <label>Email
+        <input type="email" id="email" autocomplete="username" required />
+      </label>
+      <label>Password
+        <input type="password" id="password" autocomplete="current-password" required />
+      </label>
+      <button type="submit" class="btn btn-primary">Sign in</button>
+      <p class="error" id="login-error"></p>
+    </form>
+
+    <p class="hint">Default seeded admin is set via <code>.env</code> (ADMIN_EMAIL / ADMIN_PASSWORD).</p>
+  </main>
+  <script src="/static/js/app.js"></script>
+  <script>m3dsEYE.initLogin();</script>
+</body>
+</html>

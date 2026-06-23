@@ -1,0 +1,49 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# m3dsEYE — docker-compose
+#
+#   docker compose up --build
+#
+# Default service runs SQLite + MOCK detection (zero external deps). Uncomment the
+# `postgres` service + DATABASE_URL to switch to PostgreSQL. Build with the ML arg
+# for live inference (large image): `docker compose build --build-arg INSTALL_ML=true`
+# ─────────────────────────────────────────────────────────────────────────────
+services:
+  api:
+    build:
+      context: .
+      args:
+        INSTALL_ML: "false"        # set "true" for live YOLO/OCR inference
+    container_name: m3dseye-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      # SQLite lives on the mounted volume so data persists across restarts.
+      DATABASE_URL: "sqlite:///./data/m3dseye.db"
+      # For Postgres instead, comment the line above and uncomment:
+      # DATABASE_URL: "postgresql+psycopg2://m3dseye:m3dseye@postgres:5432/m3dseye"
+    volumes:
+      - ./data:/app/data           # persist DB + captured imagery
+      - ./logs:/app/logs
+      - ./models:/app/models       # optional model weights
+    restart: unless-stopped
+    # GPU note: to use CUDA, install ML extras, set DEVICE=cuda, and add a
+    # `deploy.resources.reservations.devices` block with the nvidia runtime.
+    # depends_on:
+    #   - postgres
+
+  # ── Optional PostgreSQL backend ────────────────────────────────────────────
+  # postgres:
+  #   image: postgres:16-alpine
+  #   container_name: m3dseye-db
+  #   environment:
+  #     POSTGRES_USER: m3dseye
+  #     POSTGRES_PASSWORD: m3dseye
+  #     POSTGRES_DB: m3dseye
+  #   volumes:
+  #     - pgdata:/var/lib/postgresql/data
+  #   restart: unless-stopped
+
+# volumes:
+#   pgdata:

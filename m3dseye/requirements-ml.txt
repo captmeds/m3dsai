@@ -1,0 +1,22 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Optional heavy ML dependencies for LIVE AI inference.
+# Install AFTER the base requirements.txt:
+#
+#   pip install -r requirements.txt
+#   pip install -r requirements-ml.txt
+#
+# Without these, m3dsEYE runs in MOCK detection mode so the API, dashboard,
+# database, watchlist and audit features can all be exercised end-to-end.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# YOLO vehicle + plate detection
+ultralytics==8.3.55
+
+# PyTorch (CPU build by default; install a CUDA build for GPU).
+# For CUDA, follow https://pytorch.org/get-started/locally/
+torch==2.5.1
+torchvision==0.20.1
+
+# OCR — choose one (EasyOCR is the default used by the code).
+easyocr==1.7.2
+# pytesseract==0.3.13   # alternative; also requires the `tesseract` system binary
