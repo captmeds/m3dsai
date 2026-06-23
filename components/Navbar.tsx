@@ -1,56 +1,11 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Menu, Moon, Sun, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { navLinks } from "@/lib/data";
 import GlowButton from "./GlowButton";
 import { useCurrency, FLAGS, type Currency } from "@/lib/currency";
-
-type Theme = "light" | "dark";
-
-function ThemeToggle({
-  theme,
-  onSelect,
-}: {
-  theme: Theme;
-  onSelect: (theme: Theme) => void;
-}) {
-  return (
-    <div
-      className="inline-flex items-center rounded-md border border-border bg-bg-card/70 p-1 shadow-sm"
-      role="group"
-      aria-label="Choose color theme"
-    >
-      <button
-        type="button"
-        onClick={() => onSelect("light")}
-        className={`inline-flex h-9 items-center gap-2 rounded px-3 text-xs font-semibold transition-colors ${
-          theme === "light"
-            ? "bg-accent-primary text-white"
-            : "text-text-secondary hover:text-text-primary"
-        }`}
-        aria-pressed={theme === "light"}
-      >
-        <Sun className="h-4 w-4" aria-hidden="true" />
-        Light
-      </button>
-      <button
-        type="button"
-        onClick={() => onSelect("dark")}
-        className={`inline-flex h-9 items-center gap-2 rounded px-3 text-xs font-semibold transition-colors ${
-          theme === "dark"
-            ? "bg-accent-primary text-white"
-            : "text-text-secondary hover:text-text-primary"
-        }`}
-        aria-pressed={theme === "dark"}
-      >
-        <Moon className="h-4 w-4" aria-hidden="true" />
-        Dark
-      </button>
-    </div>
-  );
-}
 
 const CURRENCIES: Currency[] = ["USD", "SGD", "MYR", "IDR", "PHP", "THB"];
 
@@ -107,7 +62,6 @@ function CurrencyToggle() {
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -116,22 +70,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  useEffect(() => {
-    const currentTheme = document.documentElement.dataset.theme;
-    if (currentTheme === "light" || currentTheme === "dark") {
-      setTheme(currentTheme);
-      return;
-    }
-
-    setTheme(window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
-  }, []);
-
-  const selectTheme = (nextTheme: Theme) => {
-    setTheme(nextTheme);
-    document.documentElement.dataset.theme = nextTheme;
-    window.localStorage.setItem("m3dsai-theme", nextTheme);
-  };
 
   return (
     <>
@@ -166,10 +104,9 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Theme, Currency and CTA */}
+            {/* Currency and CTA */}
             <div className="hidden md:flex items-center gap-4">
               <CurrencyToggle />
-              <ThemeToggle theme={theme} onSelect={selectTheme} />
               <GlowButton href="/contact/" variant="outline" className="text-sm py-2.5 px-6">
                 Book a Demo
               </GlowButton>
@@ -204,7 +141,6 @@ export default function Navbar() {
             ))}
             <div className="flex items-center justify-center gap-3">
               <CurrencyToggle />
-              <ThemeToggle theme={theme} onSelect={selectTheme} />
             </div>
             <GlowButton href="/contact/" variant="primary">
               Book a Demo
