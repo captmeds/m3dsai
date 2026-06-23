@@ -17,6 +17,8 @@ const config: Config = {
         accent: {
           primary: "var(--accent-primary)",
           secondary: "var(--accent-secondary)",
+          hover: "var(--accent-hover)",
+          on: "var(--on-accent)",
           glow: "var(--accent-glow)",
         },
         text: {
@@ -30,8 +32,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["ui-sans-serif", "system-ui", "sans-serif"],
-        body: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Inter", "Arial", "sans-serif"],
+        body: ["Inter", "Arial", "sans-serif"],
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
       },
       backgroundImage: {
@@ -44,8 +46,8 @@ const config: Config = {
       },
       keyframes: {
         "glow-pulse": {
-          "0%": { boxShadow: "0 0 20px rgba(79,142,247,0.15)" },
-          "100%": { boxShadow: "0 0 40px rgba(79,142,247,0.35)" },
+          "0%": { boxShadow: "0 0 20px rgba(45,139,139,0.18)" },
+          "100%": { boxShadow: "0 0 40px rgba(45,139,139,0.38)" },
         },
         float: {
           "0%, 100%": { transform: "translateY(0px)" },

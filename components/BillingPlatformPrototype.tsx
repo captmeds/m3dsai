@@ -258,7 +258,7 @@ function RevenueChart() {
             {revenueSeries.map((item) => (
               <div key={item.label} className="flex h-full flex-1 flex-col justify-end gap-2">
                 <div
-                  className="min-h-8 rounded-t-md bg-gradient-to-t from-accent-primary/55 to-cyan-200/90 shadow-[0_0_24px_rgba(56,189,248,0.22)]"
+                  className="min-h-8 rounded-t-md bg-gradient-to-t from-accent-primary/55 to-accent-hover/90 shadow-[0_0_24px_rgba(45,139,139,0.22)]"
                   style={{ height: `${(item.value / max) * 100}%` }}
                   title={`${item.label}: ${item.value}k`}
                 />

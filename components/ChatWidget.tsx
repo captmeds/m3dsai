@@ -88,7 +88,7 @@ export default function ChatWidget() {
       {/* Floating button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-accent-primary text-white shadow-lg shadow-accent-glow flex items-center justify-center hover:bg-blue-600 transition-colors"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-accent-primary text-white shadow-lg shadow-accent-glow flex items-center justify-center hover:brightness-90 transition-colors"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         aria-label="Toggle chat"
@@ -226,7 +226,7 @@ export default function ChatWidget() {
                 />
                 <button
                   onClick={() => handleSend()}
-                  className="w-10 h-10 rounded-lg bg-accent-primary text-white flex items-center justify-center hover:bg-blue-600 transition-colors"
+                  className="w-10 h-10 rounded-lg bg-accent-primary text-white flex items-center justify-center hover:brightness-90 transition-colors"
                   aria-label="Send message"
                 >
                   <Send className="w-4 h-4" />
