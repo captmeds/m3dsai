@@ -4,11 +4,11 @@ import Link from "next/link";
 
 const footerLinks = {
   services: [
-    { name: "ITSM Consulting", href: "/services/it-service-management-consulting/" },
-    { name: "AI Automation", href: "/services/ai-automation-consulting/" },
-    { name: "Freshservice Consulting", href: "/services/freshservice-implementation-consultant/" },
-    { name: "HaloITSM Consulting", href: "/services/haloitsm-implementation-consultant/" },
-    { name: "Website Design and SEO", href: "/services/website-design-seo/" }
+    { name: "IT Consulting", href: "/services/it-service-management-consulting/" },
+    { name: "AI Services", href: "/services/ai-automation-consulting/" },
+    { name: "Freshservice Setup", href: "/services/freshservice-implementation-consultant/" },
+    { name: "HaloITSM Setup", href: "/services/haloitsm-implementation-consultant/" },
+    { name: "Websites & SEO", href: "/services/website-design-seo/" }
   ],
   company: [
     { name: "About", href: "/about/" },
@@ -21,8 +21,8 @@ const footerLinks = {
     { name: "Singapore", href: "/locations/singapore/" },
     { name: "Malaysia", href: "/locations/malaysia/" },
     { name: "Indonesia", href: "/locations/indonesia/" },
-    { name: "ITSM Comparisons", href: "/comparisons/" },
-    { name: "AI Search Guide", href: "/resources/ai-search-optimization-b2b-services/" }
+    { name: "Compare IT Tools", href: "/comparisons/" },
+    { name: "AI Search Tips", href: "/resources/ai-search-optimization-b2b-services/" }
   ]
 };
 
@@ -40,7 +40,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-text-secondary text-sm leading-relaxed mb-6">
-              AI-powered IT service management, automation, dashboards, cybersecurity, and search-ready websites for Southeast Asian SMBs.
+              We help small businesses in Asia and Australia use AI tools, build websites, and grow online.
             </p>
           </div>
 

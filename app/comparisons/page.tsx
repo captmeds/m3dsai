@@ -30,11 +30,11 @@ export default function ComparisonsPage() {
       />
       <SeoHubPage
         eyebrow="Comparisons"
-        title="ITSM Software Comparisons for SMBs"
-        description={description}
+        title="Compare IT Support Tools — Which One Is Right for You?"
+        description="We compare popular IT help desk tools — Freshservice, HaloITSM, Jira, and ServiceNow — so you can pick the best one for your business."
         pages={comparisonPages}
         basePath="/comparisons"
-        ctaLabel="Choose the right ITSM tool"
+        ctaLabel="Get Help Choosing"
       />
     </>
   );

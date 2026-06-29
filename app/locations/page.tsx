@@ -30,11 +30,11 @@ export default function LocationsPage() {
       />
       <SeoHubPage
         eyebrow="Locations"
-        title="SEA ITSM and AI Automation Consulting Locations"
-        description={description}
+        title="We Work With Businesses Across Southeast Asia"
+        description="We help businesses in Singapore, Malaysia, Indonesia, Philippines, and Thailand with AI tools, IT support, and website growth."
         pages={locationPages}
         basePath="/locations"
-        ctaLabel="Discuss regional support"
+        ctaLabel="Talk to Us"
       />
     </>
   );

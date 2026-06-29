@@ -34,13 +34,13 @@ export default function PrivacyPolicyPage() {
           </h1>
           <div className="prose prose-invert max-w-none text-text-secondary space-y-6">
             <p>
-              M3DS AI collects the information you submit through forms or direct email so we can respond to inquiries, scope projects and provide consulting services.
+              We collect the info you send us through forms or email so we can reply to you and help with your project.
             </p>
             <p>
-              We may collect business contact details, project requirements, website URLs, budget ranges, timelines and messages you choose to provide.
+              This includes your name, email, phone, website link, budget, and any messages you send.
             </p>
             <p>
-              We do not sell personal information. We use submitted information for communication, project evaluation, service delivery, security and basic website analytics.
+              We don&apos;t sell your info. We use it to reply to you, review your project, and keep the site working safely.
             </p>
             <p>
               To ask about your data, contact <a className="text-accent-primary" href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.

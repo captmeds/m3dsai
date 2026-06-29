@@ -68,13 +68,13 @@ export default function Home() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary">
-                AI, Cloud &amp; Digital Growth for{" "}
-                <span className="gradient-text">Australian &amp; Asian SMBs.</span>
+                AI, Cloud &amp; Website Growth for{" "}
+                <span className="gradient-text">Businesses in Australia &amp; Asia.</span>
               </h2>
             </FadeUp>
             <FadeUp delay={0.15}>
               <p className="text-text-secondary mt-4 max-w-2xl mx-auto">
-                Six core services — AI consulting, cloud infrastructure, custom dashboards, website design, OpenClaw automation, and SEO — delivering measurable business outcomes.
+                Six services to help your business grow: AI tools, cloud servers, dashboards, websites, AI automation, and SEO.
               </p>
             </FadeUp>
           </div>

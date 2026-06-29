@@ -5,18 +5,18 @@ import SectionLabel from "./SectionLabel";
 const valueProps = [
   {
     icon: Cpu,
-    title: "AI-Native Approach",
-    description: "We don't just use AI tools — we architect solutions with artificial intelligence at their core, delivering smarter, faster results."
+    title: "AI Built In",
+    description: "We build AI into everything we do — not as an add-on. You get faster and smarter results."
   },
   {
     icon: DollarSign,
-    title: "SMB-Focused Pricing",
-    description: "Enterprise-quality solutions without enterprise-level budgets. Transparent pricing, no hidden fees, real ROI."
+    title: "Prices for Small Businesses",
+    description: "Top-quality work at a price that makes sense for your size. Clear prices, no hidden fees, real results."
   },
   {
     icon: Layers,
-    title: "Full-Stack Execution",
-    description: "From strategy to design to development to deployment — one team, one vision, zero handoff friction."
+    title: "One Team, Start to Finish",
+    description: "One team handles everything — from planning to launch. No passing the work around to other teams."
   }
 ];
 
@@ -33,14 +33,14 @@ export default function WhySection() {
 
             <FadeUp delay={0.1}>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
-                Built Different.{" "}
-                <span className="gradient-text">Built for You.</span>
+                We&apos;re Built for{" "}
+                <span className="gradient-text">Businesses Like Yours.</span>
               </h2>
             </FadeUp>
 
             <FadeUp delay={0.2}>
               <p className="text-text-secondary text-lg leading-relaxed mb-10">
-                Most agencies treat SMBs like afterthoughts. We built m3DSai specifically for businesses that need enterprise-grade solutions without the enterprise baggage.
+                Most tech companies only care about big businesses. We work with small and medium businesses and give them the same great tools.
               </p>
             </FadeUp>
 
@@ -72,7 +72,7 @@ export default function WhySection() {
                 <div className="relative z-10 space-y-6">
                   <div className="flex items-center justify-between pb-4 border-b border-border">
                     <span className="font-mono text-xs text-text-muted uppercase tracking-wider">Comparison</span>
-                    <span className="font-mono text-xs text-accent-primary">m3DSai vs Traditional</span>
+                    <span className="font-mono text-xs text-accent-primary">m3DSai vs Others</span>
                   </div>
 
                   {[

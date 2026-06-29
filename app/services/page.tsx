@@ -60,25 +60,25 @@ export default function ServicesPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent-primary mb-4">
-              AI Consulting &amp; Technology Services
+              AI Tools &amp; Tech Services
             </p>
           </FadeUp>
           <FadeUp delay={0.05}>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary mb-6 max-w-4xl leading-tight">
-              AI, Cloud &amp; Digital Growth Services for{" "}
-              <span className="gradient-text">Australian &amp; Asian SMBs</span>
+              AI, Cloud &amp; Website Services for{" "}
+              <span className="gradient-text">Businesses in Australia &amp; Asia</span>
             </h1>
           </FadeUp>
           <FadeUp delay={0.1}>
             <p className="text-text-secondary text-lg leading-relaxed max-w-2xl mb-8">
-              We help forward-thinking businesses in Australia and across Asia leverage AI automation, cloud infrastructure, business intelligence, and digital marketing to reduce costs, increase efficiency, and accelerate growth.
+              We help businesses in Australia and Asia use AI tools, cloud servers, smart dashboards, and digital marketing to cut costs, work faster, and grow.
             </p>
           </FadeUp>
           <FadeUp delay={0.15}>
             <div className="flex flex-wrap gap-4">
               <GlowButton href="/contact/" variant="primary">
                 <Calendar className="w-4 h-4 mr-2" />
-                Book a Free Consultation
+                Book a Free Call
               </GlowButton>
               <GlowButton href="/contact/" variant="ghost">
                 Request a Proposal
@@ -177,20 +177,20 @@ export default function ServicesPage() {
           </FadeUp>
           <FadeUp delay={0.1}>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
-              Helping Australian &amp; Asian Businesses{" "}
+              Helping Businesses in Australia &amp; Asia{" "}
               <span className="gradient-text">Grow with AI</span>
             </h2>
           </FadeUp>
           <FadeUp delay={0.15}>
             <p className="text-text-secondary text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-              We help forward-thinking businesses leverage AI, automation, cloud technologies, and digital marketing to increase efficiency, reduce costs, and accelerate growth. Whether you&apos;re launching a new business, scaling operations, or modernising existing systems, our team delivers practical solutions that produce real results.
+              We use AI, automation, cloud tools, and digital marketing to help businesses work better and grow faster. Whether you&apos;re just starting out or upgrading your systems, we build real solutions that get results.
             </p>
           </FadeUp>
           <FadeUp delay={0.2}>
             <div className="flex flex-wrap justify-center gap-4">
               <GlowButton href="/contact/" variant="primary" className="text-base px-10 py-5">
                 <Calendar className="w-5 h-5 mr-2" />
-                Book a Free Consultation
+                Book a Free Call
               </GlowButton>
               <GlowButton href="/contact/" variant="ghost" className="text-base px-10 py-5">
                 Request a Proposal

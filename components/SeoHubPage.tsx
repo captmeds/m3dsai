@@ -20,7 +20,7 @@ export default function SeoHubPage({
   description,
   pages,
   basePath,
-  ctaLabel = "Book a consultation",
+  ctaLabel = "Book a Free Call",
   ctaHref = "/contact/",
 }: SeoHubPageProps) {
   return (

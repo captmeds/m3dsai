@@ -34,13 +34,13 @@ export default function TermsOfServicePage() {
           </h1>
           <div className="prose prose-invert max-w-none text-text-secondary space-y-6">
             <p>
-              This website provides general information about M3DS AI consulting services. Submitting an inquiry does not create a client relationship until a written scope or agreement is accepted.
+              This site tells you about our services. Sending us a message doesn&apos;t make you a client until we both sign an agreement.
             </p>
             <p>
-              Project timelines, pricing and deliverables depend on agreed scope, access, dependencies and client responsiveness.
+              How long a project takes and what it costs depends on what we agree to and how quickly you can respond.
             </p>
             <p>
-              Website content is provided for informational purposes and should not be treated as legal, financial or compliance advice.
+              The info on this site is for general use only. It is not legal or financial advice.
             </p>
             <p>
               For questions, contact <a className="text-accent-primary" href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.

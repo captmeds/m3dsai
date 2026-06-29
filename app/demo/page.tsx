@@ -20,18 +20,18 @@ export const metadata: Metadata = pageMetadata({
 const steps = [
   {
     icon: FileSearch,
-    title: "Audit",
-    text: "Review your current service desk, website, automation, security or dashboard setup.",
+    title: "Review",
+    text: "We look at your current setup — your IT support, website, automation, security, or dashboards.",
   },
   {
     icon: Route,
-    title: "Roadmap",
-    text: "Identify the fastest path to better operations, organic traffic and qualified lead flow.",
+    title: "Plan",
+    text: "We find the quickest way to fix problems, get more visitors, and bring in new leads.",
   },
   {
     icon: CalendarCheck,
     title: "Scope",
-    text: "Turn the roadmap into a practical implementation plan with clear priorities.",
+    text: "We turn the plan into clear steps so you know exactly what to do first.",
   },
 ];
 
@@ -53,10 +53,10 @@ export default function DemoPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SectionLabel text="Demo" className="mb-4" />
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary mb-6">
-            Book a Practical ITSM, AI and SEO Opportunity Review
+            Book a Free IT, AI and SEO Review
           </h1>
           <p className="text-text-secondary text-lg leading-relaxed max-w-3xl mx-auto mb-10">
-            Bring one messy workflow, one growth problem or one platform decision. M3DS AI will help you identify what to fix first and how to scope it.
+            Bring one problem or one decision you&apos;re stuck on. We&apos;ll help you figure out what to fix first and how to do it.
           </p>
           <GlowButton href="/contact/" variant="primary" className="text-lg px-10 py-5">
             Request a review

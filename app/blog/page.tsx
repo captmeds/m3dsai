@@ -46,14 +46,13 @@ export default function BlogPage() {
         <div className="max-w-3xl mx-auto">
           <SectionLabel text="Blog" />
           <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mt-4 mb-6 leading-tight">
-            Insights for{" "}
+            Tips &amp; Guides for{" "}
             <span className="bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text text-transparent">
-              Southeast Asian SMBs
+              Small Businesses in Asia
             </span>
           </h1>
           <p className="text-lg text-text-secondary max-w-xl mx-auto">
-            Practical guides on ITSM, AI automation, cybersecurity and digital transformation —
-            written for lean IT teams growing in the SEA market.
+            Easy-to-follow guides on AI tools, IT support, security, and growing your business online.
           </p>
         </div>
       </section>
@@ -134,14 +133,13 @@ export default function BlogPage() {
       <section className="px-6 pb-24">
         <div className="max-w-3xl mx-auto rounded-2xl border border-border-accent bg-bg-card p-8 sm:p-12 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
-            Want a personalised roadmap?
+            Want a clear plan for your business?
           </h2>
           <p className="text-text-secondary mb-8 max-w-xl mx-auto">
-            Book a free strategy call with Mehdi. We will map your current state, identify the
-            highest-ROI moves and give you a clear next step — no sales pitch.
+            Book a free call with Mehdi. We&apos;ll look at where you are now and tell you exactly what to do next — no hard sell.
           </p>
           <GlowButton href="/contact/" variant="primary">
-            Book a Strategy Call
+            Book a Free Call
           </GlowButton>
         </div>
       </section>

@@ -13,20 +13,20 @@ interface Message {
 }
 
 const quickReplies = [
-  "What services do you offer?",
+  "What do you offer?",
   "How much does it cost?",
   "How long does a project take?",
-  "Can I book a demo?"
+  "Can I book a call?"
 ];
 
 const botResponses: Record<string, string> = {
-  "What services do you offer?": "We offer five core services: Website Design, AI Services, Digital Marketing, Custom Dashboards, and Security Consulting. Each is tailored for SMBs. Would you like details on any specific service?",
-  "How much does it cost?": "Our pricing starts at $299/month depending on the service. Website Design starts at $499 one-time. Check our Pricing page for full details, or I can connect you with our team for a custom quote.",
-  "How long does a project take?": "Most projects take 4-8 weeks. Simple websites can be done in 2-3 weeks, while complex AI implementations may take 10-12 weeks. We'll give you a precise timeline during our discovery call.",
-  "Can I book a demo?": "Absolutely! I'd recommend booking a free strategy call with our team. They'll walk you through our process and show you relevant case studies. Click below to schedule!"
+  "What do you offer?": "We offer six services: AI Consulting, Cloud Servers, Custom Dashboards, Website Design, OpenClaw AI Setup, and SEO. All for small and medium businesses. Want to know more about any of these?",
+  "How much does it cost?": "Prices start at $499 for websites. Check our Pricing page to see all plans, or we can talk about a custom price that fits your needs.",
+  "How long does a project take?": "Most projects take 4–8 weeks. Simple websites can be done in 2–3 weeks. Big AI setups may take 10–12 weeks. We'll give you a clear timeline on our first call.",
+  "Can I book a call?": "Yes! Book a free call with us and we'll walk you through how we can help. Click below to get started."
 };
 
-const defaultResponse = "That's a great question! I'd love to help you with that. Would you like to book a free strategy call with our team? They can provide detailed answers tailored to your specific needs.";
+const defaultResponse = "Good question! Would you like to book a free call with us? We can answer all your questions and find the best fit for your business.";
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);

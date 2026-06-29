@@ -21,12 +21,12 @@ export default function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
         <div className="max-w-4xl mx-auto text-center">
           <span className="font-mono text-xs uppercase tracking-[0.22em] text-accent-primary mb-6 block">
-            AI Automation and Web Growth
+            AI Tools &amp; Website Growth
           </span>
 
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-text-primary leading-[1.04] mb-10">
-            AI-Powered IT Service Management for{" "}
-            <span className="gradient-text">Southeast Asian &amp; Australian SMBs</span>
+            Smarter Tech for Growing Businesses in{" "}
+            <span className="gradient-text">Asia &amp; Australia</span>
           </h1>
 
           {/* OpenClaw banner */}
@@ -52,15 +52,14 @@ export default function HeroSection() {
                 </div>
 
                 <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-text-primary mb-4 leading-tight">
-                  OpenClaw Setup &amp; Support —{" "}
-                  <span className="gradient-text">Your 24/7 AI Agent</span>
+                  OpenClaw —{" "}
+                  <span className="gradient-text">Your AI Helper That Never Sleeps</span>
                 </h2>
 
                 <p className="text-text-secondary leading-relaxed mb-6 max-w-2xl text-sm sm:text-base">
-                  Deploy a private AI agent on your own infrastructure. Connects to WhatsApp,
-                  Telegram, Slack, Discord and 50+ tools. Manages calendars, clears inboxes,
-                  executes scripts — autonomously, around the clock. M3DS AI handles full setup,
-                  security hardening, integrations and ongoing support.
+                  Set up a private AI helper on your own server. It connects to WhatsApp,
+                  Telegram, Slack, Discord, and 50+ tools. It handles your calendar, inbox,
+                  and tasks — all by itself, 24/7. We do the full setup for you.
                 </p>
 
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -80,7 +79,7 @@ export default function HeroSection() {
                 </div>
 
                 <span className="inline-flex items-center gap-2 text-sm font-semibold text-accent-primary group-hover:gap-3 transition-all duration-300">
-                  Explore OpenClaw Setup &amp; Support
+                  Learn about OpenClaw
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </div>
@@ -88,9 +87,9 @@ export default function HeroSection() {
               <div className="grid grid-cols-2 gap-3 shrink-0 lg:w-56">
                 {[
                   { value: "48h", label: "Setup time" },
-                  { value: "50+", label: "Integrations" },
-                  { value: "24/7", label: "Operation" },
-                  { value: "100%", label: "Private infra" },
+                  { value: "50+", label: "App connections" },
+                  { value: "24/7", label: "Runs by itself" },
+                  { value: "100%", label: "Your own server" },
                 ].map(({ value, label }) => (
                   <div
                     key={label}

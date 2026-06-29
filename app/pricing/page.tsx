@@ -82,7 +82,7 @@ function TierCard({
         {discounted !== null ? (
           <>
             <div className="text-text-muted text-sm line-through mb-1">
-              {format(originalPrice as number)} market rate
+              {format(originalPrice as number)} normal price
             </div>
             <div className="flex items-baseline gap-2">
               <span className="font-display text-4xl font-bold text-text-primary">
@@ -99,7 +99,7 @@ function TierCard({
         ) : (
           <>
             <span className="font-display text-4xl font-bold text-text-primary">Custom</span>
-            <p className="mt-1.5 text-text-muted text-xs">Scoped to your requirements</p>
+            <p className="mt-1.5 text-text-muted text-xs">Priced for your specific needs</p>
           </>
         )}
       </div>
@@ -146,7 +146,7 @@ function ServiceBlock({ service, format }: ServiceBlockProps) {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
         <TierCard
           name="Starter"
-          description="Perfect for small businesses getting started."
+          description="Good for small businesses just starting out."
           originalPrice={service.pricing.starter}
           features={service.features.slice(0, 3)}
           delay={0}
@@ -154,7 +154,7 @@ function ServiceBlock({ service, format }: ServiceBlockProps) {
         />
         <TierCard
           name="Growth"
-          description="Ideal for growing businesses with expanding needs."
+          description="Great for businesses that are growing."
           originalPrice={service.pricing.growth}
           features={service.features.slice(0, 5)}
           isPopular
@@ -163,7 +163,7 @@ function ServiceBlock({ service, format }: ServiceBlockProps) {
         />
         <TierCard
           name="Enterprise"
-          description="Tailored for larger organisations and complex needs."
+          description="Built for bigger teams with bigger needs."
           originalPrice="Custom"
           features={service.features}
           delay={0.2}
@@ -175,14 +175,14 @@ function ServiceBlock({ service, format }: ServiceBlockProps) {
 }
 
 const included = [
-  { label: "Dedicated point of contact", tier: "All plans" },
-  { label: "Weekly progress updates", tier: "All plans" },
-  { label: "30-day post-launch support", tier: "Growth & Enterprise" },
-  { label: "Staff training & documentation", tier: "Growth & Enterprise" },
-  { label: "Priority support queue", tier: "Enterprise" },
-  { label: "Custom SLA", tier: "Enterprise" },
-  { label: "API integrations", tier: "Growth & Enterprise" },
-  { label: "Security hardening review", tier: "Enterprise" },
+  { label: "One person handles your project", tier: "All plans" },
+  { label: "Weekly project updates", tier: "All plans" },
+  { label: "30 days of help after launch", tier: "Growth & Enterprise" },
+  { label: "Team training and guides", tier: "Growth & Enterprise" },
+  { label: "Priority support", tier: "Enterprise" },
+  { label: "Custom support agreement", tier: "Enterprise" },
+  { label: "App connections", tier: "Growth & Enterprise" },
+  { label: "Security review", tier: "Enterprise" },
 ];
 
 export default function PricingPage() {
@@ -214,7 +214,7 @@ export default function PricingPage() {
 
           <FadeUp delay={0.1}>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary mb-6 leading-tight">
-              Transparent Pricing.{" "}
+              Clear Prices.{" "}
               <span className="relative inline-block">
                 <span className="gradient-text">40% Off.</span>
                 <svg
@@ -238,14 +238,13 @@ export default function PricingPage() {
 
           <FadeUp delay={0.2}>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-10">
-              All six services, three tiers each. Market rates shown for reference — your launch price is
-              always <span className="text-amber-400 font-semibold">40% below market</span>, automatically applied.
+              Six services, three plans each. We show the normal price so you can see your savings. Your price is always <span className="text-amber-400 font-semibold">40% less</span> — no extra steps needed.
             </p>
           </FadeUp>
 
           <FadeUp delay={0.3}>
             <div className="inline-flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-text-secondary">
-              {["No hidden fees", "Currency auto-detected", "Free discovery call", "No lock-in contracts"].map(
+              {["No hidden fees", "Price shown in your currency", "Free first call", "No lock-in contracts"].map(
                 (item) => (
                   <span key={item} className="flex items-center gap-1.5">
                     <Check className="w-4 h-4 text-accent-secondary flex-shrink-0" />
@@ -270,15 +269,15 @@ export default function PricingPage() {
                 </div>
                 <div>
                   <p className="text-text-primary text-sm font-semibold">
-                    Launch pricing active — 40% off every service
+                    Launch deal on — 40% off every service
                   </p>
                   <p className="text-text-muted text-xs mt-0.5">
-                    Strikethrough prices reflect standard market rates. Your price is highlighted below.
+                    The crossed-out price is the normal price. Your price is shown below it.
                   </p>
                 </div>
               </div>
               <GlowButton href="/contact/" variant="outline" className="text-sm py-2.5 px-5 flex-shrink-0">
-                Lock in your rate
+                Lock in your price
               </GlowButton>
             </div>
           </FadeUp>
@@ -299,7 +298,7 @@ export default function PricingPage() {
                 Every Plan, Every Service
               </h2>
               <p className="text-text-secondary text-sm mt-3 max-w-lg mx-auto">
-                Core deliverables that come standard — no upselling once you start.
+                These things come with every plan — no surprises.
               </p>
             </div>
           </FadeUp>
@@ -356,14 +355,14 @@ export default function PricingPage() {
                   <HelpCircle className="w-7 h-7 text-amber-400" />
                 </div>
                 <h2 className="font-display text-3xl font-bold text-text-primary mb-3">
-                  Not sure which tier?
+                  Not sure which plan?
                 </h2>
                 <p className="text-text-secondary mb-2 max-w-lg mx-auto">
-                  Book a free 30-minute discovery call. We&apos;ll scope your project and lock in your 40% launch rate.
+                  Book a free 30-minute call. We&apos;ll figure out the right plan and lock in your 40% discount.
                 </p>
-                <p className="text-amber-400 text-sm font-mono mb-8">Limited availability at launch pricing.</p>
+                <p className="text-amber-400 text-sm font-mono mb-8">This price won&apos;t last forever.</p>
                 <GlowButton href="/contact/" variant="primary" className="text-base px-10 py-4">
-                  Book a Free Discovery Call
+                  Book a Free Call
                 </GlowButton>
               </div>
             </div>

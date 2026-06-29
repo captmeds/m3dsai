@@ -108,7 +108,7 @@ export default function Navbar() {
             <div className="hidden md:flex items-center gap-4">
               <CurrencyToggle />
               <GlowButton href="/contact/" variant="outline" className="text-sm py-2.5 px-6">
-                Book a Demo
+                Book a Free Call
               </GlowButton>
             </div>
 
@@ -143,7 +143,7 @@ export default function Navbar() {
               <CurrencyToggle />
             </div>
             <GlowButton href="/contact/" variant="primary">
-              Book a Demo
+              Book a Free Call
             </GlowButton>
           </div>
         </div>

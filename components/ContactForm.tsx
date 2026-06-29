@@ -28,7 +28,7 @@ const services = [
   { value: "OpenClaw Setup & Support", label: "OpenClaw Setup & Support" },
   { value: "AI Automation Consulting", label: "AI Automation Consulting" },
   { value: "Cloud Infrastructure & DevOps", label: "Cloud Infrastructure & DevOps" },
-  { value: "Custom Dashboards & BI", label: "Custom Dashboards & BI" },
+  { value: "Custom Dashboards & BI", label: "Custom Dashboards" },
   { value: "Website Design & SEO", label: "Website Design & SEO" },
   { value: "Not sure yet", label: "Not sure yet" },
 ];
@@ -57,13 +57,13 @@ const businessTypes = [
 ];
 
 const goals = [
-  "Deploy an AI agent (OpenClaw)",
-  "Generate more qualified leads",
-  "Launch or redesign a website",
-  "Automate repetitive work with AI",
-  "Modernize cloud infrastructure",
-  "Track KPIs with a dashboard",
-  "Discuss the best option",
+  "Set up an AI helper (OpenClaw)",
+  "Get more leads",
+  "Build or redo a website",
+  "Automate tasks with AI",
+  "Improve cloud servers",
+  "Track data with a dashboard",
+  "Talk about what's best for me",
 ];
 
 export default function ContactForm() {

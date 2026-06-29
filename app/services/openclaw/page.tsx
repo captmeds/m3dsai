@@ -36,45 +36,45 @@ export const metadata: Metadata = pageMetadata({
 const features = [
   {
     icon: MessageSquare,
-    title: "50+ Messaging Integrations",
-    desc: "WhatsApp, Telegram, Slack, Discord, Signal — OpenClaw communicates on the platforms your team and customers already use.",
+    title: "50+ Messaging Apps",
+    desc: "OpenClaw works with WhatsApp, Telegram, Slack, Discord, and Signal — the apps your team and customers already use.",
   },
   {
     icon: Globe,
-    title: "Productivity Tool Connectivity",
-    desc: "Connect Gmail, Google Calendar, Notion, Linear, Airtable, and hundreds more productivity apps for seamless automation.",
+    title: "Connects to Your Apps",
+    desc: "Link Gmail, Google Calendar, Notion, Airtable, and hundreds more apps to automate your daily work.",
   },
   {
     icon: Wrench,
-    title: "File & Shell Automation",
-    desc: "Execute shell commands, manage files, control browsers, and run scripts — fully automated by your AI agent.",
+    title: "Runs Tasks for You",
+    desc: "It can manage files, control apps, and run tasks — all by itself. No manual steps needed.",
   },
   {
     icon: Mic,
-    title: "Voice Interaction",
-    desc: "Issue voice commands and receive spoken responses. OpenClaw bridges voice to action across your workflows.",
+    title: "Voice Commands",
+    desc: "Talk to it out loud and it talks back. Your voice turns into action across your tools.",
   },
   {
     icon: Brain,
-    title: "Persistent Memory",
-    desc: "OpenClaw remembers your preferences, context, and prior conversations — becoming more useful over time.",
+    title: "Remembers You",
+    desc: "OpenClaw remembers your preferences and past chats — it gets more helpful the more you use it.",
   },
   {
     icon: Bot,
     title: "Claude & GPT-4 Ready",
-    desc: "Choose your AI model — Anthropic Claude or OpenAI GPT-4. We configure and optimise it for your specific use case.",
+    desc: "Pick your AI brain — Claude or GPT-4. We set it up to fit exactly what you need.",
   },
 ];
 
 const deliverables = [
-  "Full OpenClaw server installation & configuration",
-  "Security hardening — DM pairing, sandbox modes, permission models",
-  "Channel authentication (WhatsApp, Telegram, Slack, Discord, Signal)",
-  "AI model selection, tuning and prompt optimisation",
-  "Tool integrations (up to package limit)",
-  "Custom skill development",
-  "Staff onboarding & documentation",
-  "Ongoing monitoring, updates & support",
+  "Full OpenClaw server setup",
+  "Security setup to keep your data safe",
+  "Connecting your chat apps (WhatsApp, Telegram, Slack, Discord, Signal)",
+  "Picking and tuning the best AI model for you",
+  "App connections (up to plan limit)",
+  "Custom feature building",
+  "Team training and a setup guide",
+  "Ongoing monitoring and support",
 ];
 
 const packages = [
@@ -82,15 +82,15 @@ const packages = [
     name: "Starter",
     price: "$799",
     period: "one-time setup",
-    desc: "For individuals or small teams automating personal or lightweight business workflows.",
+    desc: "For solo users or small teams starting with AI automation.",
     features: [
-      "Single user deployment",
-      "1 messaging platform",
-      "Up to 5 tool integrations",
-      "Standard security hardening",
-      "1 AI model configuration",
-      "7-day post-setup support",
-      "Setup documentation",
+      "Single user",
+      "1 messaging app",
+      "Up to 5 app connections",
+      "Basic security setup",
+      "1 AI model",
+      "7 days of support after setup",
+      "Setup guide",
     ],
     cta: "Get Starter",
     highlight: false,
@@ -99,16 +99,16 @@ const packages = [
     name: "Growth",
     price: "$1,799",
     period: "one-time setup",
-    desc: "For teams that want multi-channel AI automation, more integrations, and hands-on support.",
+    desc: "For teams who want to use multiple apps and get more help.",
     features: [
       "Up to 5 users",
-      "3 messaging platforms",
-      "Up to 20 tool integrations",
-      "Advanced security & compliance",
-      "2 AI model configurations",
-      "1 custom skill development",
-      "30-day post-setup support",
-      "Staff training & documentation",
+      "3 messaging apps",
+      "Up to 20 app connections",
+      "Advanced security",
+      "2 AI models",
+      "1 custom feature",
+      "30 days of support after setup",
+      "Team training and a guide",
     ],
     cta: "Get Growth",
     highlight: true,
@@ -116,88 +116,88 @@ const packages = [
   {
     name: "Enterprise",
     price: "Custom",
-    period: "tailored engagement",
-    desc: "Full-scale team or organisation deployment with custom skills, SLA, and a dedicated support engineer.",
+    period: "tailored for you",
+    desc: "For larger teams needing a fully custom setup and a dedicated support person.",
     features: [
       "Unlimited users",
-      "All messaging platforms",
-      "Unlimited integrations",
-      "Enterprise security & SLA",
-      "Custom skills & workflows",
-      "Dedicated support engineer",
+      "All messaging apps",
+      "Unlimited app connections",
+      "Enterprise security and support agreement",
+      "Custom features and workflows",
+      "Your own support person",
       "Regular performance reviews",
       "Priority response time",
     ],
-    cta: "Discuss Scope",
+    cta: "Talk About Scope",
     highlight: false,
   },
 ];
 
 const risks = [
-  "Security misconfigurations exposing your internal network to the internet",
-  "Data leaks through unsecured messaging channels or poorly scoped permissions",
-  "Compliance gaps — OpenClaw without governance violates data residency rules in SG, MY and ID",
-  "Unstable deployments without proper environment setup and dependency management",
-  "Weeks of troubleshooting without deep infrastructure and AI expertise",
+  "Poor setup can leave your network open to hackers",
+  "Your data can leak through unsafe apps or wrong settings",
+  "You could break data rules in Singapore, Malaysia, and Indonesia",
+  "Crashes and bugs from a badly built setup",
+  "Weeks of fixing problems if you don't have the right skills",
 ];
 
 const faqs = [
   {
     question: "What is OpenClaw?",
     answer:
-      "OpenClaw is an open-source AI assistant that runs entirely on your own private server or cloud infrastructure. It connects to your messaging channels, productivity tools, and internal systems — enabling autonomous AI automation without sending your data to third-party SaaS platforms.",
+      "OpenClaw is a free, open AI tool that runs on your own server or cloud. It connects to your chat apps, work tools, and internal systems. Unlike other AI tools, your data stays with you — it doesn't go to outside companies.",
   },
   {
     question: "How long does setup take?",
     answer:
-      "Standard Starter and Growth deployments are live within 48 hours of project kickoff. Enterprise scopes with custom skills and integrations typically take 1–2 weeks.",
+      "Starter and Growth plans are live within 48 hours of starting. Enterprise setups with custom features usually take 1–2 weeks.",
   },
   {
     question: "Do I need my own server?",
     answer:
-      "No. M3DS AI can host your OpenClaw instance on our managed cloud infrastructure — fully isolated and private. Alternatively, we deploy to your own VPS, cloud VM (AWS, GCP, DigitalOcean, etc.), or on-premises server.",
+      "No. We can host OpenClaw for you on our own private cloud. Or we can set it up on your own server (AWS, GCP, DigitalOcean, etc.).",
   },
   {
-    question: "Which AI model does it use?",
+    question: "Which AI does it use?",
     answer:
-      "OpenClaw is compatible with Anthropic Claude and OpenAI GPT-4. We recommend the best model for your use case and configure it optimally. You can switch models later without re-deploying.",
+      "OpenClaw works with Claude (Anthropic) and GPT-4 (OpenAI). We'll help you pick the best one. You can also switch later without starting over.",
   },
   {
-    question: "Is my data private and secure?",
+    question: "Is my data private?",
     answer:
-      "Yes. OpenClaw runs on infrastructure you own or control. Your data, conversations, and files never leave your environment unless you explicitly configure an integration that sends data externally. We implement DM pairing policies, sandbox modes, and permission models as part of every deployment.",
+      "Yes. OpenClaw runs on your own server. Your data, chats, and files never leave your system — unless you set up a connection that sends them out. We add strong security to every setup.",
   },
   {
-    question: "What messaging apps are supported?",
+    question: "What messaging apps work with it?",
     answer:
-      "WhatsApp, Telegram, Slack, Discord, and Signal are supported out of the box. Additional channels are available via community-built skills.",
+      "WhatsApp, Telegram, Slack, Discord, and Signal work right away. You can add more through extra features.",
   },
   {
-    question: "Can I add more integrations after setup?",
+    question: "Can I add more app connections later?",
     answer:
-      "Yes. We offer add-on integration packages and monthly support retainers for ongoing configuration changes, new tool connections, and skill development.",
+      "Yes. We offer add-on packages and monthly plans so you can add new app connections and features any time.",
   },
   {
-    question: "Do you provide support after launch?",
+    question: "Do you help after the setup is done?",
     answer:
-      "All packages include post-setup support: 7 days for Starter, 30 days for Growth, and ongoing for Enterprise. Monthly maintenance retainers are available for all tiers.",
+      "Yes. Starter gets 7 days of support, Growth gets 30 days, and Enterprise gets ongoing support. Monthly care plans are also available for all plans.",
   },
 ];
 
 const stats = [
-  { value: "50+", label: "Service integrations" },
-  { value: "48h", label: "Standard setup time" },
-  { value: "24/7", label: "Autonomous operation" },
-  { value: "100%", label: "Private infrastructure" },
+  { value: "50+", label: "App connections" },
+  { value: "48h", label: "Setup time" },
+  { value: "24/7", label: "Runs by itself" },
+  { value: "100%", label: "Your own server" },
 ];
 
 const whyReasons = [
-  "24+ years enterprise IT — infrastructure expertise, not just AI APIs",
+  "24+ years of real IT work — not just AI tools",
   "Certified OpenClaw partner for Southeast Asia",
-  "Full security hardening included as standard, not an add-on",
-  "Fixed-price packages with detailed proposals before we start",
-  "Direct access to the principal engineer on every project",
-  "SEA-specialist: SG, MY, ID, PH, TH, VN timezone-aware delivery",
+  "Full security setup included — not an extra cost",
+  "Fixed prices with a full plan before we start",
+  "You talk directly to the person doing the work",
+  "We work across Singapore, Malaysia, Indonesia, Philippines, Thailand, and Vietnam time zones",
 ];
 
 export default function OpenClawPage() {
@@ -229,13 +229,13 @@ export default function OpenClawPage() {
           </FadeUp>
           <FadeUp delay={0.05}>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary leading-tight mb-6 max-w-4xl">
-              OpenClaw Setup Done Right —{" "}
-              <span className="gradient-text">So You Don&apos;t Go It Alone</span>
+              OpenClaw, Set Up Right —{" "}
+              <span className="gradient-text">We Do It For You</span>
             </h1>
           </FadeUp>
           <FadeUp delay={0.1}>
             <p className="text-text-secondary text-lg leading-relaxed mb-8 max-w-2xl">
-              OpenClaw is a powerful open-source AI assistant. Deploying it securely across your channels, devices, and workflows takes real expertise. We handle the infrastructure, security, integrations, and training — so you get a working AI agent in 48 hours.
+              OpenClaw is a powerful AI helper. Setting it up safely takes real skill. We handle everything — servers, security, app connections, and training — and have it running in 48 hours.
             </p>
           </FadeUp>
           <FadeUp delay={0.15}>
@@ -273,28 +273,28 @@ export default function OpenClawPage() {
               </FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="font-display text-3xl sm:text-4xl font-bold text-text-primary mb-6">
-                  A local-first AI assistant that lives where you already work
+                  An AI helper that runs on your own server
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="text-text-secondary leading-relaxed mb-4">
-                  OpenClaw is an open-source AI agent that runs entirely on your own private server or cloud infrastructure. Unlike SaaS AI tools, your data never leaves your network unless you explicitly configure it to.
+                  OpenClaw is a free, open AI tool that runs on your own server. Your data stays with you — it never goes to outside companies unless you say so.
                 </p>
               </FadeUp>
               <FadeUp delay={0.15}>
                 <p className="text-text-secondary leading-relaxed mb-8">
-                  It connects to 50+ services — from WhatsApp and Telegram to Google Calendar, Gmail, Notion, and custom internal tools — enabling fully autonomous workflows that run 24/7 without manual prompting.
+                  It connects to 50+ apps — like WhatsApp, Telegram, Google Calendar, and Gmail — and runs tasks on its own, all day and night.
                 </p>
               </FadeUp>
               <FadeUp delay={0.2}>
                 <ul className="space-y-3">
                   {[
-                    "Runs on hardware you own — data never leaves your network",
-                    "Manages calendars, clears inboxes, browses the web, executes scripts",
-                    "Compatible with Claude (Anthropic) and GPT-4 (OpenAI)",
-                    "50+ service connections including all major messaging platforms",
-                    "Community-built extensible skills for custom capabilities",
-                    "Persistent memory that learns your preferences and context",
+                    "Runs on your own server — your data stays private",
+                    "Manages your calendar, clears your inbox, and runs tasks for you",
+                    "Works with Claude (Anthropic) and GPT-4 (OpenAI)",
+                    "Connects to 50+ apps and messaging platforms",
+                    "Add extra features to make it do more things",
+                    "Remembers your settings and gets smarter over time",
                   ].map((point) => (
                     <li key={point} className="flex items-start gap-3 text-sm text-text-secondary">
                       <CheckCircle className="w-4 h-4 text-accent-primary shrink-0 mt-0.5" />
@@ -306,10 +306,10 @@ export default function OpenClawPage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: Server, label: "Private Infrastructure", desc: "Your data never leaves your network" },
-                { icon: Lock, label: "Security Hardened", desc: "DM pairing, sandbox modes, permission models" },
-                { icon: Users, label: "Team or Solo", desc: "Scales from one person to entire departments" },
-                { icon: Clock, label: "48-Hour Setup", desc: "From kickoff to live AI agent in 48 hours" },
+                { icon: Server, label: "Your Own Server", desc: "Your data never leaves your network" },
+                { icon: Lock, label: "Security Built In", desc: "Locked down settings to keep your data safe" },
+                { icon: Users, label: "Team or Solo", desc: "Works for one person or an entire company" },
+                { icon: Clock, label: "48-Hour Setup", desc: "From start to live AI helper in 48 hours" },
               ].map(({ icon: Icon, label, desc }) => (
                 <div key={label} className="glass tech-surface rounded-lg p-5">
                   <Icon className="w-6 h-6 text-accent-primary mb-3" />
@@ -336,7 +336,7 @@ export default function OpenClawPage() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <p className="text-text-secondary max-w-2xl mx-auto">
-                An autonomous AI agent that works across your existing tools and channels — without you having to ask each time.
+                An AI helper that works across your apps and tools — without you having to ask each time.
               </p>
             </FadeUp>
           </div>
@@ -365,12 +365,12 @@ export default function OpenClawPage() {
                 </FadeUp>
                 <FadeUp delay={0.05}>
                   <h2 className="font-display text-3xl font-bold text-text-primary mb-4">
-                    OpenClaw is powerful. The risks of a bad setup are real.
+                    OpenClaw is powerful. A bad setup can cause real problems.
                   </h2>
                 </FadeUp>
                 <FadeUp delay={0.1}>
                   <p className="text-text-secondary leading-relaxed">
-                    Without proper configuration, an OpenClaw deployment can expose your network, leak sensitive data, and create compliance gaps. These are infrastructure problems — not just software ones.
+                    If set up wrong, it can leave your network open to attack, leak your data, and break the rules. This isn&apos;t just a software problem — it&apos;s a serious IT risk.
                   </p>
                 </FadeUp>
               </div>
@@ -405,12 +405,12 @@ export default function OpenClawPage() {
               </FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="font-display text-3xl sm:text-4xl font-bold text-text-primary mb-6">
-                  Enterprise IT expertise. AI-native execution.
+                  Deep IT experience. Built with AI from the start.
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="text-text-secondary leading-relaxed mb-6">
-                  Founder Mehdi Debbabi brings 24+ years across infrastructure, virtualisation, networking, Active Directory, and data centre operations. A proper OpenClaw deployment is an infrastructure project, not just a software install — and that background matters.
+                  Our founder Mehdi has 24+ years working with servers, networks, and IT systems. Setting up OpenClaw is a real IT project — and his background means we do it right.
                 </p>
               </FadeUp>
               <FadeUp delay={0.15}>
@@ -443,12 +443,12 @@ export default function OpenClawPage() {
             </FadeUp>
             <FadeUp delay={0.05}>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-                Simple, Fixed-Price Setup
+                Clear, Fixed Prices
               </h2>
             </FadeUp>
             <FadeUp delay={0.1}>
               <p className="text-text-secondary max-w-xl mx-auto">
-                Detailed proposals sent before we start. No surprises. All prices in USD.
+                We send a full plan before starting. No surprises. Prices are in USD.
               </p>
             </FadeUp>
           </div>
@@ -500,7 +500,7 @@ export default function OpenClawPage() {
             ))}
           </div>
           <p className="text-center text-text-muted text-sm mt-8">
-            All packages include a free 30-minute discovery call before any commitment. No upfront payment required.
+            Every plan includes a free 30-minute call before you decide. No payment needed to start.
           </p>
         </div>
       </section>
@@ -515,21 +515,21 @@ export default function OpenClawPage() {
               </FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="font-display text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-                  Tell Us About Your OpenClaw Project
+                  Tell Us What You Need
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="text-text-secondary leading-relaxed mb-8">
-                  Fill in the form and we&apos;ll respond within 24 hours with a detailed proposal and discovery call availability. No commitment required.
+                  Fill in the form and we&apos;ll reply within 24 hours with a plan and a call time. No commitment needed.
                 </p>
               </FadeUp>
               <FadeUp delay={0.15}>
                 <div className="space-y-4">
                   {[
-                    { icon: Clock, text: "Response within 24 hours" },
-                    { icon: Shield, text: "Detailed fixed-price proposal" },
-                    { icon: Users, text: "Direct access to the principal" },
-                    { icon: Zap, text: "Free 30-min discovery call included" },
+                    { icon: Clock, text: "We reply within 24 hours" },
+                    { icon: Shield, text: "A full, fixed-price plan" },
+                    { icon: Users, text: "You talk directly to the person doing the work" },
+                    { icon: Zap, text: "Free 30-min call included" },
                   ].map(({ icon: Icon, text }) => (
                     <div key={text} className="flex items-center gap-3 text-sm text-text-secondary">
                       <Icon className="w-4 h-4 text-accent-primary shrink-0" />
@@ -577,12 +577,12 @@ export default function OpenClawPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-              Ready to Deploy Your AI Agent?
+              Ready to Start with OpenClaw?
             </h2>
           </FadeUp>
           <FadeUp delay={0.05}>
             <p className="text-text-secondary mb-8 leading-relaxed">
-              Book a free 30-minute discovery call. We&apos;ll scope your requirements, recommend the right package, and send a fixed-price proposal — no strings attached.
+              Book a free 30-minute call. We&apos;ll find the right plan for you and send a fixed-price proposal — no commitment needed.
             </p>
           </FadeUp>
           <FadeUp delay={0.1}>

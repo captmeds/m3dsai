@@ -26,12 +26,12 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
 
   const accordionItems = service.features.map((feature, index) => ({
     title: feature,
-    description: `Our ${feature.toLowerCase()} service delivers exceptional results through proven methodologies and cutting-edge technology.`,
+    description: `We handle ${feature.toLowerCase()} with care. You get a clear plan, a custom setup, and support along the way.`,
     features: [
-      "Strategic planning and consultation",
-      "Custom implementation tailored to your needs",
-      "Ongoing optimization and support",
-      "Detailed reporting and analytics"
+      "Clear planning and advice",
+      "Custom setup for your business",
+      "Ongoing support",
+      "Regular reports on progress"
     ]
   }));
 
@@ -71,7 +71,7 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
               <FadeUp delay={0.1}>
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary mb-6">
                   {service.name}{" "}
-                  <span className="gradient-text">for Growing SMBs</span>
+                  <span className="gradient-text">for Growing Businesses</span>
                 </h1>
               </FadeUp>
               <FadeUp delay={0.2}>
@@ -131,10 +131,10 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
           <div className="glass rounded-lg p-12 text-center">
             <FadeUp>
               <h2 className="font-display text-3xl font-bold text-text-primary mb-4">
-                Transparent Pricing
+                Clear Prices
               </h2>
               <p className="text-text-secondary mb-8 max-w-2xl mx-auto">
-                Choose the plan that fits your business. All plans include our core {service.name.toLowerCase()} services with varying levels of support and features.
+                Pick the plan that fits your business. Every plan includes our core {service.name.toLowerCase()} services, with more support and features as you go up.
               </p>
             </FadeUp>
 
@@ -193,14 +193,14 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp>
             <h2 className="font-display text-3xl font-bold text-text-primary mb-6">
-              Ready to get started?
+              Ready to start?
             </h2>
             <p className="text-text-secondary mb-8">
-              Book a free consultation and let&apos;s discuss how our {service.name.toLowerCase()} services can help your business grow.
+              Book a free call and let&apos;s talk about how our {service.name.toLowerCase()} services can help your business.
             </p>
             <GlowButton href="/contact/" variant="primary" className="text-lg px-10 py-5">
               <Calendar className="w-5 h-5 mr-2" />
-              Book a Free Consultation
+              Book a Free Call
             </GlowButton>
           </FadeUp>
         </div>

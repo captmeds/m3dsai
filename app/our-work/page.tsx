@@ -39,9 +39,7 @@ export default function OurWorkPage() {
           </FadeUp>
           <FadeUp delay={0.2}>
             <p className="mx-auto max-w-2xl text-lg text-text-secondary">
-              M3DS AI designs and builds modern websites, brands, and digital
-              experiences. Here&apos;s a selection of live projects we&apos;ve shipped
-              for clients across Southeast Asia and beyond.
+              We build modern websites and digital tools. Here are some real projects we&apos;ve done for clients in Southeast Asia and beyond.
             </p>
           </FadeUp>
         </div>

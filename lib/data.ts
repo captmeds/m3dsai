@@ -3,24 +3,24 @@ export const services = [
     id: "ai-consulting",
     name: "AI Consulting & Business Automation",
     description:
-      "Transform your business with practical AI solutions that reduce costs, automate repetitive tasks, improve customer engagement, and increase operational efficiency. We identify high-impact AI opportunities and implement automation strategies that deliver measurable results.",
+      "We help your business use AI tools to save time and cut costs. We find the best places AI can help and then set it all up for you.",
     icon: "Brain",
     gradient: "from-purple-500 to-blue-500",
     features: [
-      "AI strategy and implementation",
-      "Business process automation",
-      "Workflow optimisation",
-      "AI chatbot deployment",
-      "Content automation systems",
+      "AI planning and setup",
+      "Business task automation",
+      "Workflow improvements",
+      "AI chatbot setup",
+      "Content automation",
       "AI-powered customer support",
-      "Productivity and efficiency consulting",
+      "Productivity consulting",
     ],
     benefits: [
-      "Reduce operational costs",
-      "Save hundreds of staff hours",
-      "Increase productivity",
-      "Improve customer response times",
-      "Scale operations efficiently",
+      "Lower running costs",
+      "Save hundreds of work hours",
+      "Get more done each day",
+      "Faster customer replies",
+      "Grow without extra staff",
     ],
     cta: "Book an AI Strategy Session",
     pricing: { starter: 799, growth: 1799, enterprise: "Custom" },
@@ -29,50 +29,50 @@ export const services = [
     id: "cloud-infrastructure",
     name: "Cloud Infrastructure & Managed Hosting",
     description:
-      "Build a secure, scalable, and high-performance cloud environment that supports your business growth. We design, deploy, manage, and optimise cloud infrastructure for reliability, security, and maximum uptime.",
+      "We build and look after your online servers so your business stays fast, safe, and always running.",
     icon: "Cloud",
     gradient: "from-sky-500 to-cyan-400",
     features: [
-      "Cloud architecture design",
-      "Server deployment and management",
-      "Cloud migration services",
-      "Performance optimisation",
-      "Security hardening",
-      "Backup and disaster recovery",
-      "Infrastructure monitoring",
+      "Cloud server design",
+      "Server setup and management",
+      "Moving to the cloud",
+      "Speed improvements",
+      "Security setup",
+      "Backup and recovery",
+      "Server monitoring",
     ],
     benefits: [
-      "Improved reliability",
-      "Enhanced security",
-      "Reduced downtime",
-      "Scalable infrastructure",
-      "Lower IT management costs",
+      "More reliable systems",
+      "Better security",
+      "Less downtime",
+      "Servers that grow with you",
+      "Lower IT costs",
     ],
-    cta: "Discuss Your Cloud Requirements",
+    cta: "Talk About Your Cloud Needs",
     pricing: { starter: 999, growth: 1999, enterprise: "Custom" },
   },
   {
     id: "custom-dashboards",
     name: "Custom Dashboards & Business Intelligence",
     description:
-      "Turn your business data into actionable insights with custom dashboards designed specifically for your operations. Monitor KPIs, sales, marketing performance, customer activity, and operational metrics in real time.",
+      "We turn your business numbers into easy-to-read charts and reports, so you always know how things are going.",
     icon: "LayoutDashboard",
     gradient: "from-emerald-400 to-cyan-500",
     features: [
       "Executive dashboards",
-      "Sales reporting dashboards",
-      "Marketing analytics dashboards",
-      "Financial reporting systems",
-      "CRM integrations",
-      "Real-time KPI monitoring",
-      "Automated reporting",
+      "Sales reports",
+      "Marketing analytics",
+      "Financial reports",
+      "CRM connections",
+      "Live KPI tracking",
+      "Automated reports",
     ],
     benefits: [
-      "Better decision making",
-      "Real-time visibility",
-      "Increased accountability",
-      "Improved forecasting",
-      "Data-driven growth",
+      "Better decisions",
+      "See results in real time",
+      "More accountability",
+      "Better planning",
+      "Grow using your own data",
     ],
     cta: "Request a Dashboard Demo",
     pricing: { starter: 599, growth: 1299, enterprise: "Custom" },
@@ -81,24 +81,24 @@ export const services = [
     id: "ai-website-design",
     name: "AI Website Design & Development",
     description:
-      "Create high-converting websites powered by modern AI technologies and built specifically to generate leads, improve customer engagement, and increase online sales. Every site is mobile-first, performance-optimised, and SEO-ready from day one.",
+      "We build websites that look great, load fast, and help you get more customers. Every site works on phones and is ready for Google from day one.",
     icon: "Monitor",
     gradient: "from-blue-500 to-indigo-500",
     features: [
       "Business websites",
-      "E-commerce websites",
+      "Online shop websites",
       "AI-powered websites",
-      "Landing page development",
-      "Conversion optimisation",
-      "Mobile-first design",
-      "Performance optimisation",
+      "Landing pages",
+      "Conversion improvements",
+      "Mobile-friendly design",
+      "Speed improvements",
     ],
     benefits: [
       "More leads and enquiries",
-      "Faster website performance",
-      "Improved user experience",
-      "Higher search rankings",
-      "Increased conversion rates",
+      "Faster website",
+      "Better user experience",
+      "Higher Google rankings",
+      "More sales",
     ],
     cta: "Start Your Website Project",
     pricing: { starter: 499, growth: 999, enterprise: "Custom" },
@@ -107,49 +107,49 @@ export const services = [
     id: "openclaw",
     name: "OpenClaw Setup, Automation & Support",
     description:
-      "Leverage the power of OpenClaw AI automation to streamline business operations, automate repetitive tasks, and create intelligent workflows that work around the clock. M3DS AI handles full setup, integration, and ongoing support.",
+      "We set up OpenClaw — a smart AI helper that works on your own server. It connects to your apps and handles tasks for you, day and night. We do the full setup, connections, and support.",
     icon: "Bot",
     gradient: "from-teal-400 to-cyan-500",
     features: [
       "OpenClaw installation",
-      "Configuration and deployment",
-      "AI workflow development",
-      "Integration with business systems",
-      "Automation consulting",
-      "Staff training",
-      "Ongoing support and maintenance",
+      "Setup and deployment",
+      "AI workflow building",
+      "App connections",
+      "Automation advice",
+      "Team training",
+      "Ongoing support",
     ],
     benefits: [
-      "Increased efficiency",
-      "Reduced manual workload",
-      "Better workflow management",
-      "Faster task completion",
-      "Continuous automation support",
+      "Work faster",
+      "Less manual work",
+      "Better task management",
+      "Tasks done quicker",
+      "Always-on support",
     ],
-    cta: "Schedule an OpenClaw Consultation",
+    cta: "Book an OpenClaw Consultation",
     pricing: { starter: 995, growth: 1495, enterprise: "Custom" },
   },
   {
     id: "seo-digital-marketing",
     name: "SEO & Digital Marketing Growth Services",
     description:
-      "Increase your online visibility, generate qualified leads, and grow your business with data-driven SEO and digital marketing strategies tailored for Australian and Asian markets. We focus on sustainable, long-term results that build your brand authority.",
+      "We help more people find your business online. We grow your website traffic and bring in customers who are ready to buy.",
     icon: "TrendingUp",
     gradient: "from-orange-400 to-amber-500",
     features: [
-      "Search engine optimisation",
+      "Search engine optimisation (SEO)",
       "Local SEO",
       "Content marketing",
       "Technical SEO",
-      "Google Business optimisation",
-      "Lead generation campaigns",
+      "Google Business setup",
+      "Lead generation",
       "Digital growth strategy",
     ],
     benefits: [
-      "Higher search rankings",
-      "Increased website traffic",
-      "More qualified leads",
-      "Improved online visibility",
+      "Higher Google rankings",
+      "More website visitors",
+      "More ready-to-buy leads",
+      "Better online presence",
       "Long-term business growth",
     ],
     cta: "Get a Free SEO Audit",
@@ -169,45 +169,45 @@ export const processSteps = [
   {
     number: "01",
     title: "Discover",
-    description: "We dive deep into your business, goals, and challenges to understand exactly what you need."
+    description: "We learn about your business and what you need."
   },
   {
     number: "02",
     title: "Design",
-    description: "We craft detailed strategies and designs that align with your vision and drive results."
+    description: "We plan a solution that fits your goals."
   },
   {
     number: "03",
     title: "Build",
-    description: "Our team develops solutions with precision, using cutting-edge technology and best practices."
+    description: "We build it using the best tools available."
   },
   {
     number: "04",
-    title: "Launch & Optimise",
-    description: "We deploy your solution and continuously optimize for peak performance and growth."
+    title: "Launch & Improve",
+    description: "We go live and keep making it better over time."
   }
 ];
 
 export const faqs = [
   {
-    question: "How long does a typical website project take?",
-    answer: "Most website projects take 4-8 weeks from kickoff to launch. Complex enterprise sites may take 10-12 weeks. We'll provide a detailed timeline during our discovery call."
+    question: "How long does a website project take?",
+    answer: "Most websites take 4–8 weeks. Big, complex sites can take up to 12 weeks. We'll give you a clear timeline on our first call."
   },
   {
-    question: "Do you offer ongoing support after launch?",
-    answer: "Yes! We offer monthly maintenance and support packages. All Growth and Enterprise plans include 30 days of post-launch support."
+    question: "Do you offer support after launch?",
+    answer: "Yes. We offer monthly care plans. Growth and Enterprise plans include 30 days of free support after launch."
   },
   {
-    question: "Can you work with our existing tech stack?",
-    answer: "Absolutely. We're technology-agnostic and can integrate with your existing systems, whether it's WordPress, Shopify, custom APIs, or enterprise platforms."
+    question: "Can you work with the tools we already use?",
+    answer: "Yes. We can connect to most tools and systems you use — WordPress, Shopify, custom systems, and more."
   },
   {
-    question: "What makes m3DSai different from other agencies?",
-    answer: "We combine deep technical expertise with business strategy. Every solution is built with your ROI in mind, not just aesthetics. Plus, our AI-native approach means smarter, more efficient solutions."
+    question: "What makes m3DSai different?",
+    answer: "We focus on real results, not just looks. Every solution is built to help your business grow. We also use AI in smarter ways than most agencies."
   },
   {
-    question: "How do you handle project communication?",
-    answer: "We use a dedicated Slack channel, weekly video check-ins, and a shared project dashboard. You'll always know exactly where your project stands."
+    question: "How do you keep us updated?",
+    answer: "We use a shared Slack channel, weekly video calls, and a live project tracker. You'll always know where things stand."
   }
 ];
 

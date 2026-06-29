@@ -18,11 +18,11 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const proofPoints = [
-  "24+ years across infrastructure, virtualization, networking, Active Directory and data center operations",
-  "ITSM, ITIL-aligned workflow design and service desk modernization",
-  "AI automation, internal knowledge assistants and practical workflow optimization",
-  "Cloudflare Pages, Next.js, technical SEO and AI search optimization",
-  "Security assessments, access control reviews and remediation planning",
+  "24+ years working on servers, networks, and IT systems",
+  "Designing better IT support workflows and help desks",
+  "Building AI tools that automate work and save time",
+  "Building fast websites that rank well on Google",
+  "Finding security problems and fixing them",
 ];
 
 export default function AboutPage() {
@@ -65,10 +65,10 @@ export default function AboutPage() {
             <div>
               <SectionLabel text="About" className="mb-4" />
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary mb-6">
-                Enterprise IT Experience, Built for SEA SMB Growth
+                Big IT Know-How, Made for Small Businesses in Asia
               </h1>
               <p className="text-text-secondary text-lg leading-relaxed mb-8">
-                M3DS AI helps small and medium businesses in Southeast Asia modernize service desks, automate repetitive work, improve cybersecurity, build dashboards and turn websites into qualified lead engines.
+                M3DS AI helps small businesses in Southeast Asia set up better IT support, automate boring tasks, stay safe online, track their data, and get more leads from their websites.
               </p>
               <div className="flex flex-wrap gap-4">
                 <GlowButton href="/contact/" variant="primary">
@@ -88,7 +88,7 @@ export default function AboutPage() {
                 Mehdi Debbabi
               </h2>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Founder of M3DS AI, known as Meds, with deep enterprise IT experience and a practical bias toward measurable operations and revenue outcomes.
+                Founder of M3DS AI. Known as Meds. He has 24+ years in IT and focuses on real, measurable results for your business.
               </p>
             </aside>
           </div>
@@ -97,9 +97,9 @@ export default function AboutPage() {
 
       <section className="py-14">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionLabel text="Expertise" className="mb-4" />
+          <SectionLabel text="Skills" className="mb-4" />
           <h2 className="font-display text-3xl font-bold text-text-primary mb-8">
-            Why Buyers Can Trust the Advice
+            Why You Can Trust Our Advice
           </h2>
           <ul className="grid md:grid-cols-2 gap-4">
             {proofPoints.map((point) => (

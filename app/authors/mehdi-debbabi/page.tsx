@@ -62,7 +62,7 @@ export default function AuthorPage() {
             Mehdi Debbabi
           </h1>
           <p className="text-text-secondary text-lg leading-relaxed mb-8">
-            Founder of M3DS AI. I help Southeast Asian SMBs turn enterprise IT discipline into practical service desk workflows, AI automation, cybersecurity basics, dashboards and search-ready websites.
+            Founder of M3DS AI. I help small businesses in Southeast Asia set up better IT support, use AI tools, stay safe online, track their data, and build websites that get found on Google.
           </p>
           <div className="grid sm:grid-cols-2 gap-4 mb-10">
             <div className="glass rounded-lg p-5">

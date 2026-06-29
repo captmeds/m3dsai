@@ -30,11 +30,11 @@ export default function IndustriesPage() {
       />
       <SeoHubPage
         eyebrow="Industries"
-        title="ITSM, AI Automation and SEO by Industry"
-        description={description}
+        title="AI and IT Help for Your Industry"
+        description="We work with businesses in fintech, e-commerce, logistics, healthcare, and professional services. See how we can help yours."
         pages={industryPages}
         basePath="/industries"
-        ctaLabel="Discuss industry fit"
+        ctaLabel="Talk About Your Industry"
       />
     </>
   );

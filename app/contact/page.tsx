@@ -35,13 +35,13 @@ export default function ContactPage() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary mb-6">
-                Let&apos;s Start a{" "}
-                <span className="gradient-text">Conversation</span>
+                Let&apos;s{" "}
+                <span className="gradient-text">Talk</span>
               </h1>
             </FadeUp>
             <FadeUp delay={0.2}>
               <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-                Share the essentials about your business, goals, budget, and timeline. We&apos;ll receive a clear project brief through WhatsApp.
+                Tell us about your business and what you need. We&apos;ll get your message right away.
               </p>
             </FadeUp>
           </div>
@@ -51,7 +51,7 @@ export default function ContactPage() {
             <FadeUp>
               <div className="glass tech-surface rounded-lg p-6 sm:p-8">
                 <h2 className="font-display text-2xl font-bold text-text-primary mb-6">
-                  Build your project brief
+                  Tell us about your project
                 </h2>
                 <ContactForm />
               </div>
@@ -62,10 +62,10 @@ export default function ContactPage() {
               <div className="space-y-8">
                 <div>
                   <h2 className="font-display text-2xl font-bold text-text-primary mb-6">
-                    Contact Information
+                    Get in Touch
                   </h2>
                   <p className="text-text-secondary mb-8">
-                    Prefer to reach out directly? Here&apos;s how you can get in touch with our team.
+                    Want to reach us yourself? Here&apos;s how.
                   </p>
                 </div>
 
@@ -87,13 +87,13 @@ export default function ContactPage() {
 
                 <div className="glass tech-surface rounded-lg p-6 mt-8">
                   <h3 className="font-display font-bold text-text-primary mb-4">
-                    What M3DS AI Can Help With
+                    What We Can Help You With
                   </h3>
                   <ul className="space-y-3 text-text-secondary text-sm">
-                    <li>Website design, SEO structure, and performance tuning</li>
-                    <li>AI services, chatbot integration, and workflow automation</li>
-                    <li>Digital marketing, conversion optimization, and reporting</li>
-                    <li>Custom dashboards, KPI tracking, and security consulting</li>
+                    <li>Building and improving websites</li>
+                    <li>AI tools, chatbots, and automating tasks</li>
+                    <li>Digital marketing and tracking results</li>
+                    <li>Custom dashboards and IT security</li>
                   </ul>
                 </div>
               </div>

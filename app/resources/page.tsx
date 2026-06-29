@@ -30,11 +30,11 @@ export default function ResourcesPage() {
       />
       <SeoHubPage
         eyebrow="Resources"
-        title="ITSM, AI Automation and AI Search Resources"
-        description={description}
+        title="Guides on AI, IT, and Growing Your Business Online"
+        description="Practical guides on AI tools, IT support, security, cloud servers, and getting your website found on Google."
         pages={resourcePages}
         basePath="/resources"
-        ctaLabel="Get a roadmap"
+        ctaLabel="Book a Free Call"
       />
     </>
   );
