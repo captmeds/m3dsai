@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import GlowButton from "@/components/GlowButton";
 import JsonLd from "@/components/JsonLd";
 import SectionLabel from "@/components/SectionLabel";
@@ -81,10 +81,6 @@ export default function AuthorPage() {
             <a href={`mailto:${siteConfig.email}`} className="inline-flex items-center gap-2 text-text-secondary hover:text-accent-primary transition-colors">
               <Mail className="h-4 w-4" />
               {siteConfig.email}
-            </a>
-            <a href="https://www.linkedin.com/company/m3ds-ai" className="inline-flex items-center gap-2 text-text-secondary hover:text-accent-primary transition-colors">
-              <Linkedin className="h-4 w-4" />
-              LinkedIn
             </a>
           </div>
         </div>
