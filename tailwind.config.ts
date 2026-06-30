@@ -20,6 +20,7 @@ const config: Config = {
           hover: "var(--accent-hover)",
           on: "var(--on-accent)",
           glow: "var(--accent-glow)",
+          warm: "var(--accent-warm)",
         },
         text: {
           primary: "var(--text-primary)",
@@ -46,8 +47,8 @@ const config: Config = {
       },
       keyframes: {
         "glow-pulse": {
-          "0%": { boxShadow: "0 0 20px rgba(0,0,0,0.08)" },
-          "100%": { boxShadow: "0 0 40px rgba(0,0,0,0.16)" },
+          "0%": { boxShadow: "0 0 20px rgba(8,145,178,0.12)" },
+          "100%": { boxShadow: "0 0 40px rgba(8,145,178,0.26)" },
         },
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
