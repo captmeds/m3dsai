@@ -191,7 +191,7 @@ export const processSteps = [
 export const faqs = [
   {
     question: "How long does a website project take?",
-    answer: "Most websites take 4–8 weeks. Big, complex sites can take up to 12 weeks. We'll give you a clear timeline on our first call."
+    answer: "We'll give you a clear timeline during our first call. Most small websites are completed within a few days, while larger, more complex websites typically take one to two weeks."
   },
   {
     question: "Do you offer support after launch?",

@@ -48,9 +48,6 @@ export default function SeoDetailPage({
                 <GlowButton href={page.ctaHref} variant="primary">
                   {page.ctaLabel}
                 </GlowButton>
-                <GlowButton href="/resources/itsm-consulting-southeast-asia/" variant="ghost">
-                  Read ITSM guide
-                </GlowButton>
               </div>
             </div>
 

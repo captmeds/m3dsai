@@ -12,7 +12,6 @@ const footerLinks = {
   ],
   company: [
     { name: "About", href: "/about/" },
-    { name: "Resources", href: "/resources/" },
     { name: "Our Work", href: "/our-work/" },
     { name: "Pricing", href: "/pricing/" },
     { name: "Contact", href: "/contact/" }
@@ -21,8 +20,8 @@ const footerLinks = {
     { name: "Singapore", href: "/locations/singapore/" },
     { name: "Malaysia", href: "/locations/malaysia/" },
     { name: "Indonesia", href: "/locations/indonesia/" },
-    { name: "Compare IT Tools", href: "/comparisons/" },
-    { name: "AI Search Tips", href: "/resources/ai-search-optimization-b2b-services/" }
+    { name: "Australia", href: "/locations/australia/" },
+    { name: "Compare IT Tools", href: "/comparisons/" }
   ]
 };
 
@@ -99,7 +98,7 @@ export default function Footer() {
           <div>
             <h4 className="font-display font-bold text-text-primary mb-4">Contact</h4>
             <ul className="space-y-3 text-text-secondary text-sm">
-              <li>meds@m3dsai.com</li>
+              <li>admin@m3dsai.com</li>
             </ul>
           </div>
         </div>

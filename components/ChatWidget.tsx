@@ -22,7 +22,7 @@ const quickReplies = [
 const botResponses: Record<string, string> = {
   "What do you offer?": "We offer six services: AI Consulting, Cloud Servers, Custom Dashboards, Website Design, OpenClaw AI Setup, and SEO. All for small and medium businesses. Want to know more about any of these?",
   "How much does it cost?": "Prices start at $499 for websites. Check our Pricing page to see all plans, or we can talk about a custom price that fits your needs.",
-  "How long does a project take?": "Most projects take 4–8 weeks. Simple websites can be done in 2–3 weeks. Big AI setups may take 10–12 weeks. We'll give you a clear timeline on our first call.",
+  "How long does a project take?": "We'll give you a clear timeline during our first call. Most small websites are completed within a few days, while larger, more complex websites typically take one to two weeks.",
   "Can I book a call?": "Yes! Book a free call with us and we'll walk you through how we can help. Click below to get started."
 };
 

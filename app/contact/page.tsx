@@ -71,7 +71,7 @@ export default function ContactPage() {
 
                   <div className="space-y-6">
                   {[
-                    { icon: Mail, label: "Email", value: "meds@m3dsai.com" }
+                    { icon: Mail, label: "Email", value: "admin@m3dsai.com" }
                   ].map((item, index) => (
                     <div key={index} className="flex gap-4">
                       <div className="w-12 h-12 rounded-md bg-accent-primary/10 border border-accent-primary/25 flex items-center justify-center flex-shrink-0">
