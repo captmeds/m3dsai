@@ -215,7 +215,7 @@ export const navLinks = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services/" },
   { name: "Pricing", href: "/pricing/" },
-  { name: "Resources", href: "/resources/" },
+  { name: "Blog", href: "/blog/" },
   { name: "About", href: "/about/" },
   { name: "Our Work", href: "/our-work/" },
   { name: "Contact", href: "/contact/" },
