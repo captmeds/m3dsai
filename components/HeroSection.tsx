@@ -18,7 +18,7 @@ export default function HeroSection() {
       {/* Dot grid overlay */}
       <div className="absolute inset-0 dot-grid opacity-[0.04]" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
         <div className="max-w-4xl mx-auto text-center">
           <span className="font-mono text-xs uppercase tracking-[0.22em] text-accent-primary mb-6 block">
             AI Tools &amp; Website Growth

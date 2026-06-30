@@ -60,9 +60,9 @@ export default function Home() {
       <TrustedBy />
 
       {/* What We Do */}
-      <section className="py-16 lg:py-24">
+      <section className="py-10 lg:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <FadeUp>
               <SectionLabel text="Our Services" className="mb-4" />
             </FadeUp>

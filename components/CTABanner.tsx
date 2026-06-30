@@ -3,7 +3,7 @@ import FadeUp from "./animations/FadeUp";
 
 export default function CTABanner() {
   return (
-    <section className="py-24 lg:py-32 relative overflow-hidden">
+    <section className="py-12 lg:py-16 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-bg-secondary" />
       <div className="absolute inset-0 dot-grid opacity-[0.14]" />

@@ -4,7 +4,7 @@ import SectionLabel from "./SectionLabel";
 
 export default function ProcessTimeline() {
   return (
-    <section className="py-24 lg:py-32 bg-bg-secondary/30">
+    <section className="py-12 lg:py-16 bg-bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <FadeUp>
