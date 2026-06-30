@@ -91,15 +91,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </h1>
 
           <div className="flex items-center gap-4 text-sm text-text-muted">
-            <span>
-              By{" "}
-              <Link
-                href="/authors/mehdi-debbabi/"
-                className="text-text-secondary hover:text-accent-primary transition-colors"
-              >
-                Mehdi Debbabi
-              </Link>
-            </span>
+            <span>By Admin</span>
             <span>·</span>
             <time dateTime={post.date}>
               {new Date(post.date).toLocaleDateString("en-SG", {
