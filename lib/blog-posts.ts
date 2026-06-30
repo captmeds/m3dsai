@@ -13,6 +13,317 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "what-is-openclaw-self-hosted-ai-agent",
+    title: "What Is OpenClaw? A Self-Hosted AI Agent for SMBs in Southeast Asia (2026)",
+    metaDescription:
+      "OpenClaw is a self-hosted AI agent that runs on your own server and connects to 50+ tools. Here's what it does for SMBs in Southeast Asia in 2026.",
+    category: "AI Automation",
+    date: "2026-06-30",
+    readMinutes: 6,
+    excerpt:
+      "Most AI tools send your business data to someone else's server. OpenClaw is different — it runs on your own infrastructure, connects to your apps and works for you around the clock.",
+    keywords: [
+      "OpenClaw AI agent",
+      "self-hosted AI agent Southeast Asia",
+      "private AI agent SMB",
+      "OpenClaw setup Singapore",
+      "AI automation self-hosted",
+    ],
+    faqs: [
+      {
+        question: "What is OpenClaw?",
+        answer:
+          "OpenClaw is an open-source, self-hosted AI agent platform that runs on your own server. It connects to tools like WhatsApp, Slack, Freshservice and databases, then executes workflows and answers questions using your own data — without sending anything to a third-party cloud.",
+      },
+      {
+        question: "How is OpenClaw different from ChatGPT or Microsoft Copilot?",
+        answer:
+          "SaaS AI tools process your data on vendor infrastructure you don't control. OpenClaw runs on servers you own, which means your data, prompts and workflows stay entirely within your environment.",
+      },
+      {
+        question: "How long does OpenClaw setup take?",
+        answer:
+          "Most SMB deployments go live within 48 hours. M3DS AI handles the full setup — server, integrations, knowledge base and testing — so your team doesn't need to manage the technical side.",
+      },
+      {
+        question: "Does OpenClaw work with WhatsApp and Telegram?",
+        answer:
+          "Yes. WhatsApp Business and Telegram are among the most common integrations for SEA SMBs. OpenClaw can handle customer enquiries, internal support or operational alerts through either channel.",
+      },
+    ],
+    html: `
+<p>Most AI tools on the market send your business data to someone else's server. Every prompt, document and internal workflow processed by a SaaS AI tool leaves your infrastructure and lands in an environment you do not control. <strong>OpenClaw is a self-hosted AI agent</strong> built on a different model — it runs on your own server, connects to your existing tools and handles operational tasks around the clock. This guide explains what OpenClaw is, what it does, what it connects to and why growing SMBs across Singapore, Malaysia, Indonesia and the Philippines are deploying it as their primary AI infrastructure in 2026.</p>
+
+<h2>What OpenClaw Actually Is</h2>
+<p>OpenClaw is an open-source AI agent platform designed to run on your own infrastructure — a cloud VPS, a managed server or an on-premises machine you control. Unlike SaaS AI tools where the vendor manages everything, OpenClaw puts the compute, the data and the control on your side.</p>
+<p>At its core, it is an automation layer that:</p>
+<ul>
+  <li>Connects to your business tools — messaging, ticketing, CRMs and databases</li>
+  <li>Monitors, triggers and executes workflows based on rules or AI reasoning</li>
+  <li>Answers questions from your team using your own verified internal knowledge</li>
+  <li>Runs continuously — 24 hours a day, 7 days a week — without manual input</li>
+</ul>
+<p>Think of it as a capable AI team member who knows your systems, works every hour of every day and never shares your data with an external vendor.</p>
+
+<h2>How Self-Hosting Changes the Equation</h2>
+<p>OpenClaw installs on a server you control — typically a cloud VPS hosted in a region you choose. Once live, it operates independently: listening for triggers, processing requests and taking action within the workflows you define.</p>
+<p>Because all processing happens on your infrastructure, your business data never leaves your environment. That matters for three specific reasons in the Southeast Asian market:</p>
+<ul>
+  <li><strong>Data compliance</strong> — Singapore's PDPA, Malaysia's PDPA, Indonesia's PDP Law and Thailand's PDPA all require organisations to know where personal data is processed and stored.</li>
+  <li><strong>Confidentiality</strong> — customer records, pricing logic and internal communications stay in-house, not on a vendor's shared infrastructure.</li>
+  <li><strong>Independence</strong> — no dependency on a SaaS vendor's pricing decisions, uptime record or feature roadmap.</li>
+</ul>
+
+<h2>What OpenClaw Connects To</h2>
+<p>OpenClaw integrates with more than 50 tools and platforms. The most common integrations for SMBs in Singapore, Malaysia and Indonesia include:</p>
+<ul>
+  <li><strong>Messaging</strong> — WhatsApp Business, Telegram, Slack, Microsoft Teams</li>
+  <li><strong>Ticketing and ITSM</strong> — Freshservice, Jira Service Management, HaloITSM</li>
+  <li><strong>CRM and sales</strong> — HubSpot, Salesforce, Pipedrive</li>
+  <li><strong>Databases and spreadsheets</strong> — PostgreSQL, MySQL, Airtable, Google Sheets</li>
+  <li><strong>Cloud and storage</strong> — AWS, Google Cloud, Cloudflare, S3</li>
+  <li><strong>Email and calendar</strong> — Gmail, Outlook, Google Calendar</li>
+</ul>
+<p>For most SMBs, the right starting point is connecting OpenClaw to the two or three tools your team uses daily — typically a messaging platform, a ticketing system and a knowledge base. That combination alone resolves 40–70% of repetitive operational load.</p>
+
+<h2>What OpenClaw Handles in Practice</h2>
+<p>The highest-ROI use cases for SEA SMBs deploying OpenClaw in 2026:</p>
+<ul>
+  <li><strong>Internal helpdesk assistant</strong> — answers staff questions 24/7 from your own knowledge base, without those questions reaching the IT team at all.</li>
+  <li><strong>Customer support on WhatsApp or Telegram</strong> — handles first-line enquiries, resolves common issues and escalates only when a human is genuinely needed.</li>
+  <li><strong>IT operations monitoring</strong> — watches your infrastructure, alerts the right person on the right channel and logs incidents automatically.</li>
+  <li><strong>Scheduled reporting</strong> — pulls data from multiple sources and delivers summaries, alerts or dashboards on a schedule you define.</li>
+  <li><strong>Workflow automation</strong> — triggers actions across connected tools based on conditions, approvals or time-based rules.</li>
+</ul>
+<p>These are exactly the categories where <a href="/blog/ai-automation-cut-it-support-costs-sea/">AI automation delivers measurable cost reduction for SEA SMBs</a> — not because the technology is impressive, but because the volume of repetitive work is real and the alternatives are hiring or ignoring it.</p>
+
+<h2>How M3DS AI Deploys OpenClaw for Your Business</h2>
+<p>OpenClaw is powerful and requires proper setup to deploy securely. M3DS AI handles the full implementation:</p>
+<ol>
+  <li><strong>Infrastructure provisioning</strong> — selecting and configuring the right server for your workload, location and budget.</li>
+  <li><strong>Secure installation</strong> — hardened deployment with proper access controls, HTTPS, firewall rules and automated backups.</li>
+  <li><strong>Integration build</strong> — connecting OpenClaw to your specific tools and mapping your exact workflows.</li>
+  <li><strong>Knowledge base loading</strong> — importing your internal documentation, policies and FAQs so the AI answers accurately from your content.</li>
+  <li><strong>Testing and handover</strong> — validating every workflow before go-live, then training your team and providing ongoing support.</li>
+</ol>
+<p>Most SMB deployments are live within 48 hours. The approach is consistent with how we structure all AI implementations — clean foundation first, then expand automation incrementally as each layer proves its value. That sequence is also why phased digital transformation <a href="/blog/digital-transformation-roadmap-sea-smb/">pays for itself in stages</a> rather than requiring a large upfront bet.</p>
+
+<h2>Is OpenClaw Right for Your Business?</h2>
+<p>OpenClaw is the right fit if your business:</p>
+<ul>
+  <li>Handles repetitive requests through WhatsApp, Telegram or Slack</li>
+  <li>Has a support or operations function under volume pressure</li>
+  <li>Needs AI automation but cannot or should not send data to third-party SaaS platforms</li>
+  <li>Wants to build durable AI capability on infrastructure it owns and controls</li>
+</ul>
+<p>It is not the right first move for businesses with no IT foundation at all — though M3DS AI's managed service model removes that barrier by handling the technical side entirely.</p>
+<p>The alternative — processing your business data through ChatGPT, Copilot or another SaaS AI indefinitely — carries compliance and confidentiality risks that compound as your data footprint grows. For most SEA SMBs thinking seriously about AI in 2026, self-hosted is worth evaluating before committing to a SaaS vendor whose terms you cannot fully control.</p>
+`,
+  },
+
+  {
+    slug: "self-hosted-ai-vs-saas-data-sovereignty-sea-2026",
+    title: "Self-Hosted AI vs SaaS Tools: Why SEA SMBs Are Choosing Data Sovereignty in 2026",
+    metaDescription:
+      "SaaS AI sends your data to servers you don't control. Here's what SEA SMBs need to know about self-hosted AI and data sovereignty in 2026.",
+    category: "AI Automation",
+    date: "2026-06-30",
+    readMinutes: 6,
+    excerpt:
+      "Every time your team uses a SaaS AI tool, your business data travels to a server you do not control. For SMBs in Southeast Asia navigating PDPA and tighter data laws, that is becoming a real problem.",
+    keywords: [
+      "self-hosted AI Southeast Asia",
+      "data sovereignty AI tools",
+      "self-hosted AI vs SaaS",
+      "private AI SMB",
+      "AI data compliance Singapore",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between self-hosted AI and SaaS AI?",
+        answer:
+          "SaaS AI runs on the vendor's cloud infrastructure — your data travels to their servers for processing. Self-hosted AI runs on infrastructure you control, meaning your data never leaves your environment. The tradeoff is setup complexity versus data sovereignty and long-term cost control.",
+      },
+      {
+        question: "Is data sovereignty a legal requirement in Southeast Asia?",
+        answer:
+          "Yes, in practical terms. PDPA equivalents across Singapore, Malaysia, Indonesia, the Philippines and Thailand require organisations to know where personal data is processed. Using SaaS AI that processes data outside your jurisdiction can create compliance exposure.",
+      },
+      {
+        question: "Is self-hosted AI harder to manage than SaaS?",
+        answer:
+          "The initial setup requires more technical work. A managed implementation partner like M3DS AI removes that friction — handling deployment, security hardening and integrations so you get the benefits of self-hosting without managing the infrastructure yourself.",
+      },
+      {
+        question: "Which self-hosted AI tools should SEA SMBs consider?",
+        answer:
+          "OpenClaw is purpose-built for business automation on your own server, with native integrations for WhatsApp, Slack, Freshservice and 50+ tools. It is the most practical starting point for most SEA SMBs that need self-hosted AI without deep infrastructure expertise.",
+      },
+    ],
+    html: `
+<p>Every time your team uses a SaaS AI tool — ChatGPT, Microsoft Copilot, Google Gemini — your business data travels to a server you do not own, gets processed on infrastructure you cannot audit and is stored under terms you agreed to but may not have read closely. For most businesses in 2024, this felt like an acceptable trade-off. In 2026, with tighter data protection laws across Southeast Asia and sharper regulatory scrutiny of AI systems, the calculation is changing. <strong>Self-hosted AI in Southeast Asia</strong> is no longer just a technical preference — it is increasingly a compliance and business continuity decision for SMBs in Singapore, Malaysia, Indonesia and beyond.</p>
+
+<h2>Where Your Data Goes When You Use SaaS AI</h2>
+<p>When your team sends a prompt to a SaaS AI tool, the following typically happens:</p>
+<ul>
+  <li>The input — including any business context, customer data or internal documents attached — travels over the internet to the vendor's infrastructure.</li>
+  <li>The vendor's model processes it on shared or dedicated cloud infrastructure in a jurisdiction you may not control.</li>
+  <li>The response is returned and the interaction may be logged, used for model improvement or retained according to the vendor's policy.</li>
+</ul>
+<p>Most enterprise SaaS AI tools offer data processing agreements, training opt-outs and jurisdiction controls for enterprise customers. Most SMBs — on standard consumer or SMB plans — have limited control over any of this.</p>
+
+<h2>The Data Sovereignty Problem in Southeast Asia</h2>
+<p>Southeast Asia's data protection landscape has matured significantly. Every major SEA market now enforces data protection law with real consequences:</p>
+<ul>
+  <li><strong>Singapore PDPA</strong> — applies to all organisations handling personal data, with financial penalties for breaches and cross-border transfer obligations.</li>
+  <li><strong>Malaysia PDPA</strong> — similar obligations, with restrictions on personal data leaving Malaysia without adequate protection.</li>
+  <li><strong>Indonesia PDP Law</strong> — enacted in 2022, with explicit requirements on cross-border data transfers and local processing.</li>
+  <li><strong>Philippines Data Privacy Act</strong> — comprehensive protections with breach notification requirements and significant penalties.</li>
+  <li><strong>Thailand PDPA</strong> — effective since 2022, with rules on processing personal data outside Thailand.</li>
+</ul>
+<p>When you process customer data, employee records or financial information through a SaaS AI tool whose servers sit outside your jurisdiction, you may be creating compliance exposure you have not fully accounted for. This overlaps directly with the <a href="/blog/cybersecurity-compliance-smb-southeast-asia/">cybersecurity and compliance obligations SEA SMBs already face</a>.</p>
+
+<h2>Self-Hosted AI: What Is Actually Different</h2>
+<p>Self-hosted AI runs on infrastructure you control — typically a VPS, a cloud instance in a region you choose or on-premises hardware. The key differences:</p>
+<ul>
+  <li><strong>Data residency</strong> — all processing happens on your server. Customer data, prompts and outputs stay within your environment.</li>
+  <li><strong>Vendor independence</strong> — no SaaS pricing changes, no feature deprecations, no dependency on a vendor's uptime or roadmap decisions.</li>
+  <li><strong>Customisation</strong> — you define exactly what the AI can access, what it can do and how it responds to your team and customers.</li>
+  <li><strong>Auditability</strong> — you can log, monitor and inspect every interaction the AI has — not just what the vendor chooses to expose in their reporting dashboard.</li>
+</ul>
+<p>The trade-off is that self-hosted AI requires more upfront setup than signing up for a SaaS plan. A capable implementation partner closes most of that gap for businesses that do not have a dedicated infrastructure team.</p>
+
+<h2>The Real Cost Comparison</h2>
+<p>SaaS AI tools are not free at scale. As your team's usage grows, per-seat or consumption-based pricing compounds. Self-hosted AI carries a fixed infrastructure cost — typically a VPS — that does not scale with usage volume.</p>
+<p>For an SMB running 100–300 AI interactions per day across a team of 10–30 people:</p>
+<ul>
+  <li><strong>SaaS AI</strong> — per-user subscription costs grow with headcount; enterprise plans with meaningful data controls add significant overhead.</li>
+  <li><strong>Self-hosted AI</strong> — fixed monthly server cost regardless of usage volume; implementation is a one-time investment.</li>
+</ul>
+<p>Beyond direct cost, the more significant calculation for most SEA SMBs is risk. A data breach or regulatory inquiry involving third-party AI processing can carry reputational and financial consequences that far exceed the cost of self-hosted infrastructure.</p>
+
+<h2>What You Give Up — and What You Gain</h2>
+<p>Self-hosted AI is not the right choice for every business. The honest comparison:</p>
+<ul>
+  <li><strong>You give up</strong> — instant SaaS onboarding, vendor-managed updates, the consumer-grade UI polish of major cloud AI products.</li>
+  <li><strong>You gain</strong> — data sovereignty, compliance confidence, cost predictability, the ability to connect to any internal system and full control over what the AI can access and do.</li>
+</ul>
+<p>For SEA SMBs handling customer personal data, financial records or proprietary operational processes — which is most of them — the gains are not abstract. They are directly relevant to how you operate, how you scale and how you respond when a regulator asks where your data is being processed.</p>
+
+<h2>How to Decide: A Practical Frame for SEA SMBs</h2>
+<p>Self-hosted AI is worth prioritising if any of these are true for your business:</p>
+<ul>
+  <li>You process customer personal data that falls under PDPA or an equivalent SEA law.</li>
+  <li>Your AI use cases involve internal documents, financial data or proprietary processes you cannot risk exposing.</li>
+  <li>Your SaaS AI spend is growing and you want long-term cost predictability.</li>
+  <li>You want AI automation that runs continuously, integrated with your internal systems, not just available on demand.</li>
+</ul>
+<p>Tools like <a href="/services/openclaw/">OpenClaw</a> are built specifically for this use case — self-hosted AI agents that run on your server, connect to WhatsApp, Slack, Freshservice and 50+ other tools and handle business automation 24/7, with your data staying entirely on your infrastructure.</p>
+<p>The shift to self-hosted AI is not a niche technical trend. It is a business decision about where your most sensitive operational data lives — and who controls the systems that process it.</p>
+`,
+  },
+
+  {
+    slug: "custom-ai-dashboards-small-business-singapore-2026",
+    title: "Custom AI Dashboards for Small Businesses in Singapore and Southeast Asia (2026)",
+    metaDescription:
+      "Custom AI dashboards give SEA SMBs real-time ops visibility without enterprise BI costs. Here's what they look like, what they cost and how to start.",
+    category: "Digital Transformation",
+    date: "2026-06-30",
+    readMinutes: 5,
+    excerpt:
+      "Most small businesses in Southeast Asia make decisions on data that is days or weeks old. A custom AI dashboard changes that — live KPIs, automated alerts and trends, built around your specific operations.",
+    keywords: [
+      "custom AI dashboard small business",
+      "business intelligence Singapore SMB",
+      "real-time dashboard Southeast Asia",
+      "KPI dashboard AI automation",
+      "custom reporting tools SMB",
+    ],
+    faqs: [
+      {
+        question: "What is a custom AI dashboard?",
+        answer:
+          "A custom AI dashboard is a real-time visual interface built specifically for your business, pulling live data from your tools — CRM, service desk, finance systems and infrastructure — and surfacing the metrics that actually matter to your operations.",
+      },
+      {
+        question: "How is a custom dashboard different from Excel or Google Sheets?",
+        answer:
+          "Excel and Sheets are pull-based: someone exports data, formats it and shares it, usually weekly. A custom dashboard is always-current — it connects directly to your systems and updates automatically, so you see live data without any manual effort.",
+      },
+      {
+        question: "What does a custom AI dashboard cost for an SMB?",
+        answer:
+          "Cost depends on data sources, views and complexity. M3DS AI scopes dashboards in phases, so you pay for the highest-value views first and expand from there — keeping investment proportional to proven return.",
+      },
+      {
+        question: "How long does it take to build a custom dashboard?",
+        answer:
+          "A focused first version connecting two or three data sources is typically live within one to two weeks. More complex multi-source or AI-augmented dashboards take three to four weeks.",
+      },
+    ],
+    html: `
+<p>Most small businesses in Southeast Asia make decisions on data that is days or weeks old. The monthly spreadsheet from the operations team, the weekly sales report exported from the CRM, the quarterly finance review — all of it arrives late, manually compiled and missing the connections between numbers that would actually explain what is happening. <strong>Custom AI dashboards</strong> change that model: real-time visibility into the metrics that matter most to your business, built around your specific tools, teams and operations — not a generic BI template that shows everything except what you need.</p>
+
+<h2>The Data Problem Most SEA SMBs Have</h2>
+<p>Growing businesses in Singapore, Kuala Lumpur, Jakarta and Manila typically accumulate data across four or five disconnected systems:</p>
+<ul>
+  <li>A CRM holding pipeline, deal status and customer history</li>
+  <li>A service desk tracking support volume, SLA performance and open tickets</li>
+  <li>Accounting software managing cash flow, invoices and revenue</li>
+  <li>Cloud infrastructure generating uptime, cost and performance metrics</li>
+  <li>Marketing and website analytics</li>
+</ul>
+<p>Each system has its own reporting view. None of them talk to each other. Getting a complete picture of the business requires exporting from each, stitching the data together in a spreadsheet and hoping the person who compiled it last week used the same method this week. A custom AI dashboard eliminates that entirely — and it is exactly the type of operational friction that <a href="/blog/digital-transformation-roadmap-sea-smb/">a phased digital transformation</a> removes in sequence.</p>
+
+<h2>What a Custom AI Dashboard Actually Does</h2>
+<p>A custom dashboard connects directly to your live data sources and presents the metrics you care about in a single, always-current view. No exports, no manual compilation, no waiting for the weekly report. Specifically:</p>
+<ul>
+  <li><strong>Live data pulls</strong> — connects to your APIs, databases and SaaS tools and refreshes automatically on a schedule you define.</li>
+  <li><strong>Custom metrics</strong> — shows the KPIs relevant to your specific business, not a vendor's idea of what matters.</li>
+  <li><strong>Automated alerts</strong> — notifies the right person when a metric crosses a threshold: SLA breach, revenue drop, server load spike.</li>
+  <li><strong>Cross-source analysis</strong> — connects data from different systems so you can see relationships that a single-system report cannot surface.</li>
+</ul>
+
+<h2>Four Dashboards That Pay for Themselves</h2>
+
+<h3>1. IT operations dashboard</h3>
+<p>Pulls from your service desk (ticket volume, SLA status, queue age), infrastructure monitoring (uptime, alerts, cost) and change management logs. Gives IT leads and operations managers a live view of service health without logging into three different tools.</p>
+
+<h3>2. Sales and revenue dashboard</h3>
+<p>Connects CRM pipeline, invoice data and conversion metrics. Sales managers see deal velocity, forecast accuracy and revenue pacing in real time — not the state of the pipeline three weeks ago when someone last ran the export.</p>
+
+<h3>3. Customer support performance dashboard</h3>
+<p>Tracks first-response time, resolution rate, satisfaction scores and ticket volume trends — by agent, by channel and by issue type. Surfaces where support is working and where it is breaking down, before problems become visible to customers.</p>
+
+<h3>4. Executive summary dashboard</h3>
+<p>Combines finance, operations, sales and IT into a single leadership view. The CEO or operations director opens one screen and sees the current state of the business — not the state it was in at the last all-hands.</p>
+
+<h2>How AI Makes Dashboards More Than Reporting</h2>
+<p>Traditional BI dashboards show you what happened. AI-augmented dashboards go further:</p>
+<ul>
+  <li><strong>Anomaly detection</strong> — flags unusual patterns (a sudden spike in failed logins, an unexpected drop in conversion rate) without requiring someone to monitor every metric manually.</li>
+  <li><strong>Natural-language queries</strong> — ask the dashboard a question in plain language and get an answer pulled from your live data.</li>
+  <li><strong>Predictive signals</strong> — surface leading indicators like support volume trends, pipeline velocity or infrastructure cost trajectory before they become problems.</li>
+  <li><strong>Automated summaries</strong> — generate a written summary of the week's key metrics and deliver it to the right people on schedule, without manual effort.</li>
+</ul>
+<p>These capabilities are not reserved for enterprises with large BI teams. With the right build approach, an SMB in Singapore or Jakarta can have AI-augmented reporting operational in weeks, connected to the same tools it already uses. This is the same leverage principle that drives <a href="/blog/ai-automation-cut-it-support-costs-sea/">AI automation ROI for SEA IT support functions</a> — targeted automation of the repetitive work, so people focus on what requires judgement.</p>
+
+<h2>How to Get Started: Four Questions to Answer First</h2>
+<ol>
+  <li><strong>What decisions do you make most often?</strong> The dashboard should serve those decisions specifically, not report everything it can technically reach.</li>
+  <li><strong>Where does your most important data live?</strong> Identify the two or three systems that hold the metrics you care about most and start there.</li>
+  <li><strong>Who uses it and how?</strong> An executive summary dashboard is different from an operations monitor or a team-level performance view. Different users need different layouts and levels of detail.</li>
+  <li><strong>What triggers action?</strong> Define the thresholds that matter — the numbers that, when crossed, need someone to respond. Those become your automated alerts.</li>
+</ol>
+<p>M3DS AI scopes custom dashboards in phases: the first version connects your top two data sources and surfaces your ten most important metrics. Subsequent phases expand coverage based on what the first version reveals. Cost stays proportional to proven value — you are not betting a large budget on a dashboard that might not fit the way your team actually works.</p>
+
+<h2>The Bottom Line for SEA SMBs</h2>
+<p>A custom AI dashboard is not a luxury for businesses that have already solved everything else. It is often the thing that reveals what to solve next — and which problems are costing the most. Businesses in Singapore, Kuala Lumpur, Jakarta and Manila are competing with larger, better-resourced companies that have always had this visibility. A custom dashboard is how an SMB closes that gap without the enterprise overhead. If your team is making important decisions on data that is already a week old, that is a solvable problem — and the solution pays for itself faster than most technology investments do.</p>
+`,
+  },
+
+  {
     slug: "itsm-implementation-cost-southeast-asia",
     title: "ITSM Implementation Cost in Southeast Asia: 2026 SMB Pricing Guide",
     metaDescription:
