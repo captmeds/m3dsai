@@ -1,35 +1,41 @@
 "use client";
 
 import Link from "next/link";
+import { Mail, ArrowRight } from "lucide-react";
 
 const footerLinks = {
   services: [
-    { name: "IT Consulting", href: "/services/it-service-management-consulting/" },
-    { name: "AI Services", href: "/services/ai-automation-consulting/" },
-    { name: "Freshservice Setup", href: "/services/freshservice-implementation-consultant/" },
-    { name: "HaloITSM Setup", href: "/services/haloitsm-implementation-consultant/" },
-    { name: "Websites & SEO", href: "/services/website-design-seo/" }
+    { name: "AI Consulting", href: "/services/ai-consulting/" },
+    { name: "OpenClaw Setup", href: "/services/openclaw/" },
+    { name: "Cloud & Hosting", href: "/services/cloud-infrastructure/" },
+    { name: "Custom Dashboards", href: "/services/custom-dashboards/" },
+    { name: "Website Design", href: "/services/ai-website-design/" },
+    { name: "SEO & Marketing", href: "/services/seo-digital-marketing/" },
   ],
   company: [
-    { name: "About", href: "/about/" },
+    { name: "About Us", href: "/about/" },
+    { name: "Blog", href: "/blog/" },
     { name: "Our Work", href: "/our-work/" },
     { name: "Pricing", href: "/pricing/" },
-    { name: "Contact", href: "/contact/" }
+    { name: "Contact", href: "/contact/" },
   ],
-  growth: [
+  locations: [
     { name: "Singapore", href: "/locations/singapore/" },
     { name: "Malaysia", href: "/locations/malaysia/" },
     { name: "Indonesia", href: "/locations/indonesia/" },
     { name: "Australia", href: "/locations/australia/" },
-    { name: "Compare IT Tools", href: "/comparisons/" }
-  ]
+  ],
 };
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-bg-secondary/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+    <footer className="border-t border-border bg-bg-secondary/40">
+      {/* Top accent line */}
+      <div className="h-px bg-gradient-to-r from-transparent via-accent-primary/50 to-transparent" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
@@ -39,17 +45,26 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-text-secondary text-sm leading-relaxed mb-6">
-              We help small businesses in Asia and Australia use AI tools, build websites, and grow online.
+              We help small businesses in Asia and Australia get more customers, save time, and grow online — with no tech jargon.
             </p>
+            <Link
+              href="/contact/"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-accent-primary hover:gap-3 transition-all duration-200"
+            >
+              Book a free call
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-display font-bold text-text-primary mb-4">Services</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-5">
+              Services
+            </h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className="text-text-secondary hover:text-accent-primary text-sm transition-colors"
                   >
@@ -62,11 +77,13 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-display font-bold text-text-primary mb-4">Company</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-5">
+              Company
+            </h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className="text-text-secondary hover:text-accent-primary text-sm transition-colors"
                   >
@@ -77,13 +94,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Growth */}
+          {/* Locations + Contact */}
           <div>
-            <h4 className="font-display font-bold text-text-primary mb-4">Growth</h4>
-            <ul className="space-y-3">
-              {footerLinks.growth.map((link) => (
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-5">
+              Locations
+            </h4>
+            <ul className="space-y-3 mb-8">
+              {footerLinks.locations.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className="text-text-secondary hover:text-accent-primary text-sm transition-colors"
                   >
@@ -92,27 +111,37 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-5">
+              Contact
+            </h4>
+            <a
+              href="mailto:admin@m3dsai.com"
+              className="inline-flex items-center gap-2 text-text-secondary hover:text-accent-primary text-sm transition-colors"
+            >
+              <Mail className="w-4 h-4 flex-shrink-0" />
+              admin@m3dsai.com
+            </a>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h4 className="font-display font-bold text-text-primary mb-4">Contact</h4>
-            <ul className="space-y-3 text-text-secondary text-sm">
-              <li>admin@m3dsai.com</li>
-            </ul>
-          </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-text-muted text-sm">
+        <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-text-muted text-xs">
             © 2026 m3DSai. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link href="/privacy-policy/" className="text-text-muted hover:text-text-secondary text-sm transition-colors">
+            <Link
+              href="/privacy-policy/"
+              className="text-text-muted hover:text-text-secondary text-xs transition-colors"
+            >
               Privacy Policy
             </Link>
-            <Link href="/terms-of-service/" className="text-text-muted hover:text-text-secondary text-sm transition-colors">
+            <Link
+              href="/terms-of-service/"
+              className="text-text-muted hover:text-text-secondary text-xs transition-colors"
+            >
               Terms of Service
             </Link>
           </div>
