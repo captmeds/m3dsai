@@ -68,13 +68,13 @@ export default function Home() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary">
-                AI, Cloud &amp; Website Growth for{" "}
-                <span className="gradient-text">Businesses in Australia &amp; Asia.</span>
+                Everything You Need to{" "}
+                <span className="gradient-text">Grow Your Business Online.</span>
               </h2>
             </FadeUp>
             <FadeUp delay={0.15}>
               <p className="text-text-secondary mt-4 max-w-2xl mx-auto">
-                Six services to help your business grow: AI tools, cloud servers, dashboards, websites, AI automation, and SEO.
+                We help small businesses get more customers, save time, and look great online. Pick what you need — or let us help you figure it out on a free call.
               </p>
             </FadeUp>
           </div>

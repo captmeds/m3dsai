@@ -28,7 +28,7 @@ export default function WhySection() {
           {/* Left content */}
           <div>
             <FadeUp>
-              <SectionLabel text="Why m3DSai" className="mb-4" />
+              <SectionLabel text="Why Choose Us" className="mb-4" />
             </FadeUp>
 
             <FadeUp delay={0.1}>
@@ -76,11 +76,11 @@ export default function WhySection() {
                   </div>
 
                   {[
-                    { feature: "Response Time", m3dsai: "< 2 hours", traditional: "2-3 days" },
-                    { feature: "AI Integration", m3dsai: "Native", traditional: "Add-on" },
-                    { feature: "Pricing", m3dsai: "Transparent", traditional: "Hidden fees" },
-                    { feature: "Support", m3dsai: "Dedicated", traditional: "Ticket-based" },
-                    { feature: "Results", m3dsai: "Guaranteed", traditional: "Variable" }
+                    { feature: "Reply time", m3dsai: "Under 2 hours", traditional: "2–3 days" },
+                    { feature: "AI included", m3dsai: "Always", traditional: "Costs extra" },
+                    { feature: "Pricing", m3dsai: "Clear & upfront", traditional: "Hidden fees" },
+                    { feature: "Your contact", m3dsai: "1 person", traditional: "Ticket queue" },
+                    { feature: "Results", m3dsai: "Measurable", traditional: "Hard to track" }
                   ].map((row) => (
                     <div
                       key={row.feature}

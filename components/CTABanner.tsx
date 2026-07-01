@@ -13,14 +13,14 @@ export default function CTABanner() {
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <FadeUp>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
-            Ready to{" "}
-            <span className="gradient-text">Grow Your Business?</span>
+            Not Sure Where to Start?{" "}
+            <span className="gradient-text">Let&apos;s Talk.</span>
           </h2>
         </FadeUp>
 
         <FadeUp delay={0.1}>
           <p className="text-text-secondary text-lg mb-10 max-w-2xl mx-auto">
-            Book a free call and find out how m3DSai can help you grow with simple, smart tech.
+            Book a free 30-minute call with us. Tell us about your business and we&apos;ll tell you exactly what will help — no tech jargon, no hard sell.
           </p>
         </FadeUp>
 

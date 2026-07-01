@@ -168,23 +168,23 @@ export const testimonials: {
 export const processSteps = [
   {
     number: "01",
-    title: "Discover",
-    description: "We learn about your business and what you need."
+    title: "Free Call",
+    description: "We have a quick chat about your business. No tech knowledge needed — just tell us what you want to improve."
   },
   {
     number: "02",
-    title: "Design",
-    description: "We plan a solution that fits your goals."
+    title: "We Plan It",
+    description: "We put together a clear plan and show you exactly what we'll do, how long it takes, and what it costs."
   },
   {
     number: "03",
-    title: "Build",
-    description: "We build it using the best tools available."
+    title: "We Build It",
+    description: "We do all the work for you. You'll get updates along the way so you always know what's happening."
   },
   {
     number: "04",
-    title: "Launch & Improve",
-    description: "We go live and keep making it better over time."
+    title: "You See Results",
+    description: "Your new tool or website goes live. We stick around to make sure everything works and keep improving it."
   }
 ];
 

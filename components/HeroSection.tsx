@@ -25,8 +25,9 @@ export default function HeroSection() {
           </span>
 
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-text-primary leading-[1.04] mb-10">
-            Smarter Tech for Growing Businesses in{" "}
-            <span className="gradient-text">Asia &amp; Australia</span>
+            We Help Small Businesses in{" "}
+            <span className="gradient-text">Asia &amp; Australia</span>{" "}
+            Grow Online
           </h1>
 
           {/* OpenClaw banner */}
@@ -57,15 +58,13 @@ export default function HeroSection() {
                 </h2>
 
                 <p className="text-text-secondary leading-relaxed mb-6 max-w-2xl text-sm sm:text-base">
-                  Set up a private AI helper on your own server. It connects to WhatsApp,
-                  Telegram, Slack, Discord, and 50+ tools. It handles your calendar, inbox,
-                  and tasks — all by itself, 24/7. We do the full setup for you.
+                  We set up your own AI helper that works just for your business — not shared with anyone else. It answers messages, handles tasks, and replies to customers on WhatsApp, Telegram, Slack and more. It runs 24/7 and we handle all the setup for you.
                 </p>
 
                 <div className="flex flex-wrap gap-3 mb-6">
                   {[
-                    { icon: Clock, label: "Live in 48 Hours" },
-                    { icon: Zap, label: "50+ Integrations" },
+                    { icon: Clock, label: "Ready in 48 Hours" },
+                    { icon: Zap, label: "Connects to 50+ Apps" },
                     { icon: Wifi, label: "WhatsApp & Telegram" },
                   ].map(({ icon: Icon, label }) => (
                     <div
@@ -89,7 +88,7 @@ export default function HeroSection() {
                   { value: "48h", label: "Setup time" },
                   { value: "50+", label: "App connections" },
                   { value: "24/7", label: "Runs by itself" },
-                  { value: "100%", label: "Your own server" },
+                  { value: "100%", label: "Just for you" },
                 ].map(({ value, label }) => (
                   <div
                     key={label}
