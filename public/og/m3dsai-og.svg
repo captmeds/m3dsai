@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="M3DS AI - AI-powered IT Service Management for Southeast Asia">
-  <rect width="1200" height="630" fill="#0e1512"/>
-  <path d="M0 168h1200" stroke="#34d399" stroke-opacity=".18"/>
-  <path d="M0 470h1200" stroke="#10b981" stroke-opacity=".16"/>
-  <path d="M600 0v630" stroke="#34d399" stroke-opacity=".12"/>
-  <rect x="88" y="84" width="1024" height="462" rx="28" fill="#16211c" stroke="#1e2c26"/>
-  <text x="140" y="205" fill="#34d399" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="6">M3DS AI</text>
-  <text x="140" y="292" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800">ITSM, AI Automation</text>
-  <text x="140" y="366" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800">and Web Growth</text>
-  <text x="140" y="438" fill="#93a69c" font-family="Inter, Arial, sans-serif" font-size="29">Enterprise IT expertise for Southeast Asian SMBs</text>
-  <text x="140" y="495" fill="#10b981" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">m3dsai.com</text>
+  <rect width="1200" height="630" fill="#14121c"/>
+  <path d="M0 168h1200" stroke="#e8845a" stroke-opacity=".18"/>
+  <path d="M0 470h1200" stroke="#c96442" stroke-opacity=".16"/>
+  <path d="M600 0v630" stroke="#e8845a" stroke-opacity=".12"/>
+  <rect x="88" y="84" width="1024" height="462" rx="28" fill="#1c1927" stroke="#2a2537"/>
+  <text x="140" y="205" fill="#e8845a" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="6">M3DS AI</text>
+  <text x="140" y="292" fill="#f4ecdd" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800">ITSM, AI Automation</text>
+  <text x="140" y="366" fill="#f4ecdd" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800">and Web Growth</text>
+  <text x="140" y="438" fill="#a39b8b" font-family="Inter, Arial, sans-serif" font-size="29">Enterprise IT expertise for Southeast Asian SMBs</text>
+  <text x="140" y="495" fill="#e8845a" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">m3dsai.com</text>
 </svg>

@@ -19,50 +19,46 @@ Flagship: **OpenClaw** — private AI agent, live in 48h. Plus AI consulting/aut
 
 ---
 
-## Visual identity — "Fresh Corporate — Emerald & Graphite"
+## Visual identity — "Warm Terminal — Coral & Charcoal" (DARK)
 
-Design direction: clean, readable light body with graphite sections and cards; a single emerald accent (no blue). Fresh, growth-oriented, modern corporate.
+Design direction: dark-first, terminal-inspired. Charcoal-plum backgrounds, cream text, a single warm coral/terracotta accent. Confident, technical, distinctive. **This is the standing M3DS palette — use it for all new work.**
 
 ### Colour palette
 
-**Light surfaces**
+**Dark surfaces (page is dark)**
 | Token | Hex | Use |
 |---|---|---|
-| `--bg-primary` | `#F7FAF8` | Page background (snow) |
-| `--bg-secondary` | `#ECF3EF` | Alternate light section (mist) |
-| `--bg-card` | `#FFFFFF` | Light cards |
+| `--bg-primary` | `#14121C` | Page background (charcoal-plum) |
+| `--bg-secondary` | `#1A1724` | Alternate section |
+| `--bg-card` | `#1C1927` | Cards |
+| `--bg-ink` | `#100E18` | Darkest bands (footer, CTA, hero base) |
+| `--bg-ink-2` | `#201C2B` | Cards on bands (`.card-ink`) |
+| `--bg-ink-3` | `#2A2537` | Elevated surfaces, hairlines |
 
-**Graphite surfaces**
+**Accents — coral / terracotta**
 | Token | Hex | Use |
 |---|---|---|
-| `--bg-ink` | `#0E1512` | Dark sections, footer, hero centerpiece |
-| `--bg-ink-2` | `#16211C` | Cards on dark (`.card-ink`) |
-| `--bg-ink-3` | `#1E2C26` | Elevated dark surfaces, hairlines |
+| `--accent-primary` | `#E8845A` | Command/link/accent text, CTA fill, icons |
+| `--accent-bright` | `#F2A07A` | Peach — glows, gradient-text highlight |
+| `--accent-secondary` | `#C96442` | Terracotta — deeper accent |
+| `--accent-hover` | `#F0946A` | Hover state |
+| `--on-accent` | `#17131F` | Dark text placed on a coral fill (buttons) |
+| `--accent-warm` | `#D97706` | Sparing amber highlight |
 
-**Accents** (contrast-aware — use `primary` on light, `bright` on dark)
+**Text (cream)**
 | Token | Hex | Use |
 |---|---|---|
-| `--accent-primary` | `#047857` | Links, CTA fill, accents **on light** (WCAG AA on white) |
-| `--accent-bright` | `#34D399` | Accents, glows, gradient text **on graphite** |
-| `--accent-secondary` | `#059669` | Emerald — secondary accent, confirmations |
-| `--accent-hover` | `#065F46` | Hover state for primary |
-| `--accent-warm` | `#D97706` | Sparing warm highlight |
-
-**Text**
-| Token | Hex | Use |
-|---|---|---|
-| `--text-primary` | `#0B1210` | Headings/body on light |
-| `--text-secondary` | `#33423C` | Body on light |
-| `--text-muted` | `#64726B` | Meta/muted on light |
-| `--text-on-ink` | `#E9F1EC` | Headings/body on graphite |
-| `--text-on-ink-muted` | `#93A69C` | Muted on graphite |
+| `--text-primary` | `#F4ECDD` | Headings/body |
+| `--text-secondary` | `#D5CCBB` | Body / descriptions |
+| `--text-muted` | `#948C7D` | Meta/muted |
+| `--text-on-ink` | `#F4ECDD` | Text on darkest bands |
+| `--text-on-ink-muted` | `#A39B8B` | Muted on bands |
 
 **Usage rules**
-- On white/light: use `--accent-primary` (`#047857`) for text/links/CTAs — the deeper emerald that passes AA on white.
-- On graphite: use `--accent-bright` (`#34D399`) for accents and gradient text.
-- White text is only ever placed on an accent-colored fill (buttons, badges), never on light backgrounds.
-- Gradient text: light `#047857 → #059669 → #065F46`; on graphite `#34D399 → #10B981`.
-- No blue anywhere — the identity is emerald + neutral graphite.
+- Coral (`#E8845A`) is the accent for text/links/icons on dark. Cream (`#F4ECDD`) is default text.
+- On a coral fill (buttons/badges) use **dark** text (`--on-accent #17131F`), never white — white on coral fails contrast.
+- Gradient text: `#E8845A → #F2A07A → #D5764F`.
+- No blue. Backgrounds stay charcoal-plum, never navy.
 
 ### Typography
 | Role | Typeface | Notes |
@@ -74,7 +70,7 @@ Design direction: clean, readable light body with graphite sections and cards; a
 CSS variables: `--font-display`, `--font-body`, `--font-mono` (set in `app/layout.tsx`, mapped in `tailwind.config.ts`).
 
 ### Logo
-Wordmark: `m3DS` (ink/on-ink) + `ai` (accent). Favicon/OG use graphite `#0E1512` tile with emerald `#34D399` "M3DS" mark and `#10B981` "D/ai" mark (`public/favicon.svg`, `public/og/m3dsai-og.svg`).
+Wordmark: `m3DS` (cream) + `ai` (coral accent). Favicon/OG use charcoal `#14121C` tile with coral `#E8845A` "M3DS" mark and terracotta `#C96442` "D/ai" mark (`public/favicon.svg`, `public/og/m3dsai-og.svg`).
 
 ### Where it lives
 Tokens are the single source of truth in `app/globals.css` `:root`, exposed to Tailwind (`bg-*`, `accent-*`, `text-*`, `border-*`, `bg-ink*`, `text-on-ink*`, `accent-bright`). Dark bands use the `.section-ink` and `.card-ink` utilities.
@@ -89,4 +85,4 @@ Website (m3dsai.com), blog, email `admin@m3dsai.com`.
 Keep this client's raw assets + finished reels in this folder (`m3dsai.com/`).
 
 ## Notes
-Redesign shipped on branch `feature/redesign-deep-navy` (fresh-corporate emerald & graphite theme — no blue, real font loading, light/graphite section rhythm).
+Redesign shipped on branch `feature/redesign-deep-navy`. Current theme = warm-terminal coral & charcoal (dark), real font loading (Space Grotesk / Inter / JetBrains Mono), token-driven so palette swaps are a single edit in `app/globals.css` `:root`.

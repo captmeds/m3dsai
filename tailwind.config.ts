@@ -54,8 +54,8 @@ const config: Config = {
       },
       keyframes: {
         "glow-pulse": {
-          "0%": { boxShadow: "0 0 20px rgba(52,211,153,0.16)" },
-          "100%": { boxShadow: "0 0 44px rgba(52,211,153,0.32)" },
+          "0%": { boxShadow: "0 0 20px rgba(232,132,90,0.16)" },
+          "100%": { boxShadow: "0 0 44px rgba(232,132,90,0.32)" },
         },
         float: {
           "0%, 100%": { transform: "translateY(0px)" },

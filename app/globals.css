@@ -3,46 +3,45 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
   /* Color tokens as RGB channels so Tailwind alpha modifiers work
-     (e.g. bg-accent-primary/10). Use rgb(var(--x)) in raw CSS. */
+     (e.g. bg-accent-primary/10). Use rgb(var(--x)) in raw CSS.
+     Theme: warm terminal — coral accent, cream text, charcoal-plum dark. */
 
-  /* Light surfaces */
-  --bg-primary: 247 250 248;   /* #f7faf8 snow */
-  --bg-secondary: 236 243 239; /* #ecf3ef mist */
-  --bg-card: 255 255 255;      /* #ffffff */
+  /* Base dark surfaces */
+  --bg-primary: 20 18 28;    /* #14121c charcoal-plum (page) */
+  --bg-secondary: 26 23 36;  /* #1a1724 alternate section */
+  --bg-card: 28 25 39;       /* #1c1927 card */
 
-  /* Graphite surfaces */
-  --bg-ink: 14 21 18;          /* #0e1512 */
-  --bg-ink-2: 22 33 28;        /* #16211c */
-  --bg-ink-3: 30 44 38;        /* #1e2c26 */
+  /* Deeper bands / darkest surfaces */
+  --bg-ink: 16 14 24;        /* #100e18 */
+  --bg-ink-2: 32 28 43;      /* #201c2b card on band */
+  --bg-ink-3: 42 37 55;      /* #2a2537 elevated */
 
-  /* Accents — emerald. primary=on-light (AA), bright=on-dark */
-  --accent-primary: 4 120 87;    /* #047857 emerald-700 */
-  --accent-secondary: 5 150 105; /* #059669 emerald-600 */
-  --accent-bright: 52 211 153;   /* #34d399 emerald-400 */
-  --accent-hover: 6 95 70;       /* #065f46 */
-  --on-accent: 255 255 255;      /* #ffffff */
+  /* Accents — coral / terracotta */
+  --accent-primary: 232 132 90;   /* #e8845a coral */
+  --accent-secondary: 201 100 66; /* #c96442 terracotta */
+  --accent-bright: 242 160 122;   /* #f2a07a peach */
+  --accent-hover: 240 148 106;    /* #f0946a */
+  --on-accent: 23 19 31;          /* #17131f dark text on coral */
 
-  /* Text on light */
-  --text-primary: 11 18 16;    /* #0b1210 */
-  --text-secondary: 51 66 60;  /* #33423c */
-  --text-muted: 100 114 107;   /* #64726b */
-
-  /* Text on graphite */
-  --text-on-ink: 233 241 236;      /* #e9f1ec */
-  --text-on-ink-muted: 147 166 156;/* #93a69c */
+  /* Text (cream) */
+  --text-primary: 244 236 221;    /* #f4ecdd */
+  --text-secondary: 213 204 187;  /* #d5ccbb */
+  --text-muted: 148 140 125;      /* #948c7d */
+  --text-on-ink: 244 236 221;     /* #f4ecdd */
+  --text-on-ink-muted: 163 155 139;/* #a39b8b */
 
   /* Non-modifier values (kept as full colors) */
-  --accent-glow: rgba(52, 211, 153, 0.18);
+  --accent-glow: rgba(232, 132, 90, 0.20);
   --accent-warm: #d97706;
-  --border: rgba(11, 18, 16, 0.08);
-  --border-accent: rgba(4, 120, 87, 0.26);
-  --border-ink: rgba(52, 211, 153, 0.16);
+  --border: rgba(244, 236, 221, 0.08);
+  --border-accent: rgba(232, 132, 90, 0.30);
+  --border-ink: rgba(244, 236, 221, 0.08);
 
-  --gradient-hero: radial-gradient(120% 85% at 50% -12%, rgba(52, 211, 153, 0.12), transparent 58%),
-    linear-gradient(180deg, #f7faf8 0%, #eef4f0 58%, #ffffff 100%);
+  --gradient-hero: radial-gradient(120% 85% at 50% -12%, rgba(232, 132, 90, 0.14), transparent 58%),
+    linear-gradient(180deg, #14121c 0%, #17141f 58%, #100e18 100%);
 }
 
 * {
@@ -57,8 +56,8 @@ html {
 
 body {
   background:
-    linear-gradient(rgba(11, 18, 16, 0.028) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(11, 18, 16, 0.028) 1px, transparent 1px),
+    linear-gradient(rgba(244, 236, 221, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 236, 221, 0.03) 1px, transparent 1px),
     rgb(var(--bg-primary));
   background-size: 72px 72px;
   color: rgb(var(--text-primary));
@@ -93,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(4, 120, 87, 0.35);
+  background: rgba(232, 132, 90, 0.35);
   border-radius: 4px;
 }
 
@@ -103,65 +102,64 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Selection */
 ::selection {
-  background: rgba(4, 120, 87, 0.15);
+  background: rgba(232, 132, 90, 0.22);
   color: rgb(var(--text-primary));
 }
 
-/* Ink section — graphite band that flips child text to light */
+/* Darker band that keeps light (cream) text */
 .section-ink {
   background: rgb(var(--bg-ink));
   color: rgb(var(--text-on-ink));
 }
 .section-ink .gradient-text {
-  background: linear-gradient(120deg, #34d399 0%, #10b981 100%);
+  background: linear-gradient(120deg, #e8845a 0%, #f2a07a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Graphite card (used on light or ink sections for premium contrast) */
+/* Elevated dark card (coral sheen) */
 .card-ink {
   background:
-    linear-gradient(180deg, rgba(52, 211, 153, 0.05), transparent 45%),
+    linear-gradient(180deg, rgba(232, 132, 90, 0.06), transparent 45%),
     rgb(var(--bg-ink-2));
   border: 1px solid var(--border-ink);
-  box-shadow: 0 24px 60px rgba(14, 21, 18, 0.35);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
 }
 
-/* Corporate glass utility (light surfaces) */
+/* Glass panel (dark) */
 .glass {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.7)),
-    rgba(247, 250, 248, 0.82);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015)),
+    rgba(28, 25, 39, 0.72);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border: 1px solid var(--border);
-  box-shadow: 0 18px 45px rgba(4, 120, 87, 0.06);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
 }
 
-/* Gradient text (on light) */
+/* Gradient text (default, on dark) */
 .gradient-text {
-  background: linear-gradient(120deg, #047857 0%, #059669 52%, #065f46 100%);
+  background: linear-gradient(120deg, #e8845a 0%, #f2a07a 52%, #d5764f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Dot grid pattern */
+/* Dot grid pattern (coral tint) */
 .dot-grid {
   background-image:
-    linear-gradient(rgba(4, 120, 87, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(4, 120, 87, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(232, 132, 90, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 132, 90, 0.07) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: linear-gradient(to bottom, black, transparent 82%);
 }
 
-/* Dot grid on ink sections (emerald tint) */
 .section-ink .dot-grid,
 .card-ink .dot-grid {
   background-image:
-    linear-gradient(rgba(52, 211, 153, 0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(52, 211, 153, 0.10) 1px, transparent 1px);
+    linear-gradient(rgba(232, 132, 90, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 132, 90, 0.10) 1px, transparent 1px);
 }
 
 .tech-surface {
@@ -175,16 +173,16 @@ h1, h2, h3, h4, h5, h6 {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, transparent, rgba(4, 120, 87, 0.04), transparent),
-    linear-gradient(rgba(4, 120, 87, 0.03) 1px, transparent 1px);
+    linear-gradient(90deg, transparent, rgba(232, 132, 90, 0.05), transparent),
+    linear-gradient(rgba(232, 132, 90, 0.04) 1px, transparent 1px);
   background-size: 180px 100%, 100% 32px;
   opacity: 0.5;
 }
 
 .card-ink.tech-surface::before {
   background:
-    linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.06), transparent),
-    linear-gradient(rgba(52, 211, 153, 0.05) 1px, transparent 1px);
+    linear-gradient(90deg, transparent, rgba(232, 132, 90, 0.07), transparent),
+    linear-gradient(rgba(232, 132, 90, 0.06) 1px, transparent 1px);
 }
 
 .tech-surface > * {
@@ -201,7 +199,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 3px rgba(232, 132, 90, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 /* Visible keyboard focus */
