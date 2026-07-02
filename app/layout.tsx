@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,6 +8,26 @@ import LazyChatWidget from "@/components/LazyChatWidget";
 import { graphSchema, localBusinessSchema, organizationSchema, websiteSchema } from "@/lib/schema";
 import { absoluteUrl, siteConfig } from "@/lib/seo";
 import { CurrencyProvider } from "@/lib/currency";
+
+const fontBody = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-body",
+});
+
+const fontDisplay = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["500", "600", "700"],
+  variable: "--font-display",
+});
+
+const fontMono = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500"],
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -77,7 +98,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${fontBody.variable} ${fontDisplay.variable} ${fontMono.variable}`}>
       <body className="antialiased">
         <JsonLd data={graphSchema([organizationSchema(), websiteSchema(), localBusinessSchema()])} />
         <CurrencyProvider>

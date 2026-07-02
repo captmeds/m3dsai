@@ -10,32 +10,39 @@ const config: Config = {
     extend: {
       colors: {
         bg: {
-          primary: "var(--bg-primary)",
-          secondary: "var(--bg-secondary)",
-          card: "var(--bg-card)",
+          primary: "rgb(var(--bg-primary) / <alpha-value>)",
+          secondary: "rgb(var(--bg-secondary) / <alpha-value>)",
+          card: "rgb(var(--bg-card) / <alpha-value>)",
+          ink: "rgb(var(--bg-ink) / <alpha-value>)",
+          "ink-2": "rgb(var(--bg-ink-2) / <alpha-value>)",
+          "ink-3": "rgb(var(--bg-ink-3) / <alpha-value>)",
         },
         accent: {
-          primary: "var(--accent-primary)",
-          secondary: "var(--accent-secondary)",
-          hover: "var(--accent-hover)",
-          on: "var(--on-accent)",
+          primary: "rgb(var(--accent-primary) / <alpha-value>)",
+          secondary: "rgb(var(--accent-secondary) / <alpha-value>)",
+          bright: "rgb(var(--accent-bright) / <alpha-value>)",
+          hover: "rgb(var(--accent-hover) / <alpha-value>)",
+          on: "rgb(var(--on-accent) / <alpha-value>)",
           glow: "var(--accent-glow)",
           warm: "var(--accent-warm)",
         },
         text: {
-          primary: "var(--text-primary)",
-          secondary: "var(--text-secondary)",
-          muted: "var(--text-muted)",
+          primary: "rgb(var(--text-primary) / <alpha-value>)",
+          secondary: "rgb(var(--text-secondary) / <alpha-value>)",
+          muted: "rgb(var(--text-muted) / <alpha-value>)",
+          "on-ink": "rgb(var(--text-on-ink) / <alpha-value>)",
+          "on-ink-muted": "rgb(var(--text-on-ink-muted) / <alpha-value>)",
         },
         border: {
           DEFAULT: "var(--border)",
           accent: "var(--border-accent)",
+          ink: "var(--border-ink)",
         },
       },
       fontFamily: {
-        display: ["Inter", "Arial", "sans-serif"],
-        body: ["Inter", "Arial", "sans-serif"],
-        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
+        display: ["var(--font-display)", "Inter", "Arial", "sans-serif"],
+        body: ["var(--font-body)", "Inter", "Arial", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
       },
       backgroundImage: {
         "gradient-hero": "var(--gradient-hero)",
@@ -47,8 +54,8 @@ const config: Config = {
       },
       keyframes: {
         "glow-pulse": {
-          "0%": { boxShadow: "0 0 20px rgba(8,145,178,0.12)" },
-          "100%": { boxShadow: "0 0 40px rgba(8,145,178,0.26)" },
+          "0%": { boxShadow: "0 0 20px rgba(56,189,248,0.16)" },
+          "100%": { boxShadow: "0 0 44px rgba(56,189,248,0.32)" },
         },
         float: {
           "0%, 100%": { transform: "translateY(0px)" },

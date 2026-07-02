@@ -4,19 +4,20 @@ import SectionLabel from "./SectionLabel";
 
 export default function ProcessTimeline() {
   return (
-    <section className="py-12 lg:py-16 bg-bg-secondary/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
+    <section className="section-ink py-20 lg:py-28 relative overflow-hidden">
+      <div className="absolute inset-0 dot-grid opacity-[0.35]" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-14">
           <FadeUp>
-            <SectionLabel text="How It Works" className="mb-4" />
+            <SectionLabel text="How It Works" className="mb-4 !text-accent-bright" />
           </FadeUp>
           <FadeUp delay={0.1}>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-text-on-ink">
               Simple Steps,{" "}<span className="gradient-text">Real Results</span>
             </h2>
           </FadeUp>
           <FadeUp delay={0.15}>
-            <p className="text-text-secondary mt-4 max-w-xl mx-auto">
+            <p className="text-text-on-ink-muted mt-4 max-w-xl mx-auto">
               You don&apos;t need to know anything about tech. We take care of everything from start to finish.
             </p>
           </FadeUp>
@@ -24,32 +25,29 @@ export default function ProcessTimeline() {
 
         <div className="relative">
           {/* Connecting line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2" />
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-accent-primary to-accent-secondary -translate-y-1/2" />
+          <div className="hidden lg:block absolute top-[3.75rem] left-0 right-0 h-px bg-border-ink" />
+          <div className="hidden lg:block absolute top-[3.75rem] left-0 right-0 h-px bg-gradient-to-r from-accent-bright to-accent-secondary opacity-60" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {processSteps.map((step, index) => (
               <div
                 key={step.number}
                 className="relative"
                 data-index={index}
               >
-                <div className="glass tech-surface rounded-lg p-8 h-full relative z-10 hover:border-accent-primary/50 transition-colors duration-300">
-                  <div className="w-14 h-14 rounded-md bg-gradient-to-br from-accent-primary to-accent-secondary flex items-center justify-center mb-6">
-                    <span className="font-mono text-xl font-bold text-white">{step.number}</span>
+                <div className="card-ink tech-surface rounded-xl p-7 h-full relative z-10 transition-colors duration-300 hover:border-accent-bright/45">
+                  <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-accent-bright to-accent-secondary flex items-center justify-center mb-6 shadow-lg shadow-accent-glow">
+                    <span className="font-mono text-xl font-bold text-bg-ink">{step.number}</span>
                   </div>
 
-                  <h3 className="font-display text-xl font-bold text-text-primary mb-3">
+                  <h3 className="font-display text-xl font-bold text-text-on-ink mb-3">
                     {step.title}
                   </h3>
 
-                  <p className="text-text-secondary text-sm leading-relaxed">
+                  <p className="text-text-on-ink-muted text-sm leading-relaxed">
                     {step.description}
                   </p>
                 </div>
-
-                {/* Connector dot */}
-                <div className="hidden lg:block absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-bg-primary border-2 border-accent-primary z-20" />
               </div>
             ))}
           </div>
