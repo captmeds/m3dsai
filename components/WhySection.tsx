@@ -68,11 +68,11 @@ export default function WhySection() {
           {/* Right visual */}
           <FadeUp delay={0.3}>
             <div className="relative">
-              <div className="glass tech-surface rounded-lg p-8 border border-border">
+              <div className="card-ink tech-surface rounded-xl p-8">
                 <div className="relative z-10 space-y-6">
-                  <div className="flex items-center justify-between pb-4 border-b border-border">
-                    <span className="font-mono text-xs text-text-muted uppercase tracking-wider">Comparison</span>
-                    <span className="font-mono text-xs text-accent-primary">m3DSai vs Others</span>
+                  <div className="flex items-center justify-between pb-4 border-b border-border-ink">
+                    <span className="font-mono text-xs text-text-on-ink-muted uppercase tracking-wider">Comparison</span>
+                    <span className="font-mono text-xs text-accent-bright">m3DSai vs Others</span>
                   </div>
 
                   {[
@@ -86,18 +86,18 @@ export default function WhySection() {
                       key={row.feature}
                       className="grid grid-cols-3 gap-4 items-center"
                     >
-                      <span className="text-text-secondary text-sm">{row.feature}</span>
+                      <span className="text-text-on-ink-muted text-sm">{row.feature}</span>
                       <div className="flex items-center gap-2">
-                        <Check className="w-4 h-4 text-accent-secondary" />
-                        <span className="text-text-primary text-sm font-medium">{row.m3dsai}</span>
+                        <Check className="w-4 h-4 text-accent-secondary flex-shrink-0" />
+                        <span className="text-text-on-ink text-sm font-medium">{row.m3dsai}</span>
                       </div>
-                      <span className="text-text-muted text-sm">{row.traditional}</span>
+                      <span className="text-text-on-ink-muted text-sm line-through decoration-accent-secondary/30">{row.traditional}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="absolute -top-3 -right-3 h-16 w-16 border-t border-r border-accent-primary/40" />
+              <div className="absolute -top-3 -right-3 h-16 w-16 border-t border-r border-accent-bright/40" />
               <div className="absolute -bottom-3 -left-3 h-16 w-16 border-b border-l border-accent-secondary/35" />
             </div>
           </FadeUp>

@@ -29,27 +29,27 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-bg-secondary/40">
+    <footer className="section-ink relative">
       {/* Top accent line */}
-      <div className="h-px bg-gradient-to-r from-transparent via-accent-primary/50 to-transparent" />
+      <div className="h-px bg-gradient-to-r from-transparent via-accent-bright/50 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
 
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
               <span className="font-display text-2xl font-bold">
-                <span className="text-text-primary">m3DS</span>
-                <span className="text-accent-primary">ai</span>
+                <span className="text-text-on-ink">m3DS</span>
+                <span className="text-accent-bright">ai</span>
               </span>
             </Link>
-            <p className="text-text-secondary text-sm leading-relaxed mb-6">
+            <p className="text-text-on-ink-muted text-sm leading-relaxed mb-6">
               We help small businesses in Asia and Australia get more customers, save time, and grow online — with no tech jargon.
             </p>
             <Link
               href="/contact/"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-accent-primary hover:gap-3 transition-all duration-200"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-accent-bright hover:gap-3 transition-all duration-200"
             >
               Book a free call
               <ArrowRight className="w-4 h-4" />
@@ -58,7 +58,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-5">
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-text-on-ink-muted mb-5">
               Services
             </h4>
             <ul className="space-y-3">
@@ -66,7 +66,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-text-secondary hover:text-accent-primary text-sm transition-colors"
+                    className="text-text-on-ink-muted hover:text-accent-bright text-sm transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -77,7 +77,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-5">
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-text-on-ink-muted mb-5">
               Company
             </h4>
             <ul className="space-y-3">
@@ -85,7 +85,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-text-secondary hover:text-accent-primary text-sm transition-colors"
+                    className="text-text-on-ink-muted hover:text-accent-bright text-sm transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -96,7 +96,7 @@ export default function Footer() {
 
           {/* Locations + Contact */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-5">
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-text-on-ink-muted mb-5">
               Locations
             </h4>
             <ul className="space-y-3 mb-8">
@@ -104,7 +104,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-text-secondary hover:text-accent-primary text-sm transition-colors"
+                    className="text-text-on-ink-muted hover:text-accent-bright text-sm transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -112,12 +112,12 @@ export default function Footer() {
               ))}
             </ul>
 
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-5">
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-text-on-ink-muted mb-5">
               Contact
             </h4>
             <a
               href="mailto:admin@m3dsai.com"
-              className="inline-flex items-center gap-2 text-text-secondary hover:text-accent-primary text-sm transition-colors"
+              className="inline-flex items-center gap-2 text-text-on-ink-muted hover:text-accent-bright text-sm transition-colors"
             >
               <Mail className="w-4 h-4 flex-shrink-0" />
               admin@m3dsai.com
@@ -127,20 +127,20 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-text-muted text-xs">
+        <div className="mt-12 pt-6 border-t border-border-ink flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-text-on-ink-muted text-xs">
             © 2026 m3DSai. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link
               href="/privacy-policy/"
-              className="text-text-muted hover:text-text-secondary text-xs transition-colors"
+              className="text-text-on-ink-muted hover:text-text-on-ink text-xs transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms-of-service/"
-              className="text-text-muted hover:text-text-secondary text-xs transition-colors"
+              className="text-text-on-ink-muted hover:text-text-on-ink text-xs transition-colors"
             >
               Terms of Service
             </Link>

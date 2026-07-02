@@ -3,23 +3,45 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
-  --bg-primary: #f7fafb;
-  --bg-secondary: #ecf4f7;
-  --bg-card: #ffffff;
-  --accent-primary: #0891b2;
-  --accent-secondary: #0e7490;
-  --accent-hover: #0369a1;
-  --on-accent: #ffffff;
-  --accent-glow: rgba(8, 145, 178, 0.14);
+  color-scheme: dark;
+
+  /* Color tokens as RGB channels so Tailwind alpha modifiers work
+     (e.g. bg-accent-primary/10). Use rgb(var(--x)) in raw CSS.
+     Theme: warm terminal — coral accent, cream text, charcoal-plum dark. */
+
+  /* Base dark surfaces */
+  --bg-primary: 20 18 28;    /* #14121c charcoal-plum (page) */
+  --bg-secondary: 26 23 36;  /* #1a1724 alternate section */
+  --bg-card: 28 25 39;       /* #1c1927 card */
+
+  /* Deeper bands / darkest surfaces */
+  --bg-ink: 16 14 24;        /* #100e18 */
+  --bg-ink-2: 32 28 43;      /* #201c2b card on band */
+  --bg-ink-3: 42 37 55;      /* #2a2537 elevated */
+
+  /* Accents — coral / terracotta */
+  --accent-primary: 232 132 90;   /* #e8845a coral */
+  --accent-secondary: 201 100 66; /* #c96442 terracotta */
+  --accent-bright: 242 160 122;   /* #f2a07a peach */
+  --accent-hover: 240 148 106;    /* #f0946a */
+  --on-accent: 23 19 31;          /* #17131f dark text on coral */
+
+  /* Text (cream) */
+  --text-primary: 244 236 221;    /* #f4ecdd */
+  --text-secondary: 213 204 187;  /* #d5ccbb */
+  --text-muted: 148 140 125;      /* #948c7d */
+  --text-on-ink: 244 236 221;     /* #f4ecdd */
+  --text-on-ink-muted: 163 155 139;/* #a39b8b */
+
+  /* Non-modifier values (kept as full colors) */
+  --accent-glow: rgba(232, 132, 90, 0.20);
   --accent-warm: #d97706;
-  --text-primary: #0f172a;
-  --text-secondary: #334155;
-  --text-muted: #64748b;
-  --border: rgba(8, 145, 178, 0.10);
-  --border-accent: rgba(8, 145, 178, 0.26);
-  --gradient-hero: radial-gradient(circle at 50% 0%, rgba(8, 145, 178, 0.07), transparent 38%),
-    linear-gradient(135deg, #f7fafb 0%, #ecf4f7 52%, #ffffff 100%);
+  --border: rgba(244, 236, 221, 0.08);
+  --border-accent: rgba(232, 132, 90, 0.30);
+  --border-ink: rgba(244, 236, 221, 0.08);
+
+  --gradient-hero: radial-gradient(120% 85% at 50% -12%, rgba(232, 132, 90, 0.14), transparent 58%),
+    linear-gradient(180deg, #14121c 0%, #17141f 58%, #100e18 100%);
 }
 
 * {
@@ -34,30 +56,30 @@ html {
 
 body {
   background:
-    linear-gradient(rgba(8, 145, 178, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(8, 145, 178, 0.05) 1px, transparent 1px),
-    var(--bg-primary);
-  background-size: 64px 64px;
-  color: var(--text-primary);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    linear-gradient(rgba(244, 236, 221, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 236, 221, 0.03) 1px, transparent 1px),
+    rgb(var(--bg-primary));
+  background-size: 72px 72px;
+  color: rgb(var(--text-primary));
+  font-family: var(--font-body), Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Inter, Arial, sans-serif;
+  font-family: var(--font-display), Inter, Arial, sans-serif;
   font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: 0;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
 }
 
 .font-display {
-  font-family: Inter, Arial, sans-serif;
+  font-family: var(--font-display), Inter, Arial, sans-serif;
 }
 
 .font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 /* Custom scrollbar */
@@ -66,50 +88,78 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-secondary);
+  background: rgb(var(--bg-secondary));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(8, 145, 178, 0.35);
+  background: rgba(232, 132, 90, 0.35);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-primary);
+  background: rgb(var(--accent-primary));
 }
 
 /* Selection */
 ::selection {
-  background: rgba(8, 145, 178, 0.15);
-  color: var(--text-primary);
+  background: rgba(232, 132, 90, 0.22);
+  color: rgb(var(--text-primary));
 }
 
-/* Corporate glass utility */
-.glass {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.68)),
-    rgba(247, 250, 251, 0.82);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid var(--border);
-  box-shadow: 0 18px 45px rgba(8, 145, 178, 0.06);
+/* Darker band that keeps light (cream) text */
+.section-ink {
+  background: rgb(var(--bg-ink));
+  color: rgb(var(--text-on-ink));
 }
-
-/* Gradient text */
-.gradient-text {
-  background: linear-gradient(120deg, #0891b2 0%, #0e7490 52%, #164e63 100%);
+.section-ink .gradient-text {
+  background: linear-gradient(120deg, #e8845a 0%, #f2a07a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Dot grid pattern */
+/* Elevated dark card (coral sheen) */
+.card-ink {
+  background:
+    linear-gradient(180deg, rgba(232, 132, 90, 0.06), transparent 45%),
+    rgb(var(--bg-ink-2));
+  border: 1px solid var(--border-ink);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* Glass panel (dark) */
+.glass {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015)),
+    rgba(28, 25, 39, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+}
+
+/* Gradient text (default, on dark) */
+.gradient-text {
+  background: linear-gradient(120deg, #e8845a 0%, #f2a07a 52%, #d5764f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dot grid pattern (coral tint) */
 .dot-grid {
   background-image:
-    linear-gradient(rgba(8, 145, 178, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(8, 145, 178, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(232, 132, 90, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 132, 90, 0.07) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: linear-gradient(to bottom, black, transparent 82%);
+}
+
+.section-ink .dot-grid,
+.card-ink .dot-grid {
+  background-image:
+    linear-gradient(rgba(232, 132, 90, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 132, 90, 0.10) 1px, transparent 1px);
 }
 
 .tech-surface {
@@ -123,10 +173,16 @@ h1, h2, h3, h4, h5, h6 {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, transparent, rgba(8, 145, 178, 0.04), transparent),
-    linear-gradient(rgba(8, 145, 178, 0.03) 1px, transparent 1px);
+    linear-gradient(90deg, transparent, rgba(232, 132, 90, 0.05), transparent),
+    linear-gradient(rgba(232, 132, 90, 0.04) 1px, transparent 1px);
   background-size: 180px 100%, 100% 32px;
   opacity: 0.5;
+}
+
+.card-ink.tech-surface::before {
+  background:
+    linear-gradient(90deg, transparent, rgba(232, 132, 90, 0.07), transparent),
+    linear-gradient(rgba(232, 132, 90, 0.06) 1px, transparent 1px);
 }
 
 .tech-surface > * {
@@ -143,20 +199,26 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 3px rgba(232, 132, 90, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Visible keyboard focus */
+:focus-visible {
+  outline: 2px solid rgb(var(--accent-primary));
+  outline-offset: 2px;
 }
 
 /* Blog article prose */
-.prose-blog { color: var(--text-secondary); line-height: 1.8; }
-.prose-blog h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin: 2.5rem 0 1rem; }
-.prose-blog h3 { font-size: 1.125rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem; }
+.prose-blog { color: rgb(var(--text-secondary)); line-height: 1.8; }
+.prose-blog h2 { font-size: 1.5rem; font-weight: 700; color: rgb(var(--text-primary)); margin: 2.5rem 0 1rem; }
+.prose-blog h3 { font-size: 1.125rem; font-weight: 600; color: rgb(var(--text-primary)); margin: 2rem 0 0.75rem; }
 .prose-blog p { margin-bottom: 1.25rem; }
 .prose-blog ul, .prose-blog ol { margin: 0 0 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
 .prose-blog ul { list-style: disc; }
 .prose-blog ol { list-style: decimal; }
 .prose-blog li { padding-left: 0.25rem; }
-.prose-blog strong { color: var(--text-primary); font-weight: 600; }
-.prose-blog em { color: var(--text-secondary); font-style: italic; }
+.prose-blog strong { color: rgb(var(--text-primary)); font-weight: 600; }
+.prose-blog em { color: rgb(var(--text-secondary)); font-style: italic; }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {

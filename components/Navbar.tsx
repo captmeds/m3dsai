@@ -22,8 +22,8 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-bg-primary/80 backdrop-blur-xl border-b border-border' 
+          isScrolled
+            ? 'bg-bg-ink/90 backdrop-blur-xl border-b border-border-ink'
             : 'bg-transparent'
         }`}
       >
@@ -32,8 +32,8 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <span className="font-display text-2xl font-bold">
-                <span className="text-text-primary">m3DS</span>
-                <span className="text-accent-primary">ai</span>
+                <span className={isScrolled ? "text-text-on-ink" : "text-text-primary"}>m3DS</span>
+                <span className={isScrolled ? "text-accent-bright" : "text-accent-primary"}>ai</span>
               </span>
             </Link>
 
@@ -43,17 +43,25 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="relative text-text-secondary hover:text-text-primary text-sm font-medium transition-colors group"
+                  className={`relative text-sm font-medium transition-colors group ${
+                    isScrolled
+                      ? "text-text-on-ink-muted hover:text-text-on-ink"
+                      : "text-text-secondary hover:text-text-primary"
+                  }`}
                 >
                   {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-primary group-hover:w-full transition-all duration-300" />
+                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${isScrolled ? "bg-accent-bright" : "bg-accent-primary"}`} />
                 </Link>
               ))}
             </div>
 
             {/* CTA */}
             <div className="hidden md:flex items-center gap-4">
-              <GlowButton href="/contact/" variant="outline" className="text-sm py-2.5 px-6">
+              <GlowButton
+                href="/contact/"
+                variant="outline"
+                className={`text-sm py-2.5 px-6 ${isScrolled ? "!border-accent-bright !text-accent-bright hover:!bg-accent-bright hover:!text-bg-ink" : ""}`}
+              >
                 Book a Free Call
               </GlowButton>
             </div>
@@ -61,7 +69,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-text-primary"
+              className={`md:hidden p-2 transition-colors ${isScrolled ? "text-text-on-ink" : "text-text-primary"}`}
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
