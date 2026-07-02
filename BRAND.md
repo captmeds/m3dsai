@@ -19,49 +19,50 @@ Flagship: **OpenClaw** — private AI agent, live in 48h. Plus AI consulting/aut
 
 ---
 
-## Visual identity — "Deep-Navy Premium"
+## Visual identity — "Fresh Corporate — Emerald & Graphite"
 
-Design direction: light, readable body with deep-navy premium sections and cards; sky + teal accents that match the logo. Confident, technical, trustworthy.
+Design direction: clean, readable light body with graphite sections and cards; a single emerald accent (no blue). Fresh, growth-oriented, modern corporate.
 
 ### Colour palette
 
 **Light surfaces**
 | Token | Hex | Use |
 |---|---|---|
-| `--bg-primary` | `#F6F9FB` | Page background (cloud) |
-| `--bg-secondary` | `#EDF2F7` | Alternate light section |
+| `--bg-primary` | `#F7FAF8` | Page background (snow) |
+| `--bg-secondary` | `#ECF3EF` | Alternate light section (mist) |
 | `--bg-card` | `#FFFFFF` | Light cards |
 
-**Deep-navy surfaces**
+**Graphite surfaces**
 | Token | Hex | Use |
 |---|---|---|
-| `--bg-ink` | `#0B1220` | Dark sections, footer, hero centerpiece |
-| `--bg-ink-2` | `#0F1B2D` | Cards on dark (`.card-ink`) |
-| `--bg-ink-3` | `#16263B` | Elevated dark surfaces, hairlines |
+| `--bg-ink` | `#0E1512` | Dark sections, footer, hero centerpiece |
+| `--bg-ink-2` | `#16211C` | Cards on dark (`.card-ink`) |
+| `--bg-ink-3` | `#1E2C26` | Elevated dark surfaces, hairlines |
 
 **Accents** (contrast-aware — use `primary` on light, `bright` on dark)
 | Token | Hex | Use |
 |---|---|---|
-| `--accent-primary` | `#0284C7` | Links, CTA fill, accents **on light** (WCAG AA on white) |
-| `--accent-bright` | `#38BDF8` | Accents, glows, gradient text **on dark navy** (matches logo) |
-| `--accent-secondary` | `#14B8A6` | Teal — secondary accent, confirmations |
-| `--accent-hover` | `#0369A1` | Hover state for primary |
+| `--accent-primary` | `#047857` | Links, CTA fill, accents **on light** (WCAG AA on white) |
+| `--accent-bright` | `#34D399` | Accents, glows, gradient text **on graphite** |
+| `--accent-secondary` | `#059669` | Emerald — secondary accent, confirmations |
+| `--accent-hover` | `#065F46` | Hover state for primary |
 | `--accent-warm` | `#D97706` | Sparing warm highlight |
 
 **Text**
 | Token | Hex | Use |
 |---|---|---|
-| `--text-primary` | `#0F172A` | Headings/body on light |
-| `--text-secondary` | `#334155` | Body on light |
-| `--text-muted` | `#64748B` | Meta/muted on light |
-| `--text-on-ink` | `#E8EEF5` | Headings/body on navy |
-| `--text-on-ink-muted` | `#94A3B8` | Muted on navy |
+| `--text-primary` | `#0B1210` | Headings/body on light |
+| `--text-secondary` | `#33423C` | Body on light |
+| `--text-muted` | `#64726B` | Meta/muted on light |
+| `--text-on-ink` | `#E9F1EC` | Headings/body on graphite |
+| `--text-on-ink-muted` | `#93A69C` | Muted on graphite |
 
 **Usage rules**
-- On white/light: use `--accent-primary` (`#0284C7`) for text/links/CTAs — never the bright sky, which fails AA on white.
-- On navy: use `--accent-bright` (`#38BDF8`) for accents and gradient text.
+- On white/light: use `--accent-primary` (`#047857`) for text/links/CTAs — the deeper emerald that passes AA on white.
+- On graphite: use `--accent-bright` (`#34D399`) for accents and gradient text.
 - White text is only ever placed on an accent-colored fill (buttons, badges), never on light backgrounds.
-- Gradient text: light `#0284C7 → #0E7490 → #164E63`; on ink `#38BDF8 → #14B8A6`.
+- Gradient text: light `#047857 → #059669 → #065F46`; on graphite `#34D399 → #10B981`.
+- No blue anywhere — the identity is emerald + neutral graphite.
 
 ### Typography
 | Role | Typeface | Notes |
@@ -73,7 +74,7 @@ Design direction: light, readable body with deep-navy premium sections and cards
 CSS variables: `--font-display`, `--font-body`, `--font-mono` (set in `app/layout.tsx`, mapped in `tailwind.config.ts`).
 
 ### Logo
-Wordmark: `m3DS` (ink/on-ink) + `ai` (accent). Favicon/OG use ink navy `#0B1220` tile with sky `#38BDF8` "M3DS" mark and teal `#14B8A6` "D/ai" mark (`public/favicon.svg`, `public/og/m3dsai-og.svg`).
+Wordmark: `m3DS` (ink/on-ink) + `ai` (accent). Favicon/OG use graphite `#0E1512` tile with emerald `#34D399` "M3DS" mark and `#10B981` "D/ai" mark (`public/favicon.svg`, `public/og/m3dsai-og.svg`).
 
 ### Where it lives
 Tokens are the single source of truth in `app/globals.css` `:root`, exposed to Tailwind (`bg-*`, `accent-*`, `text-*`, `border-*`, `bg-ink*`, `text-on-ink*`, `accent-bright`). Dark bands use the `.section-ink` and `.card-ink` utilities.
@@ -88,4 +89,4 @@ Website (m3dsai.com), blog, email `admin@m3dsai.com`.
 Keep this client's raw assets + finished reels in this folder (`m3dsai.com/`).
 
 ## Notes
-Redesign shipped on branch `feature/redesign-deep-navy` (deep-navy premium theme, real font loading, light/ink section rhythm).
+Redesign shipped on branch `feature/redesign-deep-navy` (fresh-corporate emerald & graphite theme — no blue, real font loading, light/graphite section rhythm).

@@ -9,40 +9,40 @@
      (e.g. bg-accent-primary/10). Use rgb(var(--x)) in raw CSS. */
 
   /* Light surfaces */
-  --bg-primary: 246 249 251;   /* #f6f9fb cloud */
-  --bg-secondary: 237 242 247; /* #edf2f7 */
+  --bg-primary: 247 250 248;   /* #f7faf8 snow */
+  --bg-secondary: 236 243 239; /* #ecf3ef mist */
   --bg-card: 255 255 255;      /* #ffffff */
 
-  /* Deep-navy surfaces */
-  --bg-ink: 11 18 32;          /* #0b1220 */
-  --bg-ink-2: 15 27 45;        /* #0f1b2d */
-  --bg-ink-3: 22 38 59;        /* #16263b */
+  /* Graphite surfaces */
+  --bg-ink: 14 21 18;          /* #0e1512 */
+  --bg-ink-2: 22 33 28;        /* #16211c */
+  --bg-ink-3: 30 44 38;        /* #1e2c26 */
 
-  /* Accents — primary=on-light (AA), bright=on-dark */
-  --accent-primary: 2 132 199;   /* #0284c7 sky-600 */
-  --accent-secondary: 20 184 166;/* #14b8a6 teal */
-  --accent-bright: 56 189 248;   /* #38bdf8 sky-400 */
-  --accent-hover: 3 105 161;     /* #0369a1 */
+  /* Accents — emerald. primary=on-light (AA), bright=on-dark */
+  --accent-primary: 4 120 87;    /* #047857 emerald-700 */
+  --accent-secondary: 5 150 105; /* #059669 emerald-600 */
+  --accent-bright: 52 211 153;   /* #34d399 emerald-400 */
+  --accent-hover: 6 95 70;       /* #065f46 */
   --on-accent: 255 255 255;      /* #ffffff */
 
   /* Text on light */
-  --text-primary: 15 23 42;    /* #0f172a */
-  --text-secondary: 51 65 85;  /* #334155 */
-  --text-muted: 100 116 139;   /* #64748b */
+  --text-primary: 11 18 16;    /* #0b1210 */
+  --text-secondary: 51 66 60;  /* #33423c */
+  --text-muted: 100 114 107;   /* #64726b */
 
-  /* Text on ink */
-  --text-on-ink: 232 238 245;      /* #e8eef5 */
-  --text-on-ink-muted: 148 163 184;/* #94a3b8 */
+  /* Text on graphite */
+  --text-on-ink: 233 241 236;      /* #e9f1ec */
+  --text-on-ink-muted: 147 166 156;/* #93a69c */
 
   /* Non-modifier values (kept as full colors) */
-  --accent-glow: rgba(56, 189, 248, 0.18);
+  --accent-glow: rgba(52, 211, 153, 0.18);
   --accent-warm: #d97706;
-  --border: rgba(15, 23, 42, 0.08);
-  --border-accent: rgba(2, 132, 199, 0.26);
-  --border-ink: rgba(56, 189, 248, 0.16);
+  --border: rgba(11, 18, 16, 0.08);
+  --border-accent: rgba(4, 120, 87, 0.26);
+  --border-ink: rgba(52, 211, 153, 0.16);
 
-  --gradient-hero: radial-gradient(120% 85% at 50% -12%, rgba(56, 189, 248, 0.12), transparent 58%),
-    linear-gradient(180deg, #f6f9fb 0%, #eef3f8 58%, #ffffff 100%);
+  --gradient-hero: radial-gradient(120% 85% at 50% -12%, rgba(52, 211, 153, 0.12), transparent 58%),
+    linear-gradient(180deg, #f7faf8 0%, #eef4f0 58%, #ffffff 100%);
 }
 
 * {
@@ -57,8 +57,8 @@ html {
 
 body {
   background:
-    linear-gradient(rgba(15, 23, 42, 0.028) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, 0.028) 1px, transparent 1px),
+    linear-gradient(rgba(11, 18, 16, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 18, 16, 0.028) 1px, transparent 1px),
     rgb(var(--bg-primary));
   background-size: 72px 72px;
   color: rgb(var(--text-primary));
@@ -93,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(2, 132, 199, 0.35);
+  background: rgba(4, 120, 87, 0.35);
   border-radius: 4px;
 }
 
@@ -103,45 +103,45 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Selection */
 ::selection {
-  background: rgba(2, 132, 199, 0.15);
+  background: rgba(4, 120, 87, 0.15);
   color: rgb(var(--text-primary));
 }
 
-/* Ink section — dark navy band that flips child text to light */
+/* Ink section — graphite band that flips child text to light */
 .section-ink {
   background: rgb(var(--bg-ink));
   color: rgb(var(--text-on-ink));
 }
 .section-ink .gradient-text {
-  background: linear-gradient(120deg, #38bdf8 0%, #14b8a6 100%);
+  background: linear-gradient(120deg, #34d399 0%, #10b981 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Dark navy card (used on light or ink sections for premium contrast) */
+/* Graphite card (used on light or ink sections for premium contrast) */
 .card-ink {
   background:
-    linear-gradient(180deg, rgba(56, 189, 248, 0.05), transparent 45%),
+    linear-gradient(180deg, rgba(52, 211, 153, 0.05), transparent 45%),
     rgb(var(--bg-ink-2));
   border: 1px solid var(--border-ink);
-  box-shadow: 0 24px 60px rgba(11, 18, 32, 0.35);
+  box-shadow: 0 24px 60px rgba(14, 21, 18, 0.35);
 }
 
 /* Corporate glass utility (light surfaces) */
 .glass {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.7)),
-    rgba(246, 249, 251, 0.82);
+    rgba(247, 250, 248, 0.82);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border: 1px solid var(--border);
-  box-shadow: 0 18px 45px rgba(2, 132, 199, 0.06);
+  box-shadow: 0 18px 45px rgba(4, 120, 87, 0.06);
 }
 
 /* Gradient text (on light) */
 .gradient-text {
-  background: linear-gradient(120deg, #0284c7 0%, #0e7490 52%, #164e63 100%);
+  background: linear-gradient(120deg, #047857 0%, #059669 52%, #065f46 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -150,18 +150,18 @@ h1, h2, h3, h4, h5, h6 {
 /* Dot grid pattern */
 .dot-grid {
   background-image:
-    linear-gradient(rgba(2, 132, 199, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(2, 132, 199, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(4, 120, 87, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(4, 120, 87, 0.08) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: linear-gradient(to bottom, black, transparent 82%);
 }
 
-/* Dot grid on ink sections (sky tint) */
+/* Dot grid on ink sections (emerald tint) */
 .section-ink .dot-grid,
 .card-ink .dot-grid {
   background-image:
-    linear-gradient(rgba(56, 189, 248, 0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(56, 189, 248, 0.10) 1px, transparent 1px);
+    linear-gradient(rgba(52, 211, 153, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(52, 211, 153, 0.10) 1px, transparent 1px);
 }
 
 .tech-surface {
@@ -175,16 +175,16 @@ h1, h2, h3, h4, h5, h6 {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, transparent, rgba(2, 132, 199, 0.04), transparent),
-    linear-gradient(rgba(2, 132, 199, 0.03) 1px, transparent 1px);
+    linear-gradient(90deg, transparent, rgba(4, 120, 87, 0.04), transparent),
+    linear-gradient(rgba(4, 120, 87, 0.03) 1px, transparent 1px);
   background-size: 180px 100%, 100% 32px;
   opacity: 0.5;
 }
 
 .card-ink.tech-surface::before {
   background:
-    linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.06), transparent),
-    linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+    linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.06), transparent),
+    linear-gradient(rgba(52, 211, 153, 0.05) 1px, transparent 1px);
 }
 
 .tech-surface > * {
@@ -201,7 +201,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 /* Visible keyboard focus */
